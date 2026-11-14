@@ -528,7 +528,7 @@ body.inner .shade{background:rgba(8,6,24,.62)}
   </footer>
 </div>
 <div class="toast" role="status" data-toast></div>
-<div class="modal" data-modal role="dialog" aria-modal="true"><div class="box"><div class="screen"></div><div class="row"><h3></h3><div style="display:flex;gap:8px"><a class="btn" href="#" data-mopen>Open</a><button class="btn ghost" data-mclose>Close</button></div></div></div></div>
+<div class="modal" data-modal role="dialog" aria-modal="true"><div class="box"><div class="screen"></div><div class="row"><h3></h3><div style="display:flex;gap:8px"><a class="btn" href="#" data-mopen hidden style="display:none">Open</a><button class="btn ghost" data-mclose>Close</button></div></div></div></div>
 
 <script>
 (function(){
@@ -887,8 +887,7 @@ var R={
  map:function(){var p=P[lang],u='https://map.stateofleonida.net/';
   return head('map','#4DA8FF')+note(p.map_note)+'<div class="panel mapwrap" data-mapwrap style="background:#3589ae">'+
    '<div class="maptools"><button data-zoom="1" aria-label="Zoom in">+</button><button data-zoom="-1" aria-label="Zoom out">&minus;</button></div>'+
-   '<svg class="map" viewBox="0 0 880 1208" aria-label="'+esc(p.map_t)+'"><g data-mapg><image href="/img/leonida-map.jpg" x="0" y="0" width="880" height="1208"/></g></svg></div>'+
-   '<div class="mapcredit"><span>'+esc(p.credit)+'</span><a class="btn ghost" href="'+u+'" target="_blank" rel="noopener">'+esc(p.openmap)+' &#8599;</a></div>';}
+   '<svg class="map" viewBox="0 0 880 1208" aria-label="'+esc(p.map_t)+'"><g data-mapg><image href="/img/leonida-map.jpg" x="0" y="0" width="880" height="1208"/></g></svg></div>';}
 };
 var MAPPINS=[["collect", 370, 140], ["collect", 358, 453], ["collect", 538, 453], ["collect", 370, 615], ["collect", 550, 673], ["store", 676, 424], ["store", 514, 302], ["secret", 418, 47], ["secret", 622, 244], ["secret", 328, 360], ["secret", 272, 276], ["secret", 672, 383], ["mission", 490, 198], ["mission", 610, 465], ["mission", 430, 360], ["mission", 586, 302], ["mission", 442, 499], ["mission", 526, 557]];
 

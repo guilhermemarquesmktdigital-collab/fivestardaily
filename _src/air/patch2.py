@@ -15,7 +15,7 @@ assert s[nav_a:s.index('</nav>', nav_a)].count('</a>') == 7, s[nav_a:s.index('</
 s = s.replace('.tile{--acc:var(--pink);position:relative;', '.tile{--acc:var(--pink);color:inherit;text-decoration:none;position:relative;')
 s = s.replace('</nav>\n', '</nav>\n\n  <main class="page" data-page aria-live="polite"></main>\n', 1)
 s = s.replace('<div class="toast" role="status" data-toast></div>',
- '<div class="toast" role="status" data-toast></div>\n<div class="modal" data-modal role="dialog" aria-modal="true"><div class="box"><div class="screen"></div><div class="row"><h3></h3><div style="display:flex;gap:8px"><a class="btn" href="#" data-mopen>Open</a><button class="btn ghost" data-mclose>Close</button></div></div></div></div>')
+ '<div class="toast" role="status" data-toast></div>\n<div class="modal" data-modal role="dialog" aria-modal="true"><div class="box"><div class="screen"></div><div class="row"><h3></h3><div style="display:flex;gap:8px"><a class="btn" href="#" data-mopen hidden style="display:none">Open</a><button class="btn ghost" data-mclose>Close</button></div></div></div></div>')
 s = s.replace('</style>', open(sys.argv[2]).read() + '\n</style>', 1)
 a = "  var dirs={ArrowRight"
 assert a in s
