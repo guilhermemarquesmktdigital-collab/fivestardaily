@@ -53,7 +53,7 @@ def is_gta(t):
 
 
 def twitch():
-    cid, sec = os.environ.get('TWITCH_CLIENT_ID'), os.environ.get('TWITCH_CLIENT_SECRET')
+    cid, sec = (os.environ.get('TWITCH_CLIENT_ID') or '').strip(), (os.environ.get('TWITCH_CLIENT_SECRET') or '').strip()
     if not cid or not sec: return None
     tok = json.loads(urllib.request.urlopen(urllib.request.Request('https://id.twitch.tv/oauth2/token', data=urllib.parse.urlencode({'client_id': cid, 'client_secret': sec, 'grant_type': 'client_credentials'}).encode()), timeout=30).read())['access_token']
     H = {'Client-Id': cid, 'Authorization': 'Bearer ' + tok}
