@@ -90,6 +90,15 @@ def main():
                 if got >= n: break
             ok += 1
         except Exception as e: print('videos', lang, e, file=sys.stderr)
+    # YouTube search results vary run to run: top up with last run's videos (aged), so the page never thins out
+    if prev.get('V') and prev.get('SNAP'):
+        try:
+            el = (datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(prev['SNAP'])).total_seconds() / 3600
+            for v in prev['V']:
+                if v[0] not in seen and len(V) < 28 and v[6] + el <= 24 * 14:
+                    v = list(v); v[6] = int(round(v[6] + el)); V.append(v); seen.add(v[0])
+        except Exception as e: print('merge', e, file=sys.stderr)
+    V.sort(key=lambda v: v[6])
     if V: feed['V'] = V
 
     # live now, and recent streams
