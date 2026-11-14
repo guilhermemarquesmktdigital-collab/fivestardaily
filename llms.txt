@@ -1,6 +1,6 @@
 # Five Star Daily
 
-> Unofficial fan site about Grand Theft Auto VI (GTA 6). Live streams, new videos, daily news with our own summaries, guides and a map of Leonida, in English, Spanish and Portuguese. Not affiliated with Rockstar Games or Take-Two Interactive.
+> Unofficial fan site about Grand Theft Auto VI (GTA 6). Live streams, new videos, daily news with our own summaries, guides in English, Spanish and Portuguese. Not affiliated with Rockstar Games or Take-Two Interactive.
 
 ## Guides
 - [GTA 6 release date, launch time and platforms](https://fivestardaily.com/guides/release-date/): Everything Rockstar and the console makers have confirmed about when and where you can play.
@@ -17,7 +17,6 @@
 - [Live streams](https://fivestardaily.com/live/)
 - [Videos and official trailers](https://fivestardaily.com/videos/)
 - [News](https://fivestardaily.com/news/)
-- [Map of Leonida](https://fivestardaily.com/map/)
 
 ## About
 - [About](https://fivestardaily.com/about/)
