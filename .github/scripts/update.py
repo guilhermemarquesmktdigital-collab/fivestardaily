@@ -1,6 +1,6 @@
 """Hourly refresh for Five Star Daily: YouTube videos and live streams, plus Google News headlines.
 Free: no API keys. Writes data/feed.json; the site falls back to its built-in snapshot if this fails."""
-import json, re, sys, urllib.request, urllib.parse, html, os, datetime
+import json, re, sys, urllib.request, urllib.error, urllib.parse, html, os, datetime
 from email.utils import parsedate_to_datetime
 
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36',
@@ -112,6 +112,7 @@ def main():
     try:
         TW = twitch()
         if TW is not None: feed['TW'] = TW; ok += 1
+    except urllib.error.HTTPError as e: print('twitch', e.code, e.url.split('?')[0], e.read()[:200], file=sys.stderr)
     except Exception as e: print('twitch', e, file=sys.stderr)
 
     # news headlines, each links to its source
