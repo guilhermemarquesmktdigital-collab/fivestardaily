@@ -62,7 +62,7 @@ def page_html(path, title, desc, robots_noindex=False):
 
 if os.path.exists(out):
     for f in os.listdir(out):
-        if f in ('.git', 'CNAME', '.github', 'README.md', 'ads.txt', 'data', '_src'):
+        if f in ('.git', 'CNAME', '.github', 'README.md', 'ads.txt', 'data', '_src', 'social'):
             continue
         p = os.path.join(out, f)
         shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
