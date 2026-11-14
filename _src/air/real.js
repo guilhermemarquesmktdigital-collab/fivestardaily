@@ -1,7 +1,7 @@
 /* ---------- real data snapshot (taken __SNAPT__). In version 1 a scheduled job refreshes this every hour. ---------- */
 var RD=__REAL__;
 var SNAP=new Date(RD.SNAP).getTime();
-var VIDS=RD.V, LIVES=RD.LIVE, PASTS=RD.PAST;
+var VIDS=RD.V, LIVES=RD.LIVE, PASTS=RD.PAST, TWITCH=RD.TW||[];
 function hoursSince(t){return Math.max(1,Math.round((Date.now()-t)/36e5));}
 function vAgo(h){return hoursSince(SNAP-h*36e5);}
 function ytThumb(id){return 'https://i.ytimg.com/vi/'+id+'/hqdefault.jpg';}

@@ -51,6 +51,21 @@ def ncat(t):
 def is_gta(t):
     return re.search(r'gta\s*(6|vi)\b|grand theft auto vi', t, re.I)
 
+
+def twitch():
+    cid, sec = os.environ.get('TWITCH_CLIENT_ID'), os.environ.get('TWITCH_CLIENT_SECRET')
+    if not cid or not sec: return None
+    tok = json.loads(urllib.request.urlopen(urllib.request.Request('https://id.twitch.tv/oauth2/token', data=urllib.parse.urlencode({'client_id': cid, 'client_secret': sec, 'grant_type': 'client_credentials'}).encode()), timeout=30).read())['access_token']
+    H = {'Client-Id': cid, 'Authorization': 'Bearer ' + tok}
+    api = lambda path: json.loads(urllib.request.urlopen(urllib.request.Request('https://api.twitch.tv/helix/' + path, headers=H), timeout=30).read())['data']
+    games = api('games?name=' + urllib.parse.quote('Grand Theft Auto VI'))
+    if not games: return []
+    gid, out = games[0]['id'], []
+    for lang in ('en', 'es', 'pt'):
+        for st in api('streams?first=6&game_id=%s&language=%s' % (gid, lang)):
+            out.append([st['user_login'], st['title'], st['user_name'], lang, st['viewer_count']])
+    return out
+
 def main():
     prev = {}
     if os.path.exists(OUT):
@@ -93,6 +108,12 @@ def main():
         except Exception as e: print('live', lang, e, file=sys.stderr)
     if LIVE or PAST: feed['LIVE'], feed['PAST'] = LIVE, PAST
 
+    # Twitch lives (needs TWITCH_CLIENT_ID / TWITCH_CLIENT_SECRET secrets)
+    try:
+        TW = twitch()
+        if TW is not None: feed['TW'] = TW; ok += 1
+    except Exception as e: print('twitch', e, file=sys.stderr)
+
     # news headlines, each links to its source
     NEWS = {}
     for lang, qs in [('en', 'hl=en-US&gl=US&ceid=US:en'), ('es', 'hl=es-419&gl=MX&ceid=MX:es-419'), ('pt', 'hl=pt-BR&gl=BR&ceid=BR:pt-419')]:
@@ -113,12 +134,12 @@ def main():
     if NEWS: feed['NEWS'] = dict(prev.get('NEWS', {}), **NEWS)
 
     # keep the last good value of anything that failed this time
-    for k in ('V', 'LIVE', 'PAST', 'NEWS'):
+    for k in ('V', 'LIVE', 'PAST', 'NEWS', 'TW'):
         if k not in feed and k in prev: feed[k] = prev[k]
     if ok == 0:
         print('nothing fetched; keeping the previous feed', file=sys.stderr); return
     os.makedirs('data', exist_ok=True)
     json.dump(feed, open(OUT, 'w'), ensure_ascii=False, separators=(',', ':'))
-    print('videos', len(feed.get('V', [])), 'live', len(feed.get('LIVE', [])), 'past', len(feed.get('PAST', [])), 'news', {k: len(v) for k, v in feed.get('NEWS', {}).items()})
+    print('videos', len(feed.get('V', [])), 'live', len(feed.get('LIVE', [])), 'past', len(feed.get('PAST', [])), 'news', {k: len(v) for k, v in feed.get('NEWS', {}).items()}, 'twitch', len(feed.get('TW', [])))
 
 main()
