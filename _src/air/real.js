@@ -16,4 +16,4 @@ var FACES={'qSRBrekJKy4':1,'MzWm-oH6QtA':1,'tNIxxMG-wd0':1,'Kp2mCq0DHXs':1,'T9tD
 function cover(id,i){return (FACES[id]||(BAKED&&!BAKED[id]))?still(i):'background-image:url(https://i.ytimg.com/vi/'+id+'/mqdefault.jpg)';}
 function thumbFor(v,i){return v[7]?'<div class="thumb ph" style="background-image:url('+ytThumb(v[0])+')">':'<div class="thumb ph" style="'+cover(v[0],i)+'">';}
 var OFFI={};VIDS.forEach(function(v){if(v[7])OFFI[v[0]]=1});
-var LOCKED={checklist:1,map:1};
+var LOCKED={checklist:1};

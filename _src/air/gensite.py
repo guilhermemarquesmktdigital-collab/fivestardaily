@@ -12,6 +12,7 @@ src = open(SC + '/fsd/index.html').read()
 # images and icons load from the site root, so nested pages find them
 for n in ['island', 'water', 'rocks']:
     src = src.replace(f'img/{n}.webp', f'{base}img/{n}.webp')
+src = src.replace('img/leonida-map.jpg', f'{base}img/leonida-map.jpg')
 src = src.replace('<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">', '')
 
 HOME_T = 'Five Star Daily: GTA 6 news, videos, live streams and guides'
@@ -21,7 +22,7 @@ pages = [('', HOME_T, HOME_D),
  ('videos', 'New GTA 6 videos and official trailers | Five Star Daily', 'The latest GTA 6 gameplay, tips and news videos from creators, and every official Rockstar trailer, playable on one page.'),
  ('news', 'GTA 6 news today | Five Star Daily', 'Today\'s GTA 6 headlines from across the web, with short summaries we write ourselves and a link to every source.'),
  ('guides', 'GTA 6 guides | Five Star Daily', 'Step-by-step GTA 6 guides: release date and platforms, how to pre-load, every trailer and the regions of Leonida.'),
- ('map', 'GTA 6 map of Leonida | Five Star Daily', 'An interactive map of Leonida with the six regions Rockstar has confirmed: Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia and Mount Kalaga.'),
+ ('map', 'GTA 6 map of Leonida | Five Star Daily', 'A zoomable fan-made map of Leonida, the state where GTA 6 takes place, with Vice City, the Keys and the surrounding counties. Unofficial until launch.'),
  ('checklist', 'GTA 6 100% checklist | Five Star Daily', 'Track your GTA 6 progress toward 100% completion. Opens on launch day, November 19.')]
 for g in C['GUIDES']:
     pages.append(('guides/' + g['slug'], g['title']['en'] + ' | Five Star Daily', g['lede']['en']))
@@ -69,6 +70,7 @@ if os.path.exists(out):
 os.makedirs(out + '/img', exist_ok=True)
 for n in ['island', 'water', 'rocks']:
     shutil.copy(f'{SC}/fsd/img/{n}.webp', f'{out}/img/{n}.webp')
+shutil.copy(f'{SC}/fsd/img/leonida-map.jpg', f'{out}/img/leonida-map.jpg')
 for path, title, desc in pages:
     d = os.path.join(out, path)
     os.makedirs(d, exist_ok=True)
@@ -79,12 +81,12 @@ K = open(SC + '/air/indexnow.key').read().strip()
 open(f'{out}/{K}.txt', 'w').write(K)
 # indexnow
 if not noindex:
-    urls = ''.join(f'<url><loc>{origin}{base}{p + "/" if p else ""}</loc><lastmod>{TODAY}</lastmod></url>' for p, _, _ in pages if p not in ('checklist', 'map'))
+    urls = ''.join(f'<url><loc>{origin}{base}{p + "/" if p else ""}</loc><lastmod>{TODAY}</lastmod></url>' for p, _, _ in pages if p != 'checklist')
     open(out + '/sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + urls + '</urlset>\n')
     llms = ['# Five Star Daily', '', '> Unofficial fan site about Grand Theft Auto VI (GTA 6). Live streams, new videos, daily news with our own summaries, guides in English, Spanish and Portuguese. Not affiliated with Rockstar Games or Take-Two Interactive.', '', '## Guides']
     llms += [f'- [{g["title"]["en"]}]({origin}{base}guides/{g["slug"]}/): {g["lede"]["en"]}' for g in C['GUIDES']]
     llms += ['', '## News (our summaries)'] + [f'- [{n["title"]["en"]}]({origin}{base}news/{n["slug"]}/)' for n in C['NEWS']]
-    llms += ['', '## Sections', f'- [Live streams]({origin}{base}live/)', f'- [Videos and official trailers]({origin}{base}videos/)', f'- [News]({origin}{base}news/)', '', '## About', f'- [About]({origin}{base}about/)', f'- [Contact]({origin}{base}contact/)', f'- [Privacy]({origin}{base}privacy/)']
+    llms += ['', '## Sections', f'- [Live streams]({origin}{base}live/)', f'- [Videos and official trailers]({origin}{base}videos/)', f'- [News]({origin}{base}news/)', f'- [Fan-made map of Leonida]({origin}{base}map/)', '', '## About', f'- [About]({origin}{base}about/)', f'- [Contact]({origin}{base}contact/)', f'- [Privacy]({origin}{base}privacy/)']
     open(out + '/llms.txt', 'w').write('\n'.join(llms) + '\n')
     open(out + '/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {origin}{base}sitemap.xml\n')
 print(len(pages), 'pages ->', out)

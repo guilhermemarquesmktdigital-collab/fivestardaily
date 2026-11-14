@@ -22,8 +22,8 @@ var P={
   ck_t:"100% checklist",ck_p:"Tick off everything as you play. Your progress stays on this device, no account needed.",
   ck_note:"Sample list. The real list goes live after launch.",done:"complete",reset:"Reset progress",
   cc:[["Story missions","Mission",12],["Side activities","Activity",8],["Collectibles","Collectible",15],["Stunt jumps","Jump",8],["Vehicles","Vehicle",10]],
-  map_t:"Interactive map",map_p:"The six regions of Leonida Rockstar has confirmed. Drag to move, scroll or use + and − to zoom.",
-  map_note:"Temporary map drawn by us, regions in approximate places. We swap in the real map on launch day.",credit:"Want every spot found so far? The community map by State of Leonida has it.",openmap:"Open the community map",
+  map_t:"Interactive map",map_p:"Our fan-made map of Leonida. Drag to move, scroll, double-tap or use + and − to zoom.",
+  map_note:"Fan-made map based on what has been shown so far. Shapes and county names are unofficial and approximate. We swap in the official map when the game is out.",credit:"Want every spot found so far? The community map by State of Leonida has it.",openmap:"Open the community map",
   mc:{collect:"Collectibles",store:"Stores",secret:"Secrets",mission:"Missions"},point:"Sample point"},
  es:{offline:"El reproductor funciona aquí cuando el sitio esté en línea. En este archivo de vista previa YouTube solo reproduce en su propio sitio.",live_note:"Transmisiones reales de YouTube y Twitch, actualizadas el {t}. Se renueva cada hora.",twitch_soon:"No hay transmisiones de Twitch en este idioma ahora.",watching:function(n){return n.toLocaleString('es')+' viendo'},open_tw:"Abrir en Twitch",none_live:"Nadie está en vivo en este idioma ahora.",past:"Transmisiones recientes",vid_note:"Videos reales de YouTube, actualizados el {t}. Los videos oficiales de Rockstar y PlayStation están marcados. Llegan nuevos cada hora.",offfirst:"Oficiales primero",news_note:"Titulares reales de Google Noticias en tu idioma, actualizados el {t}. Cada uno abre en la fuente.",lk_t:"Bloqueado",lk_p:"Se desbloquea el día del lanzamiento, 19 de noviembre.",lk_k:"Haz clic o pulsa Esc para continuar",lk_badge:"Se abre el 19/11",menu:"Menú",note:"Contenido de muestra. En la versión 1 se llena solo desde YouTube, Twitch y medios de noticias cada hora.",
   all:"Todo",any:"Cualquier idioma",newest:"Más nuevos",popular:"Más vistos",
@@ -47,8 +47,8 @@ var P={
   ck_t:"Checklist 100%",ck_p:"Marca todo mientras juegas. Tu progreso queda en este dispositivo, sin cuenta.",
   ck_note:"Lista de muestra. La lista real sale después del lanzamiento.",done:"completado",reset:"Reiniciar progreso",
   cc:[["Misiones de la historia","Misión",12],["Actividades secundarias","Actividad",8],["Coleccionables","Coleccionable",15],["Saltos acrobáticos","Salto",8],["Vehículos","Vehículo",10]],
-  map_t:"Mapa interactivo",map_p:"Las seis regiones de Leonida que Rockstar confirmó. Arrastra para moverte, usa la rueda o + y − para el zoom.",
-  map_note:"Mapa temporal dibujado por nosotros, con las regiones en lugares aproximados. Lo cambiamos por el mapa real el día del lanzamiento.",credit:"¿Quieres cada lugar encontrado hasta ahora? El mapa de la comunidad State of Leonida los tiene.",openmap:"Abrir el mapa de la comunidad",
+  map_t:"Mapa interactivo",map_p:"Nuestro mapa de Leonida hecho por fans. Arrastra para moverte; usa la rueda, doble toque o + y − para el zoom.",
+  map_note:"Mapa hecho por fans con base en lo mostrado hasta ahora. Las formas y los nombres de los condados no son oficiales y son aproximados. Lo cambiamos por el mapa oficial cuando salga el juego.",credit:"¿Quieres cada lugar encontrado hasta ahora? El mapa de la comunidad State of Leonida los tiene.",openmap:"Abrir el mapa de la comunidad",
   mc:{collect:"Coleccionables",store:"Tiendas",secret:"Secretos",mission:"Misiones"},point:"Punto de muestra"},
  pt:{offline:"O player toca aqui mesmo quando o site estiver no ar. Neste arquivo de prévia o YouTube só toca no próprio site.",live_note:"Lives reais do YouTube e da Twitch, atualizadas em {t}. Isto se renova de hora em hora.",twitch_soon:"Nenhuma live da Twitch neste idioma agora.",watching:function(n){return n.toLocaleString('pt-BR')+' assistindo'},open_tw:"Abrir na Twitch",none_live:"Ninguém está ao vivo neste idioma agora.",past:"Lives recentes",vid_note:"Vídeos reais do YouTube, atualizados em {t}. Os vídeos oficiais da Rockstar e da PlayStation estão marcados. Novos entram de hora em hora.",offfirst:"Oficiais primeiro",news_note:"Manchetes reais do Google Notícias no seu idioma, atualizadas em {t}. Cada uma abre na fonte.",lk_t:"Bloqueado",lk_p:"Libera no dia do lançamento, 19 de novembro.",lk_k:"Clique ou aperte Esc para continuar",lk_badge:"Libera 19/11",menu:"Menu",note:"Conteúdo de exemplo. Na versão 1 isto se preenche sozinho com YouTube, Twitch e sites de notícia, de hora em hora.",
   all:"Tudo",any:"Qualquer idioma",newest:"Mais novos",popular:"Mais vistos",
@@ -72,8 +72,8 @@ var P={
   ck_t:"Checklist 100%",ck_p:"Marque tudo enquanto joga. Seu progresso fica salvo neste aparelho, sem precisar de conta.",
   ck_note:"Lista de exemplo. A lista real entra depois do lançamento.",done:"completo",reset:"Zerar progresso",
   cc:[["Missões da história","Missão",12],["Atividades paralelas","Atividade",8],["Colecionáveis","Colecionável",15],["Saltos","Salto",8],["Veículos","Veículo",10]],
-  map_t:"Mapa interativo",map_p:"As seis regiões de Leonida confirmadas pela Rockstar. Arraste para mover, use a rolagem ou + e − para o zoom.",
-  map_note:"Mapa provisório desenhado por nós, com as regiões em posições aproximadas. Trocamos pelo mapa real no dia do lançamento.",credit:"Quer todos os pontos achados até agora? O mapa da comunidade State of Leonida tem.",openmap:"Abrir o mapa da comunidade",
+  map_t:"Mapa interativo",map_p:"Nosso mapa de Leonida feito por fãs. Arraste para mover; use a rolagem, dois toques ou + e − para o zoom.",
+  map_note:"Mapa feito por fãs com base no que já foi mostrado. Os formatos e os nomes dos condados não são oficiais e são aproximados. Trocamos pelo mapa oficial quando o jogo sair.",credit:"Quer todos os pontos achados até agora? O mapa da comunidade State of Leonida tem.",openmap:"Abrir o mapa da comunidade",
   mc:{collect:"Colecionáveis",store:"Lojas",secret:"Segredos",mission:"Missões"},point:"Ponto de exemplo"}
 };
 var PAGES=['live','videos','news','guides','checklist','map'];
@@ -119,23 +119,10 @@ var R={
    tot+=c[2];dn+=d;return '<section class="panel ck-cat"><header><h3>'+esc(c[0])+'</h3><span>'+d+' / '+c[2]+'</span></header><div class="prog"><i style="width:'+(d/c[2]*100).toFixed(1)+'%"></i></div>'+items+'</section>'}).join('');
   var pc=Math.round(dn/tot*100);
   return head('ck','#B6F25A')+note(p.ck_note)+'<div class="panel ck-top"><div class="big">'+pc+'%</div><div class="lbl">'+dn+' / '+tot+' '+p.done+'</div><div class="grow prog" style="margin:0;height:10px"><i style="width:'+pc+'%"></i></div><button class="btn ghost" data-ck-reset>'+p.reset+'</button></div><div class="ck-cats">'+cats+'</div>';},
- map:function(){var p=P[lang],f=state.map||{collect:1,store:1,secret:1,mission:1},u='https://map.stateofleonida.net/';
-  var COL={collect:'#B6F25A',store:'#2EE6D6',secret:'#FF3D8B',mission:'#FFC94A'};
-  var pins=MAPPINS.filter(function(m){return f[m[0]]}).map(function(m){return '<g class="pin" tabindex="0" data-pin="'+m[0]+'" transform="translate('+m[1]+' '+m[2]+')"><circle r="8" fill="'+COL[m[0]]+'"/></g>'}).join('');
-  var land='M400 47 Q412 30 433 28 Q454 26 472 36 Q490 47 508 54 Q526 61 544 68 Q562 76 577 90 Q592 105 601 122 Q610 140 619 163 Q628 186 634 209 Q640 233 646 253 Q652 273 667 287 Q682 302 697 319 Q712 337 715 360 Q718 383 709 406 Q700 430 685 441 Q670 453 658 467 Q646 482 628 490 Q610 499 592 511 Q574 523 562 540 Q550 557 538 574 Q526 592 532 609 Q538 627 526 638 Q514 650 496 653 Q478 656 463 647 Q448 639 439 624 Q430 610 436 592 Q442 575 433 560 Q424 546 409 534 Q394 523 376 511 Q358 499 346 482 Q334 465 328 447 Q322 430 328 412 Q334 395 325 377 Q316 360 307 342 Q298 325 304 308 Q310 291 304 273 Q298 256 310 238 Q322 221 334 203 Q346 186 352 168 Q358 151 364 128 Q370 105 379 84 Q388 64 400 47 Z';
-  var regions=[["Mount Kalaga", 472, 126, "#B6F25A"], ["Ambrosia", 564, 221, "#FFC94A"], ["Port Gellhorn", 376, 302, "#FF8A3D"], ["Grassrivers", 480, 511, "#2EE6D6"], ["Vice City", 640, 383, "#FF3D8B"], ["Leonida Keys", 502, 639, "#4DA8FF"]];
-  var reg=regions.map(function(r){return '<g class="region"><circle cx="'+r[1]+'" cy="'+r[2]+'" r="52" fill="'+r[3]+'" opacity=".10"/><text x="'+r[1]+'" y="'+(r[2]-54)+'" text-anchor="middle">'+r[0]+'</text></g>'}).join('');
-  var keys=[[358, 610, 38, 21, -10], [272, 276, 16, 12, 0], [312, 424, 12, 9, 0], [672, 383, 13, 32, 10], [497, 669, 14, 6, 10], [533, 676, 13, 5, 6], [569, 673, 12, 5, -4], [600, 664, 11, 5, -12]].map(function(k){return '<ellipse cx="'+k[0]+'" cy="'+k[1]+'" rx="'+k[2]+'" ry="'+k[3]+'" transform="rotate('+k[4]+' '+k[0]+' '+k[1]+')"/>'}).join('');
-  return head('map','#4DA8FF')+note(p.map_note)+'<div class="panel mapwrap" data-mapwrap><div class="legend">'+Object.keys(p.mc).map(function(k){return '<label><input type="checkbox" data-layer="'+k+'"'+(f[k]?' checked':'')+'><span class="dot" style="background:'+COL[k]+'"></span>'+p.mc[k]+'</label>'}).join('')+'</div>'+
+ map:function(){var p=P[lang],u='https://map.stateofleonida.net/';
+  return head('map','#4DA8FF')+note(p.map_note)+'<div class="panel mapwrap" data-mapwrap style="background:#3589ae">'+
    '<div class="maptools"><button data-zoom="1" aria-label="Zoom in">+</button><button data-zoom="-1" aria-label="Zoom out">&minus;</button></div>'+
-   '<svg class="map" viewBox="190 0 620 700" aria-label="'+esc(p.map_t)+'"><defs><pattern id="grd" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,.05)"/></pattern>'+
-   '<filter id="coast" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="16"/></filter><linearGradient id="lnd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D5E3E"/><stop offset="1" stop-color="#1F4C3C"/></linearGradient></defs>'+
-   '<rect x="-2000" y="-2000" width="5000" height="5000" fill="#0D2340"/><rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#grd)"/><g data-mapg>'+
-   '<g filter="url(#coast)"><path d="'+land+'" fill="none" stroke="rgba(77,168,255,.22)" stroke-width="16" stroke-linejoin="round"/>'+
-   '<path d="'+land+'" fill="url(#lnd)" stroke="#4DA8FF" stroke-width="2" stroke-linejoin="round"/>'+
-   '<g fill="url(#lnd)" stroke="#4DA8FF" stroke-width="1.5">'+keys+'</g></g>'+
-   '<g fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.18)"><rect x="581" y="280" width="46" height="90" rx="4"/><rect x="598" y="427" width="36" height="40" rx="4"/><rect x="358" y="275" width="24" height="20" rx="4"/></g>'+
-   '<g fill="none" stroke="rgba(255,255,255,.28)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 0"><path d="M472 126 Q534 181 564 221 T640 383 T480 511"/><path d="M376 302 Q436 242 564 221 T472 126"/><path d="M376 302 Q420 431 480 511 T502 639"/></g>'+pins+reg+'</g></svg></div>'+
+   '<svg class="map" viewBox="0 0 880 1208" aria-label="'+esc(p.map_t)+'"><g data-mapg><image href="img/leonida-map.jpg" x="0" y="0" width="880" height="1208"/></g></svg></div>'+
    '<div class="mapcredit"><span>'+esc(p.credit)+'</span><a class="btn ghost" href="'+u+'" target="_blank" rel="noopener">'+esc(p.openmap)+' &#8599;</a></div>';}
 };
 var MAPPINS=[["collect", 370, 140], ["collect", 358, 453], ["collect", 538, 453], ["collect", 370, 615], ["collect", 550, 673], ["store", 676, 424], ["store", 514, 302], ["secret", 418, 47], ["secret", 622, 244], ["secret", 328, 360], ["secret", 272, 276], ["secret", 672, 383], ["mission", 490, 198], ["mission", 610, 465], ["mission", 430, 360], ["mission", 586, 302], ["mission", 442, 499], ["mission", 526, 557]];
@@ -167,19 +154,20 @@ function cd2(){var b=$('[data-cd2]');if(!b)return;var left=launch-Date.now();if(
   b.innerHTML='<div><b>'+Math.floor(left/864e5)+'</b><span>'+T[lang].days+'</span></div><div><b>'+pad(Math.floor(left/36e5)%24)+'</b><span>'+T[lang].hours+'</span></div><div><b>'+pad(Math.floor(left/6e4)%60)+'</b><span>'+T[lang].mins+'</span></div>';}
 setInterval(cd2,15000);
 var mz={s:1,x:0,y:0};
-function mapInit(){var w=$('[data-mapwrap]'),g=$('[data-mapg]'),svg=$('svg.map',w),drag=null,pop=document.createElement('div');pop.className='pop';pop.hidden=true;w.appendChild(pop);
-  function ap(){g.setAttribute('transform','translate('+mz.x+' '+mz.y+') scale('+mz.s+')');}
-  function zoom(d,cx,cy){var ns=Math.min(4,Math.max(1,mz.s*(d>0?1.25:0.8)));cx=cx==null?500:cx;cy=cy==null?350:cy;mz.x=cx-(cx-mz.x)*ns/mz.s;mz.y=cy-(cy-mz.y)*ns/mz.s;mz.s=ns;if(ns===1){mz.x=0;mz.y=0;}ap();pop.hidden=true;}
-  function toSvg(e){var r=svg.getBoundingClientRect(),k=Math.max(620/r.width,700/r.height);return [190+(e.clientX-r.left-(r.width-620/k)/2)*k,(e.clientY-r.top-(r.height-700/k)/2)*k];}
+function mapInit(){var w=$('[data-mapwrap]'),g=$('[data-mapg]'),svg=$('svg.map',w),drag=null,VW=880,VH=1208;
+  function k(){var r=svg.getBoundingClientRect();return Math.max(VW/r.width,VH/r.height);}
+  function ap(){var m=mz.s-1;mz.x=Math.min(0,Math.max(-VW*m,mz.x));mz.y=Math.min(0,Math.max(-VH*m,mz.y));g.setAttribute('transform','translate('+mz.x+' '+mz.y+') scale('+mz.s+')');}
+  function zoom(d,cx,cy){var ns=Math.min(5,Math.max(1,mz.s*(d>0?1.3:0.77)));cx=cx==null?VW/2:cx;cy=cy==null?VH/2:cy;mz.x=cx-(cx-mz.x)*ns/mz.s;mz.y=cy-(cy-mz.y)*ns/mz.s;mz.s=ns;ap();}
+  function toSvg(e){var r=svg.getBoundingClientRect(),q=k();return [(e.clientX-r.left-(r.width-VW/q)/2)*q,(e.clientY-r.top-(r.height-VH/q)/2)*q];}
   ap();
   $$('[data-zoom]',w).forEach(function(b){b.addEventListener('click',function(){zoom(+b.dataset.zoom)})});
   w.addEventListener('wheel',function(e){e.preventDefault();var q=toSvg(e);zoom(e.deltaY<0?1:-1,q[0],q[1]);},{passive:false});
-  svg.addEventListener('pointerdown',function(e){if(e.target.closest('.pin'))return;drag={x:e.clientX,y:e.clientY,ox:mz.x,oy:mz.y};svg.setPointerCapture(e.pointerId);pop.hidden=true;});
-  svg.addEventListener('pointermove',function(e){if(!drag)return;var r=svg.getBoundingClientRect(),k=Math.max(620/r.width,700/r.height);mz.x=drag.ox+(e.clientX-drag.x)*k;mz.y=drag.oy+(e.clientY-drag.y)*k;ap();});
+  svg.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY,ox:mz.x,oy:mz.y};svg.setPointerCapture(e.pointerId);});
+  svg.addEventListener('pointermove',function(e){if(!drag)return;var q=k();mz.x=drag.ox+(e.clientX-drag.x)*q;mz.y=drag.oy+(e.clientY-drag.y)*q;ap();});
   svg.addEventListener('pointerup',function(){drag=null;});
-  function show(pin){var r=pin.getBoundingClientRect(),wr=w.getBoundingClientRect();pop.innerHTML='<b>'+esc(P[lang].mc[pin.dataset.pin])+'</b>'+esc(P[lang].point);pop.style.left=(r.left+r.width/2-wr.left)+'px';pop.style.top=(r.top-wr.top)+'px';pop.classList.toggle('below',r.top-wr.top<110);pop.hidden=false;}
-  $$('.pin',w).forEach(function(pin){pin.addEventListener('click',function(){show(pin)});pin.addEventListener('keydown',function(e){if(e.key==='Enter')show(pin)});});
+  svg.addEventListener('dblclick',function(e){var q=toSvg(e);zoom(1,q[0],q[1]);});
 }
+
 page.addEventListener('click',function(e){
   var b=e.target.closest('[data-f] button');
   if(b){var cur=page.getAttribute('data-cur'),key=b.parentNode.dataset.f;state[cur]=state[cur]||({live:{pl:'all',lg:'any'},videos:{c:'all',lg:'any',s:'new'},news:{c:'all'}})[cur];state[cur][key]=b.dataset.v;render();return;}
@@ -211,7 +199,7 @@ function showLock(){var p=P[lang],left=launch-Date.now(),d=Math.max(0,Math.floor
 function hideLock(){lock.classList.remove('show');}
 lock.addEventListener('click',hideLock);
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lock.classList.contains('show'))hideLock();});
-function lockBadges(){$$('.t-check,.t-map').forEach(function(t){var b=$('.lockb',t);if(!b){b=document.createElement('span');b.className='lockb';$('.hd',t).appendChild(b);}b.innerHTML='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>'+esc(P[lang].lk_badge);t.classList.add('locked');});}
+function lockBadges(){$$('.t-check').forEach(function(t){var b=$('.lockb',t);if(!b){b=document.createElement('span');b.className='lockb';$('.hd',t).appendChild(b);}b.innerHTML='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>'+esc(P[lang].lk_badge);t.classList.add('locked');});}
 lockBadges();
 $$('[data-lang]').forEach(function(b){b.addEventListener('click',lockBadges)});
 /* home tiles show the real data too */
