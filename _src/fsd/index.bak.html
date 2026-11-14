@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (Analytics) -->
+<meta name="google-adsense-account" content="ca-pub-9625724533951932">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9625724533951932" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NKC5M38D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Five Star Daily — prototype</title>
+<meta name="description" content="Five Star Daily: an unofficial GTA VI fan hub with live streams, new videos, news, guides, a 100% checklist and an interactive map.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#F7F1FF; --dim:#C9BEDF; --mute:#9488AE;
+  --panel:rgba(14,10,34,.68); --line:rgba(255,255,255,.14);
+  --pink:#FF3D8B; --orange:#FF8A3D; --gold:#FFC94A; --teal:#2EE6D6; --lilac:#B58CFF; --lime:#B6F25A; --blue:#4DA8FF;
+  --cur:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cg stroke='%23000' stroke-opacity='.55' stroke-width='4'%3E%3Ccircle cx='16' cy='16' r='9'/%3E%3Cpath d='M16 2v7M16 23v7M2 16h7M23 16h7'/%3E%3C/g%3E%3Cg stroke='%23fff' stroke-width='2'%3E%3Ccircle cx='16' cy='16' r='9'/%3E%3Cpath d='M16 2v7M16 23v7M2 16h7M23 16h7'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='1.6' fill='%23FF3D8B'/%3E%3C/g%3E%3C/svg%3E") 16 16, crosshair;
+  --cur-gun:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cg transform='rotate(-40 16 16) translate(32 0) scale(-1 1)'%3E%3Cpath d='M3 10h24v5H17l-1 2h-3l-2 9H6l2-11H3z' fill='%23111' stroke='%23fff' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M13 17c1 3 3 3 4 1' fill='none' stroke='%23fff' stroke-width='1.4'/%3E%3Crect x='24' y='8' width='2' height='2' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E") 3 9, pointer;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:#0B0A1F;color:var(--ink);font:500 15px/1.45 "Chakra Petch",system-ui,sans-serif;overflow:hidden;-webkit-font-smoothing:antialiased}
+@media (pointer:fine){ body{cursor:var(--cur)} body.gun{cursor:var(--cur-gun)} body a,body button{cursor:inherit} }
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* ---------- SKY & SCENE ---------- */
+.world{position:fixed;inset:0;overflow:hidden;z-index:0;background:#120A2A}
+.sky{position:absolute;inset:0;opacity:0;transition:opacity 2.5s ease}
+.sky.dawn{background:linear-gradient(#2B2A6B 0%,#7A4FA0 35%,#F08A7E 68%,#FFC48A 100%)}
+.sky.day{background:linear-gradient(#1C7FE0 0%,#49A9F2 38%,#9AD7FA 70%,#D9F1FF 100%)}
+.sky.sunset{background:linear-gradient(#2A1550 0%,#5B2A86 32%,#C2408F 62%,#FF8A6B 86%,#FFC27A 100%)}
+.sky.night{background:linear-gradient(#03030F 0%,#0A0B2C 45%,#1A1546 78%,#2B1E58 100%)}
+body.ph-dawn .sky.dawn,body.ph-day .sky.day,body.ph-sunset .sky.sunset,body.ph-night .sky.night{opacity:1}
+
+.stars{position:absolute;inset:0 0 35% 0;opacity:0;transition:opacity 2.5s}
+.stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.25}}
+body.ph-night .stars{opacity:1} body.ph-dawn .stars{opacity:.25}
+
+.clouds{position:absolute;inset:0;pointer-events:none;transition:opacity 2.5s}
+.cloud{position:absolute;height:38px;border-radius:40px;background:var(--cloud,#fff);filter:blur(6px);opacity:.75;animation:drift linear infinite}
+.cloud::before,.cloud::after{content:"";position:absolute;border-radius:50%;background:inherit}
+.cloud::before{width:46%;height:180%;left:16%;bottom:20%}
+.cloud::after{width:34%;height:140%;left:52%;bottom:25%}
+@keyframes drift{from{transform:translateX(-30vw)}to{transform:translateX(130vw)}}
+body.ph-day{--cloud:#fff} body.ph-sunset{--cloud:#FF9BB8} body.ph-dawn{--cloud:#FFD2C0} body.ph-night{--cloud:#2B2A5A}
+body.ph-night .clouds{opacity:.45}
+
+/* scene is sized in JS so the horizon sits at ~60% of the screen */
+.scene{position:absolute;left:50%;transform:translateX(-50%)}
+.scene > *{position:absolute}
+.sun{border-radius:50%;transition:all 2.5s ease}
+.sun{width:var(--sw);aspect-ratio:1;left:var(--sx);top:var(--sy);translate:-50% -50%;
+  background:radial-gradient(circle,#FFF8D6 0%,#FFE680 45%,#FFC94A 70%,rgba(255,201,74,0) 71%);
+  box-shadow:0 0 120px 40px rgba(255,230,140,.45)}
+body.ph-day .sun{--sw:6.5%;--sx:63%;--sy:31%}
+body.ph-dawn .sun{--sw:12%;--sx:32%;--sy:52%;background:radial-gradient(circle,#FFE9B0 0%,#FFB070 60%,rgba(255,150,90,0) 71%);box-shadow:0 0 140px 60px rgba(255,150,100,.4)}
+body.ph-sunset .sun{--sw:21%;--sx:51%;--sy:50%;background:linear-gradient(#FFE59A 0%,#FFB36B 45%,#FF5E8E 100%);box-shadow:0 0 160px 70px rgba(255,120,140,.45);
+  -webkit-mask:linear-gradient(#000 52%,transparent 52% 55%,#000 55% 64%,transparent 64% 67.5%,#000 67.5% 76%,transparent 76% 80.5%,#000 80.5% 88%,transparent 88% 93%,#000 93%);
+          mask:linear-gradient(#000 52%,transparent 52% 55%,#000 55% 64%,transparent 64% 67.5%,#000 67.5% 76%,transparent 76% 80.5%,#000 80.5% 88%,transparent 88% 93%,#000 93%)}
+body.ph-night .sun{--sw:5%;--sx:79%;--sy:30%;background:radial-gradient(circle at 38% 38%,#FFFFFF 0%,#E8E6FF 55%,#BDB7E8 70%,rgba(0,0,0,0) 71%);box-shadow:0 0 90px 20px rgba(190,180,255,.35)}
+
+.water{left:0;bottom:0;width:100%;height:auto;transition:filter 2.5s}
+.glints{left:0;bottom:0;width:100%;height:34%;opacity:.22;mix-blend-mode:screen;
+  background:repeating-linear-gradient(180deg,transparent 0 9px,rgba(255,255,255,.5) 9px 10px,transparent 10px 23px);
+  background-size:100% 46px;animation:glint 6s linear infinite;
+  -webkit-mask:linear-gradient(transparent,#000 30%,#000 70%,transparent);mask:linear-gradient(transparent,#000 30%,#000 70%,transparent)}
+@keyframes glint{to{background-position:0 46px}}
+canvas.island{left:0;top:0;width:100%;height:100%;transition:filter 2.5s}
+.rocks{left:0;top:0;width:100%;height:auto;transition:filter 2.5s}
+
+body.ph-day .water{filter:hue-rotate(-128deg) saturate(1.25) brightness(1.15)}
+body.ph-day canvas.island,body.ph-day .rocks{filter:hue-rotate(-110deg) brightness(1.1)}
+body.ph-dawn .water{filter:hue-rotate(15deg) saturate(1.1)}
+body.ph-night .water{filter:hue-rotate(-55deg) brightness(.42) saturate(.9)}
+body.ph-night canvas.island,body.ph-night .rocks{filter:brightness(.55) saturate(.8)}
+
+/* lighthouse beam (night only) */
+.beam{left:11.5%;top:52.6%;width:30%;height:5%;translate:0 -50%;transform-origin:0 50%;opacity:0;transition:opacity 2s;pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,250,210,.85),rgba(255,250,210,0));clip-path:polygon(0 42%,100% 0,100% 100%,0 58%);animation:sweep 8s linear infinite;filter:blur(1px)}
+@keyframes sweep{0%{transform:scaleX(1)}25%{transform:scaleX(0)}50%{transform:scaleX(-1)}75%{transform:scaleX(0)}100%{transform:scaleX(1)}}
+.lamp{left:11.5%;top:52.6%;width:1.2%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:#FFF6C8;box-shadow:0 0 20px 8px rgba(255,240,180,.7);opacity:0;transition:opacity 2s}
+body.ph-night .beam,body.ph-night .lamp,body.ph-dawn .lamp{opacity:1}
+
+/* aircraft */
+.air{position:absolute;left:0;pointer-events:none;will-change:transform}
+.plane{top:14%;width:96px;animation:fly-r 46s linear infinite;animation-delay:-6s}
+.plane .trail{position:absolute;right:88%;top:46%;height:2px;width:320px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.75));border-radius:2px}
+body.ph-night .plane .trail{opacity:0}
+@keyframes fly-r{0%{transform:translateX(-140px)}62%{transform:translateX(calc(100vw + 340px))}100%{transform:translateX(calc(100vw + 340px))}}
+.heli{top:31%;width:84px;animation:fly-l 64s linear infinite;animation-delay:-22s}
+.heli svg{animation:bob 3s ease-in-out infinite}
+@keyframes fly-l{0%{transform:translateX(calc(100vw + 120px))}70%{transform:translateX(-160px)}100%{transform:translateX(-160px)}}
+@keyframes bob{50%{transform:translateY(7px) rotate(-1.5deg)}}
+.rotor{transform-origin:46px 6px;animation:rot .14s linear infinite}
+@keyframes rot{50%{transform:scaleX(.15)}}
+.trot{transform-box:fill-box;transform-origin:center;animation:spin .2s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.blink{animation:blink 1.2s steps(1) infinite;opacity:0}
+@keyframes blink{0%{opacity:1}12%{opacity:0}}
+.searchlight{position:absolute;left:26px;top:26px;width:70px;height:220px;opacity:0;transition:opacity 2s;transform-origin:50% 0;transform:rotate(18deg);
+  background:linear-gradient(rgba(255,255,230,.5),rgba(255,255,230,0));clip-path:polygon(44% 0,56% 0,100% 100%,0 100%)}
+body.ph-night .searchlight{opacity:1}
+.navlight{opacity:0;transition:opacity 2s} body.ph-night .navlight,body.ph-sunset .navlight{opacity:1}
+
+.seafill{position:absolute;left:0;right:0;bottom:0;height:var(--fill,0px);background:#1B0E3A;transition:filter 2.5s}
+body.ph-day .seafill{background:#0E3E5C}
+.shade{position:absolute;inset:0;background:linear-gradient(rgba(8,6,24,.35),rgba(8,6,24,0) 18%,rgba(8,6,24,0) 48%,rgba(8,6,24,.55) 100%)}
+
+/* ---------- HUD ---------- */
+.hud{position:relative;z-index:2;height:100svh;display:grid;grid-template-rows:auto 1fr auto auto;padding:18px clamp(14px,2.4vw,36px) 12px}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;margin-right:auto}
+.logo{font:900 clamp(26px,3vw,40px)/.9 "Big Shoulders Display",sans-serif;letter-spacing:.01em;font-style:italic;padding:.08em .18em .16em 0;margin-bottom:-.16em;
+  background:linear-gradient(100deg,#FFE08A 0%,#FF8A3D 35%,#FF3D8B 70%,#B58CFF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,.45))}
+.wanted{display:flex;gap:3px}
+.wanted svg{width:18px;height:18px;fill:rgba(255,255,255,.18);stroke:rgba(0,0,0,.5);stroke-width:1;transition:fill .25s,transform .25s}
+.wanted svg.on{fill:#fff;transform:scale(1.12)}
+.wanted.flash svg{animation:wflash .5s steps(1) 3}
+@keyframes wflash{50%{fill:var(--pink)}}
+
+.ctrl{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:4px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.chip .lbl{padding:0 6px;color:var(--dim);font-size:13px;white-space:nowrap}
+.seg{display:flex;gap:2px}
+.seg button{border:0;background:transparent;padding:5px 9px;border-radius:4px;font-weight:600;font-size:13px;color:var(--dim)}
+.seg button[aria-pressed="true"]{background:#fff;color:#14102E}
+.seg button:hover{color:#fff} .seg button[aria-pressed="true"]:hover{color:#14102E}
+.clock{font:700 20px/1 "Big Shoulders Display",sans-serif;letter-spacing:.04em;color:#fff;padding:0 4px 0 8px}
+.pro{border:1px solid rgba(255,201,74,.7);background:linear-gradient(135deg,rgba(255,201,74,.25),rgba(255,61,139,.2));border-radius:6px;padding:8px 14px;font-weight:700;color:#FFE7A3;backdrop-filter:blur(10px)}
+
+.mid{display:flex;align-items:flex-end;padding-bottom:14px}
+.tagline{font:700 clamp(15px,1.35vw,19px)/1.3 "Chakra Petch",sans-serif;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6);margin:0;max-width:40ch}
+
+/* menu grid */
+.menu{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:12px;height:min(40svh,420px);min-height:320px}
+.tile{--acc:var(--pink);position:relative;display:flex;flex-direction:column;text-align:left;border:1px solid var(--line);border-radius:8px;padding:14px 16px 14px;overflow:hidden;
+  background:var(--panel);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .18s ease,border-color .18s,box-shadow .18s}
+.tile::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--acc)}
+.tile:hover,.tile:focus-visible{transform:translateY(-4px);border-color:#fff;box-shadow:0 0 0 2px #fff,0 14px 40px -10px var(--acc);outline:none}
+.tile .hd{display:flex;align-items:center;gap:6px 10px;flex-wrap:wrap}
+.tile .ic{width:26px;height:26px;flex:none;color:var(--acc)}
+.tile h2{margin:0;font:900 clamp(22px,1.9vw,30px)/1 "Big Shoulders Display",sans-serif;letter-spacing:.01em}
+.tile p{margin:6px 0 0;color:var(--dim);font-size:13.5px;line-height:1.4;max-width:46ch}
+.tile .body{margin-top:auto;padding-top:10px}
+.t-live{grid-column:span 2;--acc:#FF3B4E}
+.t-videos{--acc:var(--orange)} .t-launch{--acc:var(--gold)} .t-news{--acc:var(--teal)}
+.t-guides{--acc:var(--lilac)} .t-check{--acc:var(--lime)} .t-map{--acc:var(--blue)}
+.livebadge{display:inline-flex;align-items:center;gap:6px;margin-left:auto;font-weight:700;font-size:12px;color:#fff;background:#E5263A;padding:3px 8px;border-radius:4px}
+.livebadge i{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3}}
+.streams{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.thumb{position:relative;aspect-ratio:16/9;border-radius:5px;overflow:hidden;background:linear-gradient(135deg,#3B1F6E,#C2408F 60%,#FF8A6B)}
+.thumb:nth-child(2){background:linear-gradient(135deg,#0E4A6E,#2EE6D6 70%,#B6F25A)}
+.thumb:nth-child(3){background:linear-gradient(135deg,#4A1630,#FF3D8B 55%,#FFC94A)}
+.thumb .play{position:absolute;inset:0;margin:auto;width:28px;height:28px;fill:rgba(255,255,255,.9)}
+.thumb .tag{position:absolute;left:6px;top:6px;font-size:10.5px;font-weight:700;background:rgba(0,0,0,.55);padding:1px 6px;border-radius:3px}
+.sk{height:8px;border-radius:4px;background:rgba(255,255,255,.16);margin-top:7px}
+.sk.s{width:55%} .sk.m{width:75%}
+.sample{margin-left:auto;font-size:11px;color:var(--mute)}
+.sample+.livebadge{margin-left:8px}
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cd{display:flex;gap:10px}
+.cd div{display:flex;flex-direction:column}
+.cd b{font:900 clamp(34px,3.3vw,50px)/.9 "Big Shoulders Display",sans-serif;color:#fff;font-variant-numeric:tabular-nums}
+.cd span{font-size:11.5px;color:var(--dim);margin-top:4px}
+.news li{display:flex;gap:8px;align-items:center;list-style:none}
+.news{margin:0;padding:0}
+.news li::before{content:"";width:6px;height:6px;background:var(--teal);border-radius:1px;flex:none;margin-top:6px}
+.news .sk{flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:12.5px;font-weight:600;padding:4px 9px;border-radius:999px;border:1px solid rgba(181,140,255,.5);color:#E3D6FF}
+.ring{display:flex;align-items:center;gap:12px}
+.ring svg{width:58px;height:58px}
+.ring b{font:900 30px/1 "Big Shoulders Display",sans-serif}
+.minimap{width:100%;height:64px}
+
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:10px;font-size:12px;color:rgba(255,255,255,.66)}
+.foot kbd{font:inherit;border:1px solid rgba(255,255,255,.35);border-radius:3px;padding:0 4px}
+
+.toast{position:fixed;left:50%;bottom:64px;translate:-50% 20px;opacity:0;z-index:5;background:#fff;color:#14102E;font-weight:700;padding:10px 16px;border-radius:6px;transition:all .25s;pointer-events:none}
+.toast.show{opacity:1;translate:-50% 0}
+
+/* small / short screens: allow scrolling */
+@media (max-width:900px),(max-height:640px){
+  body{overflow:auto}
+  .hud{height:auto;min-height:100svh;grid-template-rows:auto 30svh auto auto}
+  .menu{grid-template-columns:repeat(2,1fr);grid-template-rows:none;height:auto}
+  .t-live{grid-column:span 2} .tile{min-height:170px}
+  .ctrl{width:100%}
+}
+@media (max-width:520px){ .streams{grid-template-columns:1fr 1fr} .streams>div:nth-child(3){display:none} .chip .lbl{display:none} }
+@media (pointer:coarse){ .foot .keys{display:none} }
+@media (prefers-reduced-motion:reduce){ *,*::before,*::after{animation:none!important;transition:none!important} .air{display:none} }
+
+@media (pointer:coarse),(max-width:900px){ .cur-chip{display:none!important} }
+.seafill{background:linear-gradient(rgba(27,14,58,0),#1B0E3A 70px)!important}
+body.ph-day .seafill{background:linear-gradient(rgba(14,62,92,0),#0E3E5C 70px)!important}
+.gator{position:absolute;pointer-events:none;z-index:1;animation:gator 14s ease-in-out forwards}
+.gator .body{animation:gbody 14s ease-in-out forwards}
+.gator .waterline{fill:rgba(30,20,70,.55)}
+body.ph-day .gator .waterline{fill:rgba(20,90,120,.5)}
+.gator .rip{transform-origin:60px 27px;animation:rip 2.6s ease-out infinite;opacity:0}
+.gator .r2{animation-delay:1.3s}
+body.ph-night .gator .body path,body.ph-night .gator .body circle:not(.eye){filter:brightness(.5)}
+body.ph-night .gator .eye{fill:#FFE36B;filter:drop-shadow(0 0 3px #FFE36B)}
+@keyframes gator{0%{opacity:0}8%{opacity:1}88%{opacity:1}100%{opacity:0}}
+@keyframes gbody{0%{transform:translate(0,14px)}12%{transform:translate(0,0)}80%{transform:translate(-26px,0)}100%{transform:translate(-30px,14px)}}
+@keyframes rip{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.3);opacity:0}}
+.flock{position:absolute;left:0;height:40px;width:220px;pointer-events:none}
+.flock i{position:absolute;display:block;animation:fbob 1.4s ease-in-out infinite}
+.flock.rev svg{transform:scaleX(-1)}
+.flock .wing{transform-origin:28px 12px;animation:flap .5s ease-in-out infinite alternate}
+@keyframes flap{to{transform:scaleY(-.7)}}
+@keyframes fbob{50%{transform:translateY(4px)}}
+body.ph-sunset .flock svg{filter:brightness(.8)}
+</style>
+</head>
+<body class="ph-sunset">
+
+<div class="world" aria-hidden="true">
+  <div class="sky dawn"></div><div class="sky day"></div><div class="sky sunset"></div><div class="sky night"></div>
+  <div class="stars" data-stars></div>
+  <div class="clouds">
+    <div class="cloud" style="top:9%;width:180px;animation-duration:150s;animation-delay:-40s"></div>
+    <div class="cloud" style="top:19%;width:120px;animation-duration:110s;animation-delay:-80s;opacity:.55"></div>
+    <div class="cloud" style="top:5%;width:240px;animation-duration:190s;animation-delay:-140s;opacity:.6"></div>
+  </div>
+  <div class="scene sunbox" data-sunbox><div class="sun"></div></div>
+  <div class="scene" data-scene>
+    <img class="water" src="img/water.webp" alt="" width="2400" height="644">
+    <div class="glints"></div>
+    <canvas class="island" data-island></canvas>
+    <div class="beam"></div><div class="lamp"></div>
+    <img class="rocks" src="img/rocks.webp" alt="" width="2400" height="1717">
+  </div>
+
+  <div class="air plane">
+    <div class="trail"></div>
+    <svg viewBox="0 0 96 30" width="96" height="30"><path d="M4 15c0-2 2-3 5-3h56l12-9h6l-6 9h9c4 0 7 1 7 3s-3 3-7 3H63l-14 9h-7l8-9H9c-3 0-5-1-5-3z" fill="#1A1430"/><path d="M4 15c0-2 2-3 5-3h56" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><circle class="navlight blink" cx="46" cy="25" r="1.8" fill="#FF3344"/><circle class="navlight blink" cx="80" cy="4" r="1.6" fill="#fff" style="animation-delay:.4s"/><circle class="navlight" cx="92" cy="15" r="1.2" fill="#7CFF8A"/></svg>
+  </div>
+  <div class="air heli">
+    <div class="searchlight"></div>
+    <svg viewBox="0 0 92 46" width="84" height="42"><g fill="#16112B"><rect class="rotor" x="6" y="4" width="80" height="3" rx="1.5"/><rect x="44" y="6" width="4" height="7"/><path d="M14 22c0-7 7-11 16-11h20c8 0 12 5 12 11v3H74l12-6h4l-2 10H62v1c0 3-3 5-6 5H24c-6 0-10-4-10-9z"/><path d="M26 36l-4 6h34l4-6" fill="none" stroke="#16112B" stroke-width="2.5"/></g><path d="M18 22c0-5 5-8 11-8h6v10H18z" fill="#3A7BD5" opacity=".75"/><circle class="trot" cx="88" cy="22" r="5" fill="none" stroke="#16112B" stroke-width="2" stroke-dasharray="6 4"/><circle class="navlight blink" cx="60" cy="10" r="1.8" fill="#FF3344"/></svg>
+  </div>
+  <div class="seafill"></div>
+  <div class="shade"></div>
+</div>
+
+<div class="hud">
+  <header class="top">
+    <a class="brand" href="#" aria-label="Five Star Daily home">
+      <span class="logo">Five Star Daily</span>
+      <span class="wanted" data-wanted aria-hidden="true"></span>
+    </a>
+    <div class="ctrl">
+      <div class="chip"><span class="clock" data-clock>--:--</span>
+        <div class="seg" role="group" data-i18n-aria="timeOfDay" aria-label="Time of day">
+          <button data-mode="auto" aria-pressed="true" data-i18n="auto">Auto</button>
+          <button data-mode="day" aria-pressed="false" data-i18n="day">Day</button>
+          <button data-mode="sunset" aria-pressed="false" data-i18n="sunset">Sunset</button>
+          <button data-mode="night" aria-pressed="false" data-i18n="night">Night</button>
+        </div></div>
+      <div class="chip"><div class="seg" role="group" aria-label="Language">
+          <button data-lang="en" aria-pressed="true">EN</button>
+          <button data-lang="es" aria-pressed="false">ES</button>
+          <button data-lang="pt" aria-pressed="false">PT</button>
+        </div></div>
+      <div class="chip cur-chip"><span class="lbl" data-i18n="cursor">Cursor</span><div class="seg" role="group" aria-label="Cursor">
+          <button data-cursor="aim" aria-pressed="true" aria-label="Crosshair"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="4.5"/><path d="M8 0v4M8 12v4M0 8h4M12 8h4"/></svg></button>
+          <button data-cursor="gun" aria-pressed="false" aria-label="Pistol"><svg width="18" height="16" viewBox="0 0 30 26"><path d="M27 6H3v5h10l1 2h3l2 9h5l-2-11h5z" fill="currentColor"/></svg></button>
+        </div></div>
+      <!-- Pro tier: hidden until the site has an audience -->
+    </div>
+  </header>
+
+  <div class="mid"><p class="tagline" data-i18n="tagline">Everything GTA VI, every day.</p></div>
+
+  <nav class="menu" data-menu aria-label="Sections">
+    <button class="tile t-live" data-soon>
+      <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2.5" fill="currentColor"/><path d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2"/></svg>
+        <h2 data-i18n="live">Live now</h2><span class="sample" data-i18n="sample">Sample layout</span><span class="livebadge"><i></i>LIVE</span></div>
+      <p data-i18n="live_d">Streams playing GTA VI right now on Twitch and YouTube.</p>
+      <div class="body streams">
+        <div><div class="thumb"><span class="tag">Twitch</span><svg class="play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="sk m"></div><div class="sk s"></div></div>
+        <div><div class="thumb"><span class="tag">YouTube</span><svg class="play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="sk m"></div><div class="sk s"></div></div>
+        <div><div class="thumb"><span class="tag">Twitch</span><svg class="play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="sk m"></div><div class="sk s"></div></div>
+      </div>
+    </button>
+
+    <button class="tile t-videos" data-soon>
+      <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M10 9v6l5-3z" fill="currentColor"/></svg><h2 data-i18n="videos">New videos</h2></div>
+      <p data-i18n="videos_d">Gameplay, tips and trailers from creators, updated every hour.</p>
+      <div class="body vids"><div class="thumb"><svg class="play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="thumb"><svg class="play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+    </button>
+
+    <button class="tile t-launch" data-soon>
+      <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg><h2 data-i18n="launch">Launch day</h2></div>
+      <p data-i18n="launch_d">November 19 on PS5 and Xbox Series X|S.</p>
+      <div class="body cd" data-cd>
+        <div><b data-u="d">0</b><span data-i18n="days">days</span></div>
+        <div><b data-u="h">00</b><span data-i18n="hours">hours</span></div>
+        <div><b data-u="m">00</b><span data-i18n="mins">min</span></div>
+      </div>
+    </button>
+
+    <button class="tile t-news" data-soon>
+      <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-2 2M7 9h7M7 13h7M7 16h4"/></svg><h2 data-i18n="news">Today’s news</h2></div>
+      <p data-i18n="news_d">Headlines from across the web, linked to the source.</p>
+      <ul class="body news"><li><div class="sk"></div></li><li><div class="sk m"></div></li><li><div class="sk s"></div></li></ul>
+    </button>
+
+    <button class="tile t-guides" data-soon>
+      <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></svg><h2 data-i18n="guides">Guides</h2></div>
+      <p data-i18n="guides_d">Step-by-step help for the things everyone searches for.</p>
+      <div class="body chips"><span data-i18n="g1">Money</span><span data-i18n="g2">Cars</span><span data-i18n="g3">Missions</span><span data-i18n="g4">Beginners</span></div>
+    </button>
+
+    <button class="tile t-check" data-soon>
+      <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 12.5l3 3 6-7"/></svg><h2 data-i18n="check">100% checklist</h2></div>
+      <p data-i18n="check_d">Tick off every collectible. Your progress is saved on this device.</p>
+      <div class="body ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="4"/><circle cx="18" cy="18" r="15" fill="none" stroke="#B6F25A" stroke-width="4" stroke-dasharray="0 100" stroke-linecap="round" transform="rotate(-90 18 18)"/></svg><b>0%</b></div>
+    </button>
+
+    <button class="tile t-map" data-soon>
+      <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14"/></svg><h2 data-i18n="map">Interactive map</h2></div>
+      <p data-i18n="map_d">Secrets and points of interest across Leonida.</p>
+      <svg class="body minimap" viewBox="0 0 200 64" preserveAspectRatio="xMidYMid meet"><path d="M40 8c18-4 30 6 34 18s-2 26 8 32-40 4-48-8S22 12 40 8z" fill="rgba(77,168,255,.22)" stroke="#4DA8FF" stroke-width="1.2"/><path d="M110 16c14-6 34 0 40 10s20 8 24 18-26 16-44 12-34-34-20-40z" fill="rgba(77,168,255,.22)" stroke="#4DA8FF" stroke-width="1.2"/><g fill="#FF3D8B"><circle cx="54" cy="30" r="3"/><circle cx="140" cy="34" r="3"/><circle cx="160" cy="46" r="3"/></g><g fill="#FFC94A"><circle cx="44" cy="44" r="3"/><circle cx="124" cy="24" r="3"/></g></svg>
+    </button>
+  </nav>
+
+  <footer class="foot">
+    <span data-i18n="disclaimer">Unofficial fan site. Not affiliated with Rockstar Games or Take-Two Interactive.</span>
+    <span class="keys" data-i18n="keys">Use the arrow keys to move through the menu, Enter to open.</span>
+  </footer>
+</div>
+<div class="toast" role="status" data-toast></div>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var store={get:function(k){try{return localStorage.getItem('fsd.'+k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem('fsd.'+k,v)}catch(e){}}};
+
+/* ---------- copy in three languages ---------- */
+var T={
+ en:{tagline:"Everything GTA VI, every day.",auto:"Auto",day:"Day",sunset:"Sunset",night:"Night",dawn:"Dawn",cursor:"Cursor",pro:"Go Pro",
+  live:"Live now",live_d:"Streams playing GTA VI right now on Twitch and YouTube.",sample:"Sample layout",
+  videos:"New videos",videos_d:"Gameplay, tips and trailers from creators, updated every hour.",
+  launch:"Launch day",launch_d:"November 19 on PS5 and Xbox Series X|S.",days:"days",hours:"hours",mins:"min",out:"Out now",
+  news:"Today’s news",news_d:"Headlines from across the web, linked to the source.",
+  guides:"Guides",guides_d:"Step-by-step help for the things everyone searches for.",g1:"Money",g2:"Cars",g3:"Missions",g4:"Beginners",
+  check:"100% checklist",check_d:"Tick off every collectible. Your progress is saved on this device.",
+  map:"Interactive map",map_d:"Secrets and points of interest across Leonida.",
+  disclaimer:"Unofficial fan site. Not affiliated with Rockstar Games or Take-Two Interactive.",
+  keys:"Use the arrow keys to move through the menu, Enter to open.",soon:"This section opens in version 1.",timeOfDay:"Time of day"},
+ es:{tagline:"Todo sobre GTA VI, cada día.",auto:"Auto",day:"Día",sunset:"Atardecer",night:"Noche",dawn:"Amanecer",cursor:"Cursor",pro:"Hazte Pro",
+  live:"En vivo",live_d:"Transmisiones de GTA VI ahora mismo en Twitch y YouTube.",sample:"Diseño de muestra",
+  videos:"Videos nuevos",videos_d:"Gameplay, trucos y tráilers de creadores, actualizados cada hora.",
+  launch:"Lanzamiento",launch_d:"19 de noviembre en PS5 y Xbox Series X|S.",days:"días",hours:"horas",mins:"min",out:"Ya disponible",
+  news:"Noticias de hoy",news_d:"Titulares de toda la web, con enlace a la fuente.",
+  guides:"Guías",guides_d:"Ayuda paso a paso para lo que todos buscan.",g1:"Dinero",g2:"Autos",g3:"Misiones",g4:"Principiantes",
+  check:"Checklist 100%",check_d:"Marca cada coleccionable. Tu progreso se guarda en este dispositivo.",
+  map:"Mapa interactivo",map_d:"Secretos y puntos de interés en todo Leonida.",
+  disclaimer:"Sitio de fans no oficial. Sin relación con Rockstar Games ni Take-Two Interactive.",
+  keys:"Usa las flechas para moverte por el menú y Enter para abrir.",soon:"Esta sección abre en la versión 1.",timeOfDay:"Hora del día"},
+ pt:{tagline:"Tudo sobre GTA VI, todo dia.",auto:"Auto",day:"Dia",sunset:"Pôr do sol",night:"Noite",dawn:"Amanhecer",cursor:"Cursor",pro:"Seja Pro",
+  live:"Ao vivo",live_d:"Lives de GTA VI agora mesmo na Twitch e no YouTube.",sample:"Layout de exemplo",
+  videos:"Vídeos novos",videos_d:"Gameplay, dicas e trailers de criadores, atualizados de hora em hora.",
+  launch:"Lançamento",launch_d:"19 de novembro no PS5 e Xbox Series X|S.",days:"dias",hours:"horas",mins:"min",out:"Já disponível",
+  news:"Notícias de hoje",news_d:"Manchetes da web inteira, com link para a fonte.",
+  guides:"Guias",guides_d:"Passo a passo para o que todo mundo procura.",g1:"Dinheiro",g2:"Carros",g3:"Missões",g4:"Iniciantes",
+  check:"Checklist 100%",check_d:"Marque cada colecionável. Seu progresso fica salvo neste aparelho.",
+  map:"Mapa interativo",map_d:"Segredos e pontos de interesse por toda Leonida.",
+  disclaimer:"Site de fã não oficial. Sem ligação com a Rockstar Games ou a Take-Two Interactive.",
+  keys:"Use as setas para navegar no menu e Enter para abrir.",soon:"Esta seção abre na versão 1.",timeOfDay:"Hora do dia"}
+};
+var lang=store.get('lang')||((navigator.language||'en').slice(0,2));
+if(!T[lang]) lang='en';
+function applyLang(l){
+  lang=l; store.set('lang',l); document.documentElement.lang=l==='pt'?'pt-BR':l;
+  $$('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n'); if(T[l][k]) el.textContent=T[l][k];});
+  $$('[data-i18n-aria]').forEach(function(el){el.setAttribute('aria-label',T[l][el.getAttribute('data-i18n-aria')]);});
+  $$('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===l)});
+  tickClock(); tickCd();
+}
+$$('[data-lang]').forEach(function(b){b.addEventListener('click',function(){applyLang(b.dataset.lang)})});
+
+/* ---------- day / night from the visitor's clock ---------- */
+var mode=store.get('mode')||'auto';
+function phaseFor(d){var h=d.getHours()+d.getMinutes()/60; if(h>=5.5&&h<7)return'dawn'; if(h>=7&&h<17.5)return'day'; if(h>=17.5&&h<19.5)return'sunset'; return'night';}
+function applyPhase(){
+  var p=mode==='auto'?phaseFor(new Date()):mode;
+  document.body.classList.remove('ph-dawn','ph-day','ph-sunset','ph-night'); document.body.classList.add('ph-'+p);
+  $$('[data-mode]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.mode===mode)});
+}
+$$('[data-mode]').forEach(function(b){b.addEventListener('click',function(){mode=b.dataset.mode;store.set('mode',mode);applyPhase();})});
+function pad(n){return (n<10?'0':'')+n}
+function tickClock(){var d=new Date(); $('[data-clock]').textContent=d.toLocaleTimeString(lang==='en'?'en-US':lang,{hour:'2-digit',minute:'2-digit'});}
+setInterval(function(){tickClock(); if(mode==='auto')applyPhase();},20000);
+
+/* ---------- launch countdown (Nov 19, 2026, visitor's local midnight) ---------- */
+var launch=new Date(2026,10,19,0,0,0).getTime();
+function tickCd(){
+  var left=launch-Date.now(), box=$('[data-cd]');
+  if(left<=0){box.innerHTML='<div><b>'+T[lang].out+'</b></div>';return;}
+  $('[data-u="d"]').textContent=Math.floor(left/864e5);
+  $('[data-u="h"]').textContent=pad(Math.floor(left/36e5)%24);
+  $('[data-u="m"]').textContent=pad(Math.floor(left/6e4)%60);
+}
+setInterval(tickCd,15000);
+
+/* ---------- cursor ---------- */
+function applyCursor(c){document.body.classList.toggle('gun',c==='gun');store.set('cursor',c);$$('[data-cursor]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.cursor===c)});}
+$$('[data-cursor]').forEach(function(b){b.addEventListener('click',function(){applyCursor(b.dataset.cursor)})});
+
+/* ---------- wanted-level stars light up on load ---------- */
+var w=$('[data-wanted]'), star='<svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7.1L12 17.3 5.8 21l1.6-7.1L2 9.2l7.1-.6z"/></svg>';
+w.innerHTML=star+star+star+star+star;
+$$('svg',w).forEach(function(s,i){setTimeout(function(){s.classList.add('on')},reduce?0:400+i*220)});
+if(!reduce) setTimeout(function(){w.classList.add('flash')},1700);
+
+/* ---------- stars in the night sky ---------- */
+var sb=$('[data-stars]'), html='';
+for(var i=0;i<110;i++){html+='<i style="left:'+(Math.random()*100).toFixed(2)+'%;top:'+(Math.random()*100).toFixed(2)+'%;opacity:'+(.35+Math.random()*.65).toFixed(2)+';animation-delay:-'+(Math.random()*3).toFixed(2)+'s'+(Math.random()<.15?';width:3px;height:3px':'')+'"></i>';}
+sb.innerHTML=html;
+
+/* ---------- scene sizing: horizon at ~60% of the screen ---------- */
+var scene=$('[data-scene]'), cv=$('[data-island]'), ctx=cv.getContext('2d'), img=new Image(), ready=false, W=0, H=0, dpr=1, off=document.createElement('canvas'), octx=off.getContext('2d');
+function layout(){
+  var vw=innerWidth, vh=innerHeight, small=vw<900||vh<640;
+  H=small?Math.max(vh*0.75, vw/1.3978):Math.max(vh*0.95, vw/1.3978); W=H*1.3978;
+  scene.style.width=W+'px'; scene.style.height=H+'px'; var sb=$('[data-sunbox]'); sb.style.width=W+'px'; sb.style.height=H+'px'; var top=(small?0.42:0.5)*vh-H*0.652; window.__horizon=top+H*0.652; scene.style.top=top+'px'; sb.style.top=top+'px'; document.documentElement.style.setProperty('--fill',Math.max(0,vh-(top+H)+2)+70+'px');
+  dpr=Math.min(1.5,devicePixelRatio||1); cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr);
+  if(ready){ off.width=cv.width; off.height=cv.height; octx.drawImage(img,0,0,off.width,off.height); }
+  draw(performance.now());
+}
+/* palms sway: each row band of the island layer slides sideways a little, more near the treetops; trunks stay rooted */
+var GROUND=870, TOP=330, FIXED=[[205,360,790],[2080,2340,870]]; // lighthouse and towers (source px) stay still below their tops
+function draw(t){
+  if(!ready) return;
+  var k=cv.width/2400, s=t/1000, band=Math.max(2,Math.round(3*dpr)), g0=GROUND*k, tp=TOP*k;
+  ctx.clearRect(0,0,cv.width,cv.height);
+  for(var y=0;y<cv.height;y+=band){
+    var h=Math.min(band,cv.height-y), ys=y/k;
+    var f=y>=g0?0:Math.pow(Math.min(1,(g0-y)/(g0-tp)),1.7);
+    var o=reduce?0:f*k*(6*Math.sin(s*1.15+ys*0.006)+3*Math.sin(s*2.7+ys*0.02)+4*Math.sin(s*0.35));
+    if(!o){ctx.drawImage(off,0,y,cv.width,h,0,y,cv.width,h);continue;}
+    var segs=[[0,cv.width]];
+    FIXED.forEach(function(fx){ if(ys>=fx[2]){ var x0=fx[0]*k,x1=fx[1]*k,n=[]; segs.forEach(function(g){ if(x1<=g[0]||x0>=g[1]||g[2]){n.push(g);return;} if(x0>g[0])n.push([g[0],x0]); n.push([Math.max(g[0],x0),Math.min(g[1],x1),1]); if(x1<g[1])n.push([x1,g[1]]); }); segs=n; } });
+    for(var i=0;i<segs.length;i++){var g=segs[i], sx=Math.round(g[0]), sw=Math.round(g[1])-sx; if(sw<=0)continue;
+      ctx.drawImage(off,sx,y,sw,h,sx+(g[2]?0:o),y,sw,h);}
+  }
+}
+var last=0;
+function loop(t){ if(!document.hidden && t-last>33){last=t;draw(t);} requestAnimationFrame(loop); }
+img.onload=function(){ready=true;layout(); if(!reduce) requestAnimationFrame(loop);};
+img.src='img/island.webp';
+addEventListener('resize',layout);
+
+/* ---------- menu: arrow keys move like a game menu ---------- */
+var tiles=$$('.tile');
+document.addEventListener('keydown',function(e){
+  var dirs={ArrowRight:[1,0],ArrowLeft:[-1,0],ArrowDown:[0,1],ArrowUp:[0,-1]}, d=dirs[e.key]; if(!d)return;
+  var cur=document.activeElement; if(tiles.indexOf(cur)<0){tiles[0].focus();e.preventDefault();return;}
+  var r=cur.getBoundingClientRect(), cx=r.left+r.width/2, cy=r.top+r.height/2, best=null, bd=1e9;
+  tiles.forEach(function(t){ if(t===cur)return; var q=t.getBoundingClientRect(), x=q.left+q.width/2-cx, y=q.top+q.height/2-cy;
+    if(d[0]&&Math.sign(x)!==d[0]||d[1]&&Math.sign(y)!==d[1])return; var dist=d[0]?Math.abs(x)+Math.abs(y)*2:Math.abs(y)+Math.abs(x)*2; if(dist<bd){bd=dist;best=t;} });
+  if(best){best.focus();e.preventDefault();}
+});
+var toast=$('[data-toast]'), tt;
+$$('[data-soon]').forEach(function(b){b.addEventListener('click',function(){toast.textContent=T[lang].soon;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},2200);})});
+
+applyPhase(); applyCursor(store.get('cursor')||'aim'); applyLang(lang);
+})();
+</script>
+</body>
+</html>

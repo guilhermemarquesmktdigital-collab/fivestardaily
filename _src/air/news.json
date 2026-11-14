@@ -1,0 +1,62 @@
+{
+ "S": {},
+ "NEWS": [
+  {
+   "slug": "pre-load-live",
+   "date": "2026-11-10T14:00:00Z",
+   "cat": "official",
+   "src": [
+    "rs_preload",
+    "ps_preload"
+   ],
+   "guide": "pre-load",
+   "title": {
+    "en": "GTA 6 pre-load is live on PS5 and Xbox Series X|S",
+    "es": "La precarga de GTA 6 ya está activa en PS5 y Xbox Series X|S",
+    "pt": "O pre-load de GTA 6 já está liberado no PS5 e no Xbox Series X|S"
+   },
+   "body": {
+    "en": "<p>Rockstar opened the pre-load on November 10, nine days before launch. On PS5 it began at midnight local time; on Xbox Series X|S it began at 12 a.m. GMT worldwide. The download needs up to 212 GB of free space, depending on the console.</p><p>Players with the boxed edition, which holds a code instead of a disc, can redeem it and pre-load the same way.</p>",
+    "es": "<p>Rockstar abrió la precarga el 10 de noviembre, nueve días antes del lanzamiento. En PS5 empezó a la medianoche local; en Xbox Series X|S, a las 12 a. m. GMT en todo el mundo. La descarga necesita hasta 212 GB libres, según la consola.</p><p>Quien tenga la edición en caja, que trae un código en vez de un disco, puede canjearlo y precargar igual.</p>",
+    "pt": "<p>A Rockstar abriu o pre-load em 10 de novembro, nove dias antes do lançamento. No PS5 começou à meia-noite no horário local; no Xbox Series X|S, às 0h GMT no mundo todo. O download precisa de até 212 GB livres, dependendo do console.</p><p>Quem tem a edição em caixa, que vem com um código em vez de disco, pode resgatar e fazer o pre-load do mesmo jeito.</p>"
+   }
+  },
+  {
+   "slug": "xbox-cloud",
+   "date": "2026-11-10T23:42:00Z",
+   "cat": "official",
+   "src": [
+    "wc_cloud"
+   ],
+   "title": {
+    "en": "GTA 6 will play on Xbox One through the cloud, but not on PC or phones",
+    "es": "GTA 6 se podrá jugar en Xbox One por la nube, pero no en PC ni móviles",
+    "pt": "GTA 6 vai rodar no Xbox One pela nuvem, mas não no PC nem no celular"
+   },
+   "body": {
+    "en": "<p>Xbox confirmed that GTA 6 joins Xbox Cloud Gaming on launch day, November 19, so it can be streamed to Xbox One as well as Xbox Series X|S. Cloud play does not cover PC, mobile or TV devices, and it runs at Xbox Series S settings, so the picture is softer than on a Series X.</p><p>Microsoft did not explain why PC is left out.</p>",
+    "es": "<p>Xbox confirmó que GTA 6 llega a Xbox Cloud Gaming el día del lanzamiento, el 19 de noviembre, así que se podrá jugar en streaming en Xbox One además de Xbox Series X|S. El juego en la nube no incluye PC, móviles ni televisores, y funciona con los ajustes de Xbox Series S, así que la imagen es menos nítida que en una Series X.</p><p>Microsoft no explicó por qué el PC queda fuera.</p>",
+    "pt": "<p>O Xbox confirmou que GTA 6 entra no Xbox Cloud Gaming no dia do lançamento, 19 de novembro, então dá para jogar por streaming no Xbox One além do Xbox Series X|S. A nuvem não inclui PC, celular nem TV, e roda com as configurações do Xbox Series S, então a imagem fica menos nítida que num Series X.</p><p>A Microsoft não explicou por que o PC ficou de fora.</p>"
+   }
+  },
+  {
+   "slug": "ps5-features",
+   "date": "2026-11-10T15:41:00Z",
+   "cat": "gameplay",
+   "src": [
+    "ps_preload",
+    "ps_features"
+   ],
+   "title": {
+    "en": "What GTA 6 does on PS5 and PS5 Pro",
+    "es": "Lo que GTA 6 hace en PS5 y PS5 Pro",
+    "pt": "O que GTA 6 faz no PS5 e no PS5 Pro"
+   },
+   "body": {
+    "en": "<p>Sony detailed the PlayStation-specific features. On PS5 the game uses the DualSense speaker, haptics and adaptive triggers, which can be adjusted in the accessibility settings, plus Tempest 3D Audio and faster loading from the SSD.</p><p>On PS5 Pro it adds sharper image quality through PlayStation Spectral Super Resolution and ray-traced shadows.</p>",
+    "es": "<p>Sony detalló las funciones propias de PlayStation. En PS5 el juego usa el altavoz, la vibración háptica y los gatillos adaptativos del DualSense, que se pueden ajustar en accesibilidad, además de Tempest 3D Audio y cargas más rápidas gracias al SSD.</p><p>En PS5 Pro suma una imagen más nítida con PlayStation Spectral Super Resolution y sombras con trazado de rayos.</p>",
+    "pt": "<p>A Sony detalhou os recursos exclusivos do PlayStation. No PS5 o jogo usa o alto-falante, a vibração háptica e os gatilhos adaptáveis do DualSense, que podem ser ajustados na acessibilidade, além do Tempest 3D Audio e de carregamentos mais rápidos pelo SSD.</p><p>No PS5 Pro ele ganha imagem mais nítida com o PlayStation Spectral Super Resolution e sombras com ray tracing.</p>"
+   }
+  }
+ ]
+}
