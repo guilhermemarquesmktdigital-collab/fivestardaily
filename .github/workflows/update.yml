@@ -20,13 +20,14 @@ jobs:
       - name: Fetch videos, lives and news
         run: python3 .github/scripts/update.py
       - name: Save if anything changed
+        id: save
         run: |
           git config user.name "fsd-bot"
           git config user.email "fsd-bot@users.noreply.github.com"
           git add data/feed.json
-          git diff --cached --quiet || (git commit -m "Hourly refresh" && git push)
+          if git diff --cached --quiet; then echo "changed=0" >> $GITHUB_OUTPUT; else git commit -m "Hourly refresh" && git push && echo "changed=1" >> $GITHUB_OUTPUT; fi
       - name: Tell Bing (IndexNow) the news and videos pages changed
-        if: success()
+        if: steps.save.outputs.changed == '1'
         run: |
           K=$(ls *.txt | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | sed 's/\.txt$//')
           [ -n "$K" ] && curl -s -o /dev/null -w "IndexNow %{http_code}\n" -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' \
