@@ -25,3 +25,9 @@ jobs:
           git config user.email "fsd-bot@users.noreply.github.com"
           git add data/feed.json
           git diff --cached --quiet || (git commit -m "Hourly refresh" && git push)
+      - name: Tell Bing (IndexNow) the news and videos pages changed
+        if: success()
+        run: |
+          K=$(ls *.txt | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | sed 's/\.txt$//')
+          [ -n "$K" ] && curl -s -o /dev/null -w "IndexNow %{http_code}\n" -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' \
+            -d "{\"host\":\"fivestardaily.com\",\"key\":\"$K\",\"urlList\":[\"https://fivestardaily.com/\",\"https://fivestardaily.com/news/\",\"https://fivestardaily.com/videos/\",\"https://fivestardaily.com/live/\"]}" || true
