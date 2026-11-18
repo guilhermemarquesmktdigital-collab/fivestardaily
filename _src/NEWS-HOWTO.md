@@ -31,3 +31,6 @@ git add -A && git commit -m "News: <title>" && git push
 ```
 
 The build regenerates every page, the sitemap and llms.txt. Check `news/<slug>/index.html` exists before pushing.
+
+## Share images (optional)
+Every page gets a 1200x630 share image. Pages without their own fall back to `og/default.jpg`. After adding news or guides, run `python3 _src/air/og.py` (needs Playwright; it only creates the missing ones) before `bash _src/build.sh`. If Playwright is not available, skip it.

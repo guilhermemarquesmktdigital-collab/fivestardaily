@@ -47,13 +47,19 @@ def jsonld(path, url, title, desc):
         d = [{'@context': 'https://schema.org', '@type': 'WebPage', 'name': title, 'description': desc, 'url': url, 'isPartOf': {'@type': 'WebSite', 'name': 'Five Star Daily', 'url': origin + base}}]
     return ''.join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + '</script>\n' for x in d)
 
+def ogimg(path, title):
+    name = path.replace('/', '-') if os.path.exists(f'{SC}/air/og/{path.replace("/", "-")}.jpg') else 'default'
+    u = f'{origin}{base}img/og/{name}.jpg'
+    return (f'<meta property="og:image" content="{u}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+            f'<meta property="og:image:alt" content="{html.escape(title)}">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:image" content="{u}">\n')
+
 def page_html(path, title, desc, robots_noindex=False):
     url = origin + base + (path + '/' if path else '')
     head = (f'<meta name="fsd-base" content="{base}">\n'
             f'<link rel="canonical" href="{url}">\n'
             f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="Five Star Daily">\n'
             f'<meta property="og:title" content="{html.escape(title)}">\n<meta property="og:description" content="{html.escape(desc)}">\n'
-            f'<meta property="og:url" content="{url}">\n<meta name="twitter:card" content="summary">\n' + FAV + '\n' + jsonld(path, url, title, desc)
+            f'<meta property="og:url" content="{url}">\n' + ogimg(path, title) + FAV + '\n' + jsonld(path, url, title, desc)
             + ('<meta name="robots" content="noindex, nofollow">\n' if (noindex or robots_noindex) else ''))
     s = re.sub(r'<title>.*?</title>', '<title>' + html.escape(title) + '</title>', src, count=1, flags=re.S)
     s = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="' + html.escape(desc) + '">', s, count=1)
@@ -71,6 +77,9 @@ os.makedirs(out + '/img', exist_ok=True)
 for n in ['island', 'water', 'rocks']:
     shutil.copy(f'{SC}/fsd/img/{n}.webp', f'{out}/img/{n}.webp')
 shutil.copy(f'{SC}/fsd/img/leonida-map.jpg', f'{out}/img/leonida-map.jpg')
+os.makedirs(out + '/img/og', exist_ok=True)
+for f in os.listdir(f'{SC}/air/og'):
+    shutil.copy(f'{SC}/air/og/{f}', f'{out}/img/og/{f}')
 for path, title, desc in pages:
     d = os.path.join(out, path)
     os.makedirs(d, exist_ok=True)
