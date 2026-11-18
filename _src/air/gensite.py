@@ -8,6 +8,8 @@ out, base, origin = sys.argv[1], sys.argv[2], sys.argv[3].rstrip('/')
 noindex = len(sys.argv) > 4
 C = json.load(open(SC + '/air/content.json'))
 src = open(SC + '/fsd/index.html').read()
+# The 100% checklist stays hidden until it has real content (see NEWS-HOWTO).
+src = re.sub(r'\s*<a class="tile t-check".*?</a>', '', src, count=1, flags=re.S)
 
 # images and icons load from the site root, so nested pages find them
 for n in ['island', 'water', 'rocks']:
