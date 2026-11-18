@@ -70,3 +70,60 @@ g('editions', 3, ['gd_price', 'dx_ultimate', 'abc_launch'],
 <h2>A caixa não tem disco</h2><p>As cópias físicas vendidas nas lojas trazem um <strong>código de download</strong>, não um disco. Você resgata o código e baixa o jogo como se fosse digital, então a caixa não economiza o download.</p>
 <h2>Abra espaço antes</h2><p>A instalação é enorme: cerca de <strong>212 GB no PS5</strong> e cerca de <strong>234 GB no Xbox Series X|S</strong>. Confira o espaço livre antes da noite do lançamento, ou o download vai parar no meio.</p>
 <h2>Qual comprar?</h2><p>Os extras da Ultimate Edition são cosméticos e de conveniência: não liberam conteúdo de história. Se o que importa para você é a história e o mundo, a Standard Edition entrega o jogo inteiro. O CEO da Take-Two, Strauss Zelnick, disse em agosto que as pré-vendas estavam pendendo para a Ultimate Edition, talvez porque os fãs mais dedicados compram primeiro, e indicou que não havia planos de desconto no fim de ano.</p>"""})
+
+S3.update({
+ 'gti_cars': ['GTA Intel: GTA 6 cars list, every confirmed car with official evidence', 'https://gtaintel.com/news/gta-6-all-confirmed-cars-list'],
+ 'pcg_cars': ['PC Gamer: The confirmed GTA 6 cars, bikes and other vehicles', 'https://www.pcgamer.com/gta-6-cars-list'],
+ 'gti_weapons': ['GTA Intel: Every confirmed GTA 6 weapon', 'https://gtaintel.com/news/gta-6-confirmed-weapons-list'],
+ 'gf_look': ['Gfinity: Everything revealed in the GTA 6 Extended Look', 'https://www.gfinityesports.com/article/gta-6-everything-revealed-in-the-extended-look-special'],
+})
+
+def _tbl(rows, h):
+    return '<table><thead><tr>' + ''.join('<th>%s</th>' % x for x in h) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join('<td>%s</td>' % c for c in r) + '</tr>' for r in rows) + '</tbody></table>'
+
+_CARS_N = [('’95 Grotti Cheetah', 'Ultimate Edition'), ('’67 Vapid Dominator Buggy', 'Ultimate Edition'), ('’55 Vapid Stanier', 'Vintage Vice City Pack (pre-order)'),
+ ('Vapid Ganado', 'Jason’s pickup · Ultimate Edition retro build'), ('Benefactor Schafter', 'Extended Look'), ('Bravado Buffalo', 'Extended Look (circuit race)'),
+ ('Deviant · Sirius · Riata', 'Ultimate Edition (Wyman’s classic car collection)')]
+_CARS_S = [('Bravado Banshee', 'Trailer'), ('Grotti Carbonizzare', 'Trailer'), ('Grotti Furia', 'Trailer, screenshot'), ('Invetero Coquette D10', 'Trailer, screenshot'),
+ ('Pegassi Tempesta', 'Trailer, screenshot'), ('Pegassi Zorrusso', 'Trailer'), ('Pfister Comet S2 Cabrio', 'Trailer, screenshot'), ('Annis Elegy Retro Custom', 'Trailer'),
+ ('Bravado Gauntlet Hellfire', 'Trailer'), ('Bravado Buffalo STX Pursuit (police)', 'Trailer, screenshot'), ('Dundreary Landstalker XL', 'Trailer, screenshot, video'),
+ ('Benefactor Dubsta', 'Trailer, screenshot, video'), ('Enus Jubilee', 'Trailer, screenshot'), ('Albany V-STR', 'Screenshot'), ('MTL Packer (truck)', 'Trailer, screenshot')]
+_BIKES = [('Alvino V1', 'Official screenshot and cover art; new to the series'), ('Dinka Enduro', 'Ultimate Edition'), ('Miabatsu Sanchez', 'Trailer 1'), ('Nagasaki Carbon RS', 'Shown in footage')]
+_GUNS_N = [('Moreland 850', 'Pump shotgun', 'Pickup prompt in the Extended Look'), ('Hawk & Little Morgan', 'Revolver pair', 'Ultimate Edition'),
+ ('Girardi ES9', 'Pistol (Jason)', 'Rockstar site, personalized variants'), ('Klose K17', 'Pistol (Lucia)', 'Rockstar site, personalized variants'), ('Mustang .357', 'Revolver', 'Name on the barrel in an official screenshot')]
+_GUNS_S = 'submachine gun and grenade launcher (Trailer 2), carbines and a scoped sniper rifle (screenshots and video), double-barrel shotgun, and melee items: baseball bat, hammer, pool cue and a mini golf club'
+
+g('cars-weapons-shops', 5, ['gti_cars', 'pcg_cars', 'gti_weapons', 'gf_look'],
+ {'en': 'GTA 6 confirmed cars, weapons, clothes and shops (official only)',
+  'es': 'GTA 6: autos, armas, ropa y tiendas confirmados (solo oficial)',
+  'pt': 'GTA 6: carros, armas, roupas e lojas confirmados (só oficial)'},
+ {'en': 'Every car, gun and place Rockstar has actually named or shown, separated from the guesses. Leaks are left out.',
+  'es': 'Cada auto, arma y lugar que Rockstar nombró o mostró de verdad, separado de las suposiciones. Las filtraciones quedan fuera.',
+  'pt': 'Cada carro, arma e lugar que a Rockstar realmente nomeou ou mostrou, separado dos palpites. Vazamentos ficam de fora.'},
+ {'en': """<p>Two levels of "confirmed" are mixed up online. Here we split them: <strong>named by Rockstar</strong> (in its own text, edition pages, or a name visible in the game) and <strong>seen in official footage</strong> (identified by fans from the trailers, screenshots and the Extended Look, so the exact in-game name can still change).</p>
+<h2>Cars named by Rockstar</h2>""" + _tbl(_CARS_N, ['Car', 'Where']) + """
+<h2>Cars seen in official footage</h2>""" + _tbl(_CARS_S, ['Car (fan ID)', 'Where']) + """
+<h2>Motorcycles</h2>""" + _tbl(_BIKES, ['Bike', 'Where']) + """
+<h2>Weapons named by Rockstar</h2>""" + _tbl(_GUNS_N, ['Weapon', 'Type', 'Where']) + """
+<h2>Weapons seen but not named</h2><p>Official footage also shows a """ + _GUNS_S + """. Classics like grenades, Molotovs and knives are expected, but Rockstar has not shown them yet.</p>
+<h2>Clothes</h2><p>The Extended Look showed a quick menu with a <strong>clothing tab</strong>, so you can change outfits on the go. Changing your look also matters to the police: a new mask, hat or outfit helps you lose a search. The Ultimate Edition adds premium apparel.</p>
+<h2>Shops and places</h2><ul><li><strong>One-Eyed Willie’s</strong> and <strong>Rideout Customs</strong>: car customization garages shown on the Ultimate Edition page.</li><li><strong>Wyman’s Classic Car Collection</strong>: the source of the classic cars in the Ultimate Edition.</li><li><strong>Gyms</strong> and a <strong>firing range</strong>: shown in the Extended Look.</li><li><strong>Megamundo</strong>: the company where Petra Navarro is COO.</li></ul>
+<p>Rockstar has not published a full list of stores, brands or every gun. We will expand this page as soon as the game is out and the real menus are visible.</p>""",
+  'es': """<p>En internet se mezclan dos niveles de "confirmado". Aquí los separamos: <strong>nombrado por Rockstar</strong> (en sus textos, en las páginas de ediciones o con el nombre visible en el juego) y <strong>visto en material oficial</strong> (identificado por fans en tráilers, capturas y el Extended Look, así que el nombre exacto aún puede cambiar).</p>
+<h2>Autos nombrados por Rockstar</h2>""" + _tbl(_CARS_N, ['Auto', 'Dónde']) + """
+<h2>Autos vistos en material oficial</h2>""" + _tbl(_CARS_S, ['Auto (ID de fans)', 'Dónde']) + """
+<h2>Motos</h2>""" + _tbl(_BIKES, ['Moto', 'Dónde']) + """
+<h2>Armas nombradas por Rockstar</h2>""" + _tbl(_GUNS_N, ['Arma', 'Tipo', 'Dónde']) + """
+<h2>Armas vistas pero sin nombre</h2><p>El material oficial también muestra subfusil y lanzagranadas (Tráiler 2), carabinas y un rifle de francotirador con mira (capturas y video), escopeta de dos cañones y armas cuerpo a cuerpo: bate de béisbol, martillo, taco de billar y un palo de minigolf. Clásicos como granadas, molotov y cuchillos se esperan, pero Rockstar aún no los mostró.</p>
+<h2>Ropa</h2><p>El Extended Look mostró un menú rápido con una <strong>pestaña de ropa</strong>, para cambiar de atuendo en cualquier momento. Cambiar de aspecto también importa con la policía: otra máscara, gorra o ropa ayuda a perder una búsqueda. La Ultimate Edition añade ropa premium.</p>
+<h2>Tiendas y lugares</h2><ul><li><strong>One-Eyed Willie’s</strong> y <strong>Rideout Customs</strong>: talleres de personalización de autos que aparecen en la página de la Ultimate Edition.</li><li><strong>Wyman’s Classic Car Collection</strong>: el origen de los clásicos de la Ultimate Edition.</li><li><strong>Gimnasios</strong> y un <strong>campo de tiro</strong>: mostrados en el Extended Look.</li><li><strong>Megamundo</strong>: la empresa donde Petra Navarro es COO.</li></ul>
+<p>Rockstar no publicó una lista completa de tiendas, marcas ni de todas las armas. Ampliaremos esta página en cuanto salga el juego y se vean los menús reales.</p>""",
+  'pt': """<p>Na internet se misturam dois níveis de "confirmado". Aqui separamos: <strong>nomeado pela Rockstar</strong> (nos textos dela, nas páginas das edições ou com o nome visível no jogo) e <strong>visto em material oficial</strong> (identificado por fãs nos trailers, imagens e no Extended Look, então o nome exato ainda pode mudar).</p>
+<h2>Carros nomeados pela Rockstar</h2>""" + _tbl(_CARS_N, ['Carro', 'Onde']) + """
+<h2>Carros vistos em material oficial</h2>""" + _tbl(_CARS_S, ['Carro (ID dos fãs)', 'Onde']) + """
+<h2>Motos</h2>""" + _tbl(_BIKES, ['Moto', 'Onde']) + """
+<h2>Armas nomeadas pela Rockstar</h2>""" + _tbl(_GUNS_N, ['Arma', 'Tipo', 'Onde']) + """
+<h2>Armas vistas mas sem nome</h2><p>O material oficial também mostra submetralhadora e lança-granadas (Trailer 2), carabinas e um rifle de precisão com mira (imagens e vídeo), escopeta de dois canos e armas brancas: taco de beisebol, martelo, taco de sinuca e um taco de minigolfe. Clássicos como granadas, molotovs e facas são esperados, mas a Rockstar ainda não mostrou.</p>
+<h2>Roupas</h2><p>O Extended Look mostrou um menu rápido com uma <strong>aba de roupas</strong>, para trocar de visual a qualquer momento. Mudar o visual também importa com a polícia: outra máscara, boné ou roupa ajuda a despistar uma busca. A Ultimate Edition traz roupas premium.</p>
+<h2>Lojas e lugares</h2><ul><li><strong>One-Eyed Willie’s</strong> e <strong>Rideout Customs</strong>: oficinas de personalização de carros que aparecem na página da Ultimate Edition.</li><li><strong>Wyman’s Classic Car Collection</strong>: de onde vêm os clássicos da Ultimate Edition.</li><li><strong>Academias</strong> e um <strong>estande de tiro</strong>: mostrados no Extended Look.</li><li><strong>Megamundo</strong>: a empresa onde Petra Navarro é COO.</li></ul>
+<p>A Rockstar não publicou uma lista completa de lojas, marcas nem de todas as armas. Vamos ampliar esta página assim que o jogo sair e os menus reais aparecerem.</p>"""})

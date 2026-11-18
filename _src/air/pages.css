@@ -140,7 +140,7 @@ body.inner .shade{background:rgba(8,6,24,.62)}
 .art .meta{color:var(--mute);font-size:13px;margin:12px 0 0}
 .prose{margin-top:22px;font-size:16.5px;line-height:1.65;color:#E9E2F7;max-width:68ch}
 .prose h2{font:900 28px/1.05 "Big Shoulders Display",sans-serif;color:#fff;margin:28px 0 8px}
-.prose p{margin:0 0 14px}.prose ul,.prose ol{margin:0 0 14px;padding-left:22px}.prose li{margin:6px 0}
+.prose p{margin:0 0 14px}.prose ul,.prose ol{margin:0 0 14px;padding-left:22px}.prose li{margin:6px 0}.prose table{width:100%;border-collapse:collapse;margin:4px 0 18px;font-size:15px;line-height:1.4}.prose th{text-align:left;font-weight:700;color:#FFE08A;border-bottom:1px solid rgba(255,255,255,.3);padding:8px 10px 8px 0}.prose td{border-bottom:1px solid rgba(255,255,255,.12);padding:8px 10px 8px 0;vertical-align:top}.prose td:first-child{font-weight:700;color:#fff}
 .prose a{color:var(--teal)}
 .prose .upd{color:var(--mute);font-size:13.5px}
 .prose ol.tl{list-style:none;padding:0;border-left:3px solid var(--gold);margin-left:4px}
