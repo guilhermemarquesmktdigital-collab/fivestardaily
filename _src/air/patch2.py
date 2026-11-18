@@ -22,5 +22,5 @@ assert a in s
 s = s.replace(a, "  if(document.body.classList.contains('inner'))return;\n" + a)
 a = "applyPhase(); applyCursor("
 assert a in s
-s = s.replace(a, open(sys.argv[3]).read() + '\n' + open(sys.argv[3].replace('pages.js','critters.js')).read() + '\n' + a)
+s = s.replace(a, open(sys.argv[3]).read() + '\n' + open(sys.argv[3].replace('pages.js','critters.js')).read() + '\n' + open(sys.argv[3].replace('pages.js','radio.js')).read() + '\n' + a)
 open(P, 'w').write(s); print('ok2')
