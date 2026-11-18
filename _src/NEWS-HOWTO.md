@@ -19,7 +19,7 @@ Rules
 - 2 short paragraphs (about 90–140 words in English), then the same in Spanish and Brazilian Portuguese.
 - Write it in our own words: no copied sentences, at most one short quote under 15 words.
 - `src[0]` is the outlet the "Read the full story" button links to.
-- Optional `guide` links to a related guide slug (release-date, pre-load, trailers, leonida-regions, gameplay-extended-look, jason-and-lucia, characters, wanted-system, combat-and-cars, things-to-do, references-and-callbacks, timeline).
+- Optional `guide` links to a related guide slug (release-date, pre-load, trailers, leonida-regions, gameplay-extended-look, jason-and-lucia, characters, wanted-system, combat-and-cars, things-to-do, references-and-callbacks, timeline, soundtrack, editions).
 - Slugs must be unique and never reused.
 
 Build and publish (from the repo root):

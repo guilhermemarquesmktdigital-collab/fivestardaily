@@ -1,5 +1,18 @@
 {
- "S": {},
+ "S": {
+  "abc_launch": [
+   "ABC News: Grand Theft Auto 6 is out this week, everything you need to know",
+   "https://www.abc.net.au/news/2026-11-17/grand-theft-auto-6-gta6-explainer/107384556"
+  ],
+  "nw_album": [
+   "netzwelt: GTA 6 soundtrack available to pre-order, six songs out now",
+   "https://www.netzwelt.de/news/258672-gta-6soundtrack-vorbestellbar-rockstar-ueberrascht-fans-gratis-hoerprobe-spotify.html"
+  ],
+  "dx_ultimate": [
+   "Dexerto: Take-Two boss says the $100 Ultimate Edition is outselling the $80 Standard",
+   "https://www.dexerto.com/gta/rockstar-games-boss-says-100-gta-6-ultimate-edition-is-outselling-the-80-standard-version-3397246/"
+  ]
+ },
  "NEWS": [
   {
    "slug": "pre-load-live",
@@ -56,6 +69,63 @@
     "en": "<p>Sony detailed the PlayStation-specific features. On PS5 the game uses the DualSense speaker, haptics and adaptive triggers, which can be adjusted in the accessibility settings, plus Tempest 3D Audio and faster loading from the SSD.</p><p>On PS5 Pro it adds sharper image quality through PlayStation Spectral Super Resolution and ray-traced shadows.</p>",
     "es": "<p>Sony detalló las funciones propias de PlayStation. En PS5 el juego usa el altavoz, la vibración háptica y los gatillos adaptativos del DualSense, que se pueden ajustar en accesibilidad, además de Tempest 3D Audio y cargas más rápidas gracias al SSD.</p><p>En PS5 Pro suma una imagen más nítida con PlayStation Spectral Super Resolution y sombras con trazado de rayos.</p>",
     "pt": "<p>A Sony detalhou os recursos exclusivos do PlayStation. No PS5 o jogo usa o alto-falante, a vibração háptica e os gatilhos adaptáveis do DualSense, que podem ser ajustados na acessibilidade, além do Tempest 3D Audio e de carregamentos mais rápidos pelo SSD.</p><p>No PS5 Pro ele ganha imagem mais nítida com o PlayStation Spectral Super Resolution e sombras com ray tracing.</p>"
+   }
+  },
+  {
+   "slug": "launch-midnight-local-time",
+   "date": "2026-11-17T09:00:00Z",
+   "cat": "release",
+   "src": [
+    "abc_launch"
+   ],
+   "guide": "editions",
+   "title": {
+    "en": "GTA 6 unlocks at midnight local time on November 19",
+    "es": "GTA 6 se desbloquea a medianoche, hora local, el 19 de noviembre",
+    "pt": "GTA 6 libera à meia-noite, no horário local, em 19 de novembro"
+   },
+   "body": {
+    "en": "<p>GTA 6 does not launch at one global moment. A Rockstar support post says the game unlocks at midnight local time on November 19 in each country, so players in the Pacific and Australia get in hours before Europe and the Americas. In Australia, for example, the east coast unlocks at 12 a.m. AEDT while Perth gets it at 9 p.m. on November 18.</p><p>The download is big: about 212 GB on PS5 and about 234 GB on Xbox Series X|S. Boxed copies hold a download code rather than a disc, so pre-load if you can and clear space before the night.</p>",
+    "es": "<p>GTA 6 no sale en un único momento mundial. Según una publicación del soporte de Rockstar, el juego se desbloquea a medianoche, hora local, del 19 de noviembre en cada país, así que el Pacífico y Australia entran horas antes que Europa y América. En Australia, por ejemplo, la costa este desbloquea a las 0:00 AEDT y Perth a las 21:00 del 18 de noviembre.</p><p>La descarga es grande: unos 212 GB en PS5 y unos 234 GB en Xbox Series X|S. Las copias en caja traen un código en lugar de disco, así que precarga si puedes y libera espacio antes de esa noche.</p>",
+    "pt": "<p>GTA 6 não sai num único momento no mundo todo. Segundo uma publicação do suporte da Rockstar, o jogo libera à meia-noite, no horário local, de 19 de novembro em cada país, então o Pacífico e a Austrália entram horas antes da Europa e das Américas. Na Austrália, por exemplo, a costa leste libera à 0h AEDT e Perth às 21h do dia 18.</p><p>O download é grande: cerca de 212 GB no PS5 e cerca de 234 GB no Xbox Series X|S. As cópias em caixa trazem um código, não um disco, então faça o pre-load se puder e libere espaço antes da noite.</p>"
+   }
+  },
+  {
+   "slug": "gta-vi-the-album-out-with-game",
+   "date": "2026-11-18T08:00:00Z",
+   "cat": "official",
+   "src": [
+    "nw_album"
+   ],
+   "guide": "soundtrack",
+   "title": {
+    "en": "GTA VI: The Album arrives with the game, 34 tracks",
+    "es": "GTA VI: The Album llega con el juego, 34 canciones",
+    "pt": "GTA VI: The Album chega junto com o jogo, 34 faixas"
+   },
+   "body": {
+    "en": "<p>Rockstar's companion record, Grand Theft Auto VI: The Album, releases on November 19 alongside the game. It was made with Atlantic Records and has 34 tracks, with CD and vinyl editions, including a limited vinyl pressing.</p><p>Several songs are already out as official uploads, from Travis Scott's RHYNO to Keith Richards' Bright Lights, Big City. You can play them right here: tap the Soundtrack button at the bottom right of any page.</p>",
+    "es": "<p>El disco que acompaña al juego, Grand Theft Auto VI: The Album, sale el 19 de noviembre junto con GTA 6. Está hecho con Atlantic Records y tiene 34 canciones, con ediciones en CD y vinilo, incluida una edición limitada en vinilo.</p><p>Varias canciones ya están publicadas oficialmente, desde RHYNO de Travis Scott hasta Bright Lights, Big City de Keith Richards. Puedes oírlas aquí mismo: toca el botón de banda sonora abajo a la derecha de cualquier página.</p>",
+    "pt": "<p>O disco que acompanha o jogo, Grand Theft Auto VI: The Album, sai em 19 de novembro junto com GTA 6. Foi feito com a Atlantic Records e tem 34 faixas, com edições em CD e vinil, incluindo um vinil de edição limitada.</p><p>Várias músicas já saíram oficialmente, de RHYNO, do Travis Scott, a Bright Lights, Big City, do Keith Richards. Dá para ouvir aqui mesmo: toque no botão de trilha sonora no canto inferior direito de qualquer página.</p>"
+   }
+  },
+  {
+   "slug": "vintage-vice-city-pack-deadline",
+   "date": "2026-11-18T10:00:00Z",
+   "cat": "release",
+   "src": [
+    "dx_ultimate"
+   ],
+   "guide": "editions",
+   "title": {
+    "en": "Last chance for the GTA 6 Vintage Vice City Pack pre-order bonus",
+    "es": "Última oportunidad para el extra de reserva Vintage Vice City Pack de GTA 6",
+    "pt": "Última chance para o bônus de pré-venda Vintage Vice City Pack de GTA 6"
+   },
+   "body": {
+    "en": "<p>Standard Edition pre-orders of GTA 6 placed before November 20 include the Vintage Vice City Pack. With the game unlocking on November 19, that window closes at the end of launch day.</p><p>The Standard Edition costs $79.99 and the Ultimate Edition $99.99. Take-Two CEO Strauss Zelnick said in August that pre-orders were leaning toward the Ultimate Edition, without sharing figures. Our editions guide explains what each one includes.</p>",
+    "es": "<p>Las reservas de la Standard Edition de GTA 6 hechas antes del 20 de noviembre incluyen el Vintage Vice City Pack. Como el juego se desbloquea el 19 de noviembre, el plazo termina al final del día del lanzamiento.</p><p>La Standard Edition cuesta 79,99 USD y la Ultimate Edition, 99,99 USD. El CEO de Take-Two, Strauss Zelnick, dijo en agosto que las reservas se inclinaban hacia la Ultimate, sin dar cifras. Nuestra guía de ediciones explica qué incluye cada una.</p>",
+    "pt": "<p>As pré-vendas da Standard Edition de GTA 6 feitas antes de 20 de novembro incluem o Vintage Vice City Pack. Como o jogo libera em 19 de novembro, o prazo acaba no fim do dia do lançamento.</p><p>A Standard Edition custa US$ 79,99 e a Ultimate Edition, US$ 99,99. O CEO da Take-Two, Strauss Zelnick, disse em agosto que as pré-vendas estavam pendendo para a Ultimate, sem divulgar números. Nosso guia de edições explica o que cada uma inclui.</p>"
    }
   }
  ]

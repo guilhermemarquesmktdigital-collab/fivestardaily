@@ -180,5 +180,7 @@ _N = json.load(open(os.path.join(HERE, 'news.json')))
 S.update(_N['S']); NEWS = sorted(_N['NEWS'], key=lambda n: n['date'], reverse=True)
 from guides2 import S2, G2
 S.update(S2); GUIDES = GUIDES + G2
+from guides3 import S3, G3
+S.update(S3); GUIDES = GUIDES + G3
 json.dump({'S': S, 'GUIDES': GUIDES, 'NEWS': NEWS, 'PAGES': PAGESX, 'EMAIL': EMAIL}, open(os.path.join(HERE, 'content.json'), 'w'), ensure_ascii=False)
 print('ok')
