@@ -19,17 +19,20 @@ GUIDES = [
            'es': 'Todo lo que Rockstar y los fabricantes de consolas confirmaron sobre cuándo y dónde jugar.',
            'pt': 'Tudo o que a Rockstar e as fabricantes de console confirmaram sobre quando e onde jogar.'},
   'body': {
-   'en': """<h2>The date</h2><p>Grand Theft Auto VI launches on <strong>Thursday, November 19, 2026</strong>.</p>
+   'en': """<p><strong>Quick answer:</strong> GTA 6 launches November 19, 2026. On PS5 it unlocks at midnight in your own time zone, so for most people that is the night of November 18 going into the 19th. Free space needed: about 212 GB on PS5 and 234 GB on Xbox Series X|S.</p>
+<h2>The date</h2><p>Grand Theft Auto VI launches on <strong>Thursday, November 19, 2026</strong>.</p>
 <h2>Platforms</h2><ul><li><strong>PlayStation 5</strong> and <strong>PS5 Pro</strong></li><li><strong>Xbox Series X|S</strong></li><li><strong>Xbox One and Xbox Series X|S through Xbox Cloud Gaming</strong>, from launch day</li></ul>
 <p>Cloud play on Xbox does not include PC, mobile or TV devices, and it runs at Xbox Series S settings. Rockstar has not announced a PC version.</p>
 <h2>What time it unlocks</h2><p>On PS5 the game unlocks at <strong>midnight local time</strong> in each country. New Zealand goes first, and the rest of the world follows as midnight reaches each time zone. If you are on Xbox, check the store page on your console for your local unlock time.</p>
 <h2>Our tip</h2><p>Pre-load now, so launch night is only about the unlock and not a 200 GB download. Our pre-load guide shows how.</p>""",
-   'es': """<h2>La fecha</h2><p>Grand Theft Auto VI sale el <strong>jueves 19 de noviembre de 2026</strong>.</p>
+   'es': """<p><strong>Respuesta rápida:</strong> GTA 6 sale el 19 de noviembre de 2026. En PS5 se desbloquea a la medianoche de tu propia zona horaria, así que para la mayoría es la noche del 18 hacia el 19. Espacio libre necesario: unos 212 GB en PS5 y 234 GB en Xbox Series X|S.</p>
+<h2>La fecha</h2><p>Grand Theft Auto VI sale el <strong>jueves 19 de noviembre de 2026</strong>.</p>
 <h2>Plataformas</h2><ul><li><strong>PlayStation 5</strong> y <strong>PS5 Pro</strong></li><li><strong>Xbox Series X|S</strong></li><li><strong>Xbox One y Xbox Series X|S mediante Xbox Cloud Gaming</strong>, desde el día del lanzamiento</li></ul>
 <p>El juego en la nube de Xbox no incluye PC, móviles ni televisores, y funciona con los ajustes de Xbox Series S. Rockstar no ha anunciado una versión para PC.</p>
 <h2>A qué hora se desbloquea</h2><p>En PS5 el juego se desbloquea a la <strong>medianoche local</strong> de cada país. Nueva Zelanda es la primera y el resto del mundo sigue a medida que llega la medianoche a cada zona horaria. En Xbox, revisa la página de la tienda en tu consola para ver tu hora local.</p>
 <h2>Nuestro consejo</h2><p>Haz la precarga ya, así la noche del lanzamiento solo esperas el desbloqueo y no una descarga de 200 GB. Nuestra guía de precarga explica cómo.</p>""",
-   'pt': """<h2>A data</h2><p>Grand Theft Auto VI chega na <strong>quinta-feira, 19 de novembro de 2026</strong>.</p>
+   'pt': """<p><strong>Resposta rápida:</strong> GTA 6 sai em 19 de novembro de 2026. No PS5 libera à meia-noite do seu próprio fuso, então para a maioria é a noite do dia 18 para o 19. Espaço livre necessário: cerca de 212 GB no PS5 e 234 GB no Xbox Series X|S.</p>
+<h2>A data</h2><p>Grand Theft Auto VI chega na <strong>quinta-feira, 19 de novembro de 2026</strong>.</p>
 <h2>Plataformas</h2><ul><li><strong>PlayStation 5</strong> e <strong>PS5 Pro</strong></li><li><strong>Xbox Series X|S</strong></li><li><strong>Xbox One e Xbox Series X|S pelo Xbox Cloud Gaming</strong>, desde o dia do lançamento</li></ul>
 <p>O jogo na nuvem do Xbox não inclui PC, celular nem TV, e roda com as configurações do Xbox Series S. A Rockstar não anunciou versão para PC.</p>
 <h2>Que horas libera</h2><p>No PS5 o jogo libera à <strong>meia-noite no horário local</strong> de cada país. A Nova Zelândia é a primeira, e o resto do mundo vem em seguida conforme a meia-noite chega em cada fuso. No Xbox, confira a página da loja no seu console para ver o horário local.</p>
@@ -40,15 +43,18 @@ GUIDES = [
            'es': 'La precarga ya está abierta en PS5 y Xbox Series X|S. Así dejas el juego instalado antes de la noche del lanzamiento.',
            'pt': 'O pre-load já está aberto no PS5 e no Xbox Series X|S. Veja como deixar o jogo instalado antes da noite do lançamento.'},
   'body': {
-   'en': """<h2>When it started</h2><ul><li><strong>PS5:</strong> from midnight local time on November 10, 2026.</li><li><strong>Xbox Series X|S:</strong> from 12 a.m. GMT on November 10, 2026, at the same moment worldwide.</li></ul>
+   'en': """<p><strong>Quick answer:</strong> Open the game page in your PlayStation Store or Microsoft Store library and start the download. You need about 212 GB free on PS5 and 234 GB on Xbox Series X|S. Leave the console in rest mode so it finishes overnight.</p>
+<h2>When it started</h2><ul><li><strong>PS5:</strong> from midnight local time on November 10, 2026.</li><li><strong>Xbox Series X|S:</strong> from 12 a.m. GMT on November 10, 2026, at the same moment worldwide.</li></ul>
 <h2>Space you need</h2><p>Rockstar says the pre-load needs <strong>up to 212 GB</strong> of free space, depending on your console. Free up a little more than that, because installs need some room to unpack.</p>
 <h2>Step by step</h2><ol><li>Pre-order the digital edition in the PlayStation Store or the Microsoft Store, if you have not yet.</li><li>Open the game's page in your library and start the download.</li><li>Leave the console in rest mode with downloads on, so it finishes overnight.</li><li>On launch day, connect once so the game can unlock.</li></ol>
 <h2>Bought a physical copy?</h2><p>The boxed edition comes with a download code instead of a disc. Redeem the code in your console's store and the pre-load starts the same way.</p>""",
-   'es': """<h2>Cuándo empezó</h2><ul><li><strong>PS5:</strong> desde la medianoche local del 10 de noviembre de 2026.</li><li><strong>Xbox Series X|S:</strong> desde las 12 a. m. GMT del 10 de noviembre de 2026, al mismo tiempo en todo el mundo.</li></ul>
+   'es': """<p><strong>Respuesta rápida:</strong> Abre la página del juego en tu biblioteca de PlayStation Store o Microsoft Store e inicia la descarga. Necesitas unos 212 GB libres en PS5 y 234 GB en Xbox Series X|S. Deja la consola en reposo para que termine durante la noche.</p>
+<h2>Cuándo empezó</h2><ul><li><strong>PS5:</strong> desde la medianoche local del 10 de noviembre de 2026.</li><li><strong>Xbox Series X|S:</strong> desde las 12 a. m. GMT del 10 de noviembre de 2026, al mismo tiempo en todo el mundo.</li></ul>
 <h2>Espacio necesario</h2><p>Rockstar indica que la precarga necesita <strong>hasta 212 GB</strong> libres, según la consola. Deja un poco más de espacio, porque la instalación necesita margen para descomprimir.</p>
 <h2>Paso a paso</h2><ol><li>Reserva la edición digital en PlayStation Store o en Microsoft Store, si aún no lo hiciste.</li><li>Abre la página del juego en tu biblioteca e inicia la descarga.</li><li>Deja la consola en modo reposo con las descargas activas para que termine durante la noche.</li><li>El día del lanzamiento, conéctate una vez para que el juego se desbloquee.</li></ol>
 <h2>¿Compraste la edición física?</h2><p>La edición en caja trae un código de descarga en lugar de un disco. Canjea el código en la tienda de tu consola y la precarga empieza igual.</p>""",
-   'pt': """<h2>Quando começou</h2><ul><li><strong>PS5:</strong> a partir da meia-noite no horário local de 10 de novembro de 2026.</li><li><strong>Xbox Series X|S:</strong> a partir de 0h GMT de 10 de novembro de 2026, no mesmo momento no mundo todo.</li></ul>
+   'pt': """<p><strong>Resposta rápida:</strong> Abra a página do jogo na biblioteca da PlayStation Store ou Microsoft Store e inicie o download. Você precisa de cerca de 212 GB livres no PS5 e 234 GB no Xbox Series X|S. Deixe o console em repouso para terminar durante a noite.</p>
+<h2>Quando começou</h2><ul><li><strong>PS5:</strong> a partir da meia-noite no horário local de 10 de novembro de 2026.</li><li><strong>Xbox Series X|S:</strong> a partir de 0h GMT de 10 de novembro de 2026, no mesmo momento no mundo todo.</li></ul>
 <h2>Espaço necessário</h2><p>A Rockstar informa que o pre-load precisa de <strong>até 212 GB</strong> livres, dependendo do console. Deixe um pouco mais de espaço, porque a instalação precisa de folga para descompactar.</p>
 <h2>Passo a passo</h2><ol><li>Faça a pré-venda da edição digital na PlayStation Store ou na Microsoft Store, se ainda não fez.</li><li>Abra a página do jogo na sua biblioteca e inicie o download.</li><li>Deixe o console em modo de repouso com os downloads ligados, para terminar durante a noite.</li><li>No dia do lançamento, conecte-se uma vez para o jogo liberar.</li></ol>
 <h2>Comprou a edição física?</h2><p>A edição em caixa vem com um código de download em vez de disco. Resgate o código na loja do console e o pre-load começa do mesmo jeito.</p>"""}},
