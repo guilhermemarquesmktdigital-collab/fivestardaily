@@ -163,3 +163,7 @@ body.inner .shade{background:rgba(8,6,24,.62)}
 
 .prose a.btn{color:#14102E;text-decoration:none}
 .thumb .tag.tw{background:#9146FF;color:#fff}
+
+.t-cheats{--acc:var(--lime)}
+.cheatbody{display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start}
+.cheatbody span{font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;background:rgba(182,242,90,.14);color:#B6F25A}
