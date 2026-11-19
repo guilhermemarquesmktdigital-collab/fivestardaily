@@ -23,6 +23,14 @@
   "kt_ps5update": [
    "Kotaku: PS5 gets a last-minute software update that's required to play GTA 6",
    "https://kotaku.com/ps5-gets-last-minute-software-update-thats-required-to-play-gta-6-2000757868"
+  ],
+  "psb_launch": [
+   "PlayStation Blog: Grand Theft Auto VI launches tomorrow, November 19",
+   "https://blog.playstation.com/2026/11/18/grand-theft-auto-vi-launches-tomorrow-november-19/"
+  ],
+  "ps_psn": [
+   "Push Square: PSN down sporadically for some as GTA 6 launches around the world",
+   "https://www.pushsquare.com/news/2026/11/psn-down-sporadically-for-some-as-gta-6-launches-around-the-world"
   ]
  },
  "NEWS": [
@@ -177,6 +185,44 @@
     "en": "<p>PlayStation Support announced on the evening of November 17 that a PS5 system software update is required before playing Grand Theft Auto VI. Sony asked players to download it before midnight on November 19, when the game unlocks, so they are not held up at launch. Kotaku reports that Sony has not said what the update changes.</p><p>This is separate from the game's own day-one patch. Version 01.002.001 of GTA 6 rolled out on PS5 this week at around 602MB, following an earlier update after pre-load. If your console is set to update automatically, both should install on their own, but checking manually tonight is the safest way to start on time.</p>",
     "es": "<p>PlayStation Support anunció la noche del 17 de noviembre que hace falta una actualización del software del sistema de PS5 para jugar a Grand Theft Auto VI. Sony pidió descargarla antes de la medianoche del 19 de noviembre, cuando se desbloquea el juego, para no tener retrasos en el lanzamiento. Según Kotaku, Sony no ha explicado qué cambia la actualización.</p><p>Es algo aparte del parche de lanzamiento del propio juego. La versión 01.002.001 de GTA 6 llegó a PS5 esta semana con unos 602 MB, tras una actualización anterior posterior a la precarga. Si tu consola actualiza automáticamente, ambas deberían instalarse solas, pero revisarlo a mano esta noche es la forma más segura de empezar a tiempo.</p>",
     "pt": "<p>O PlayStation Support anunciou na noite de 17 de novembro que uma atualização do software do sistema do PS5 é obrigatória para jogar Grand Theft Auto VI. A Sony pediu que ela seja baixada antes da meia-noite de 19 de novembro, quando o jogo é liberado, para evitar atrasos no lançamento. Segundo o Kotaku, a Sony não informou o que a atualização muda.</p><p>Isso é diferente do patch de lançamento do próprio jogo. A versão 01.002.001 de GTA 6 chegou ao PS5 nesta semana com cerca de 602 MB, depois de uma atualização anterior pós-pré-download. Se o seu console atualiza automaticamente, as duas devem instalar sozinhas, mas conferir manualmente hoje à noite é o jeito mais seguro de começar na hora.</p>"
+   }
+  },
+  {
+   "slug": "gta-6-launch-day-rockstar-playstation-blog",
+   "date": "2026-11-18T16:00:00Z",
+   "cat": "official",
+   "src": [
+    "psb_launch"
+   ],
+   "guide": "leonida-regions",
+   "title": {
+    "en": "Rockstar's launch-eve post: six regions and on-demand podcasts",
+    "es": "El mensaje de Rockstar antes del lanzamiento: seis regiones y podcasts a la carta",
+    "pt": "O post de Rockstar na véspera: seis regiões e podcasts sob demanda"
+   },
+   "body": {
+    "en": "<p>On the eve of release, Rockstar published a post on the PlayStation Blog confirming that Grand Theft Auto VI arrives on PS5 on Thursday, November 19, through PlayStation Store. The post recaps the setting, the state of Leonida with Vice City at its heart, and the two leads, Jason Duval and Lucia Caminos.</p><p>It also names the six regions of the map: Vice City, the Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia and Mount Kalaga. One new detail stands out: alongside the usual radio stations, the game adds on-demand podcasts for the first time in the series, which you can listen to through headphones or earbuds paired with the in-game phone.</p>",
+    "es": "<p>La víspera del lanzamiento, Rockstar publicó en el PlayStation Blog que Grand Theft Auto VI llega a PS5 el jueves 19 de noviembre a través de PlayStation Store. El texto repasa el escenario, el estado de Leonida con Vice City como centro, y a sus dos protagonistas, Jason Duval y Lucia Caminos.</p><p>También enumera las seis regiones del mapa: Vice City, los Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia y Mount Kalaga. Hay un detalle nuevo: además de las emisoras de radio de siempre, el juego incluye por primera vez en la saga podcasts a la carta, que se escuchan con auriculares conectados al teléfono del juego.</p>",
+    "pt": "<p>Na véspera do lançamento, a Rockstar publicou no PlayStation Blog que Grand Theft Auto VI chega ao PS5 na quinta-feira, 19 de novembro, pela PlayStation Store. O texto relembra o cenário, o estado de Leonida com Vice City no centro, e os dois protagonistas, Jason Duval e Lucia Caminos.</p><p>O post também lista as seis regiões do mapa: Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia e Mount Kalaga. Um detalhe é novidade: além das rádios de sempre, o jogo traz pela primeira vez na série podcasts sob demanda, que você ouve com fones conectados ao celular do personagem.</p>"
+   }
+  },
+  {
+   "slug": "psn-outages-gta-6-rolling-launch",
+   "date": "2026-11-18T23:30:00Z",
+   "cat": "release",
+   "src": [
+    "ps_psn"
+   ],
+   "guide": "pre-load",
+   "title": {
+    "en": "PSN hiccups as GTA 6 starts unlocking around the world",
+    "es": "Fallos puntuales de PSN mientras GTA 6 se desbloquea por el mundo",
+    "pt": "PSN instável enquanto GTA 6 começa a liberar pelo mundo"
+   },
+   "body": {
+    "en": "<p>GTA 6 has started unlocking region by region, beginning with New Zealand, Australia and parts of Asia. Push Square reports scattered complaints of PlayStation Network outages over the first hours of the rollout, even though Sony's official service status page showed every service running normally at the time.</p><p>The game's story mode is single-player, but the network still matters on day one: each player has to verify their digital license once the game goes live in their region, and the PS5 must be on system software version 14.23.00. If you are in Europe or the Americas, sign in to PSN and install the update before your local midnight to avoid getting stuck.</p>",
+    "es": "<p>GTA 6 ya se está desbloqueando por regiones, empezando por Nueva Zelanda, Australia y parte de Asia. Push Square informa de quejas aisladas por caídas de PlayStation Network en las primeras horas, aunque la página oficial de estado de servicios de Sony mostraba todo funcionando con normalidad.</p><p>El modo historia es para un jugador, pero la red sigue siendo clave el primer día: cada jugador debe verificar su licencia digital cuando el juego se active en su región, y la PS5 necesita la versión 14.23.00 del software del sistema. Si estás en Europa o América, inicia sesión en PSN e instala la actualización antes de tu medianoche local.</p>",
+    "pt": "<p>GTA 6 começou a ser liberado região por região, a partir da Nova Zelândia, da Austrália e de partes da Ásia. O Push Square relata queixas pontuais de quedas da PlayStation Network nas primeiras horas, embora a página oficial de status da Sony mostrasse todos os serviços funcionando normalmente.</p><p>O modo história é para um jogador, mas a rede ainda importa no primeiro dia: cada pessoa precisa verificar a licença digital quando o jogo liberar na sua região, e o PS5 precisa estar na versão 14.23.00 do sistema. Se você está na Europa ou nas Américas, entre na PSN e instale a atualização antes da meia-noite local.</p>"
    }
   }
  ]
