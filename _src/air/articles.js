@@ -15,7 +15,7 @@ function artShell(back,backLabel,kicker,title,lede,meta,body){
 function guidePage(g){var u=UI[lang],p=P[lang];
   var vids=(g.videos||[]).map(function(id){return VIDS.filter(function(v){return v[0]===id})[0]}).filter(Boolean);
   var vg=vids.length?'<h2 class="sub2">'+u.watchall+'</h2><div class="grid g3">'+vids.map(function(v,i){return '<button class="card" data-watch="'+v[0]+'">'+thumbFor(v,i)+play+(v[5]?'<span class="dur">'+v[5]+'</span>':'')+'</div><div class="meta"><h3>'+esc(v[1])+'</h3></div></button>'}).join('')+'</div>':'';
-  return artShell('guides',p.gd_t,u.byus,g.title[lang],g.lede[lang],u.updated+' '+fmtDate('2026-11-13T12:00:00')+' &middot; '+g.mins+' '+u.read,g.body[lang]+vg+srcList(g.src));}
+  return artShell('guides',p.gd_t,u.byus,g.title[lang],g.lede[lang],u.updated+' '+fmtDate((g.upd||'2026-11-13')+'T12:00:00')+' &middot; '+g.mins+' '+u.read,g.body[lang]+vg+srcList(g.src));}
 function newsPage(n){var u=UI[lang],p=P[lang],first=C.S[n.src[0]];
   var rel=n.guide?'<p class="relg">'+u.related+': <a href="#g-'+n.guide+'">'+esc(gBy(n.guide).title[lang])+' &rarr;</a></p>':'';
   return artShell('news',p.news_t,u.oursum+' · '+p.nc[n.cat],n.title[lang],'',fmtDate(n.date),n.body[lang]+'<p><a class="btn" href="'+first[1]+'" target="_blank" rel="noopener">'+u.readfull+' '+esc(first[0].split(':')[0])+' &#8599;</a></p>'+rel+srcList(n.src));}

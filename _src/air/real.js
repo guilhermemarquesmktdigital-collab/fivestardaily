@@ -15,4 +15,4 @@ function cover(id,i){return 'background-image:url(https://i.ytimg.com/vi/'+id+'/
 function twPrev(login){return 'background-image:url(https://static-cdn.jtvnw.net/previews-ttv/live_user_'+encodeURIComponent(String(login).toLowerCase())+'-440x248.jpg?t='+Math.floor(Date.now()/120000)+'),linear-gradient(135deg,#2b1055,#0b0620)';}
 function thumbFor(v,i){return v[7]?'<div class="thumb ph" style="background-image:url('+ytThumb(v[0])+')">':'<div class="thumb ph" style="'+cover(v[0],i)+'">';}
 var OFFI={};VIDS.forEach(function(v){if(v[7])OFFI[v[0]]=1});
-var LOCKED={checklist:1};
+var LOCKED={};

@@ -10,7 +10,7 @@ C = json.load(open(SC + '/air/content.json'))
 src = open(SC + '/fsd/index.html').read()
 # The 100% checklist tile is replaced by the Cheats tile until the checklist has real content (see NEWS-HOWTO).
 CHEAT_TILE = '<a class="tile t-cheats" href="#g-cheats"><div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><h2 data-i18n="cheats">Cheats</h2></div><p data-i18n="cheats_d">What early reports say about GTA 6 cheats. Not official.</p><div class="body cheatbody"><span>Phone</span><span>Money</span><span>Cars</span><span>Ammo</span></div></a>'
-src = re.sub(r'<a class="tile t-check".*?</a>', CHEAT_TILE, src, count=1, flags=re.S)
+# checklist is live now: the real tile stays; cheats is reachable from Guides
 
 # images and icons load from the site root, so nested pages find them
 for n in ['island', 'water', 'rocks']:
@@ -26,7 +26,7 @@ pages = [('', HOME_T, HOME_D),
  ('news', 'GTA 6 news today | Five Star Daily', 'Today\'s GTA 6 headlines from across the web, with short summaries we write ourselves and a link to every source.'),
  ('guides', 'GTA 6 guides | Five Star Daily', 'Step-by-step GTA 6 guides: release date and platforms, how to pre-load, every trailer and the regions of Leonida.'),
  ('map', 'GTA 6 map of Leonida | Five Star Daily', 'A zoomable fan-made map of Leonida, the state where GTA 6 takes place, with Vice City, the Keys and the surrounding counties. Unofficial until launch.'),
- ('checklist', 'GTA 6 100% checklist | Five Star Daily', 'Track your GTA 6 progress toward 100% completion. Opens on launch day, November 19.')]
+ ('checklist', 'GTA 6 100% checklist | Five Star Daily', 'Track your GTA 6 progress toward 100% completion. Every requirement from the in-game 100% menu, with counters saved on your device.')]
 for g in C['GUIDES']:
     pages.append(('guides/' + g['slug'], g['title']['en'] + ' | Five Star Daily', g['lede']['en']))
 for n in C['NEWS']:
@@ -93,7 +93,7 @@ K = open(SC + '/air/indexnow.key').read().strip()
 open(f'{out}/{K}.txt', 'w').write(K)
 # indexnow
 if not noindex:
-    urls = ''.join(f'<url><loc>{origin}{base}{p + "/" if p else ""}</loc><lastmod>{TODAY}</lastmod></url>' for p, _, _ in pages if p != 'checklist')
+    urls = ''.join(f'<url><loc>{origin}{base}{p + "/" if p else ""}</loc><lastmod>{TODAY}</lastmod></url>' for p, _, _ in pages)
     open(out + '/sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + urls + '</urlset>\n')
     llms = ['# Five Star Daily', '', '> Unofficial fan site about Grand Theft Auto VI (GTA 6). Live streams, new videos, daily news with our own summaries, guides in English, Spanish and Portuguese. Not affiliated with Rockstar Games or Take-Two Interactive.', '', '## Guides']
     llms += [f'- [{g["title"]["en"]}]({origin}{base}guides/{g["slug"]}/): {g["lede"]["en"]}' for g in C['GUIDES']]
