@@ -2,7 +2,7 @@ import re, sys
 P = sys.argv[1]
 s = open(P).read()
 # tiles become links to the inner pages
-routes = {'t-live': 'live', 't-videos': 'videos', 't-launch': 'news', 't-news': 'news', 't-guides': 'guides', 't-check': 'checklist', 't-map': 'map'}
+routes = {'t-live': 'live', 't-videos': 'videos', 't-launch': 'guides', 't-news': 'news', 't-guides': 'guides', 't-check': 'checklist', 't-map': 'map'}
 for cls, r in routes.items():
     a = '<button class="tile %s" data-soon>' % cls
     assert a in s, a

@@ -494,13 +494,11 @@ body.inner .shade{background:rgba(8,6,24,.62)}
       <div class="body vids"><div class="thumb"><svg class="play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="thumb"><svg class="play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
     </a>
 
-    <a class="tile t-launch" href="#news">
-      <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg><h2 data-i18n="launch">Launch day</h2></div>
-      <p data-i18n="launch_d">November 19 on PS5 and Xbox Series X|S.</p>
+    <a class="tile t-launch" href="#guides">
+      <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-3.9 3.1l-1.7 7.7A2.7 2.7 0 0 0 3.7 19c.8 0 1.5-.4 2-1l1.6-2.1c.4-.5 1-.9 1.7-.9h6c.7 0 1.3.4 1.7.9l1.6 2.1c.5.6 1.2 1 2 1a2.7 2.7 0 0 0 2.6-3.2l-1.7-7.7A4 4 0 0 0 17.3 5z"/></svg><h2 data-i18n="launch">Out now</h2></div>
+      <p data-i18n="launch_d">GTA VI is live on PS5 and Xbox Series X|S.</p>
       <div class="body cd" data-cd>
-        <div><b data-u="d">0</b><span data-i18n="days">days</span></div>
-        <div><b data-u="h">00</b><span data-i18n="hours">hours</span></div>
-        <div><b data-u="m">00</b><span data-i18n="mins">min</span></div>
+        <div><b data-u="d">1</b><span data-i18n="since">days since launch</span></div>
       </div>
     </a>
 
@@ -547,7 +545,7 @@ var T={
  en:{tagline:"Everything GTA VI, every day.",auto:"Auto",day:"Day",sunset:"Sunset",night:"Night",dawn:"Dawn",cursor:"Cursor",pro:"Go Pro",
   live:"Live now",live_d:"Streams playing GTA VI right now on Twitch and YouTube.",sample:"Sample layout",
   videos:"New videos",videos_d:"Gameplay, tips and trailers from creators, updated every hour.",
-  launch:"Launch day",launch_d:"November 19 on PS5 and Xbox Series X|S.",days:"days",hours:"hours",mins:"min",out:"Out now",
+  launch:"Out now",launch_d:"GTA VI is live on PS5 and Xbox Series X|S.",since:"days since launch",days:"days",hours:"hours",mins:"min",out:"Out now",
   news:"Today’s news",news_d:"Headlines from across the web, linked to the source.",
   guides:"Guides",guides_d:"Step-by-step help for the things everyone searches for.",g1:"Money",g2:"Cars",g3:"Missions",g4:"Beginners",
   check:"100% checklist",check_d:"Tick off every collectible. Your progress is saved on this device.",cheats:"Cheats",cheats_d:"What early reports say about GTA 6 cheats. Not official.",
@@ -557,7 +555,7 @@ var T={
  es:{tagline:"Todo sobre GTA VI, cada día.",auto:"Auto",day:"Día",sunset:"Atardecer",night:"Noche",dawn:"Amanecer",cursor:"Cursor",pro:"Hazte Pro",
   live:"En vivo",live_d:"Transmisiones de GTA VI ahora mismo en Twitch y YouTube.",sample:"Diseño de muestra",
   videos:"Videos nuevos",videos_d:"Gameplay, trucos y tráilers de creadores, actualizados cada hora.",
-  launch:"Lanzamiento",launch_d:"19 de noviembre en PS5 y Xbox Series X|S.",days:"días",hours:"horas",mins:"min",out:"Ya disponible",
+  launch:"Ya disponible",launch_d:"GTA VI ya está en PS5 y Xbox Series X|S.",since:"días desde el lanzamiento",days:"días",hours:"horas",mins:"min",out:"Ya disponible",
   news:"Noticias de hoy",news_d:"Titulares de toda la web, con enlace a la fuente.",
   guides:"Guías",guides_d:"Ayuda paso a paso para lo que todos buscan.",g1:"Dinero",g2:"Autos",g3:"Misiones",g4:"Principiantes",
   check:"Checklist 100%",check_d:"Marca cada coleccionable. Tu progreso se guarda en este dispositivo.",cheats:"Trucos",cheats_d:"Lo que dicen los primeros reportes sobre trucos de GTA 6. No oficial.",
@@ -567,7 +565,7 @@ var T={
  pt:{tagline:"Tudo sobre GTA VI, todo dia.",auto:"Auto",day:"Dia",sunset:"Pôr do sol",night:"Noite",dawn:"Amanhecer",cursor:"Cursor",pro:"Seja Pro",
   live:"Ao vivo",live_d:"Lives de GTA VI agora mesmo na Twitch e no YouTube.",sample:"Layout de exemplo",
   videos:"Vídeos novos",videos_d:"Gameplay, dicas e trailers de criadores, atualizados de hora em hora.",
-  launch:"Lançamento",launch_d:"19 de novembro no PS5 e Xbox Series X|S.",days:"dias",hours:"horas",mins:"min",out:"Já disponível",
+  launch:"Já disponível",launch_d:"GTA VI já está no PS5 e Xbox Series X|S.",since:"dias desde o lançamento",days:"dias",hours:"horas",mins:"min",out:"Já disponível",
   news:"Notícias de hoje",news_d:"Manchetes da web inteira, com link para a fonte.",
   guides:"Guias",guides_d:"Passo a passo para o que todo mundo procura.",g1:"Dinheiro",g2:"Carros",g3:"Missões",g4:"Iniciantes",
   check:"Checklist 100%",check_d:"Marque cada colecionável. Seu progresso fica salvo neste aparelho.",cheats:"Cheats",cheats_d:"O que os primeiros relatos dizem sobre cheats de GTA 6. Não oficial.",
@@ -602,12 +600,10 @@ setInterval(function(){tickClock(); if(mode==='auto')applyPhase();},20000);
 /* ---------- launch countdown (Nov 19, 2026, visitor's local midnight) ---------- */
 var launch=new Date(2026,10,19,0,0,0).getTime();
 function tickCd(){
-  var left=launch-Date.now(), box=$('[data-cd]');
-  if(left<=0){box.innerHTML='<div><b>'+T[lang].out+'</b></div>';return;}
-  $('[data-u="d"]').textContent=Math.floor(left/864e5);
-  $('[data-u="h"]').textContent=pad(Math.floor(left/36e5)%24);
-  $('[data-u="m"]').textContent=pad(Math.floor(left/6e4)%60);
+  var n=Math.max(1,Math.floor((Date.now()-launch)/864e5)+1), e=$('[data-u="d"]');
+  if(e)e.textContent=n;
 }
+tickCd();
 setInterval(tickCd,15000);
 
 /* ---------- cursor ---------- */
