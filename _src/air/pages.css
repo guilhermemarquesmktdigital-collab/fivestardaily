@@ -183,3 +183,5 @@ body.inner .shade{background:rgba(8,6,24,.62)}
 .guide .sub{display:flex;align-items:center;gap:8px}
 .gall .card[hidden],.gnone[hidden]{display:none}
 @media (max-width:760px){.gfgrid{grid-template-columns:1fr 1fr}.gsearch{width:100%}}
+
+.lis{margin-left:8px;font-size:12px;color:var(--dim);text-decoration:none;white-space:nowrap}.lis:hover{color:#fff;text-decoration:underline}

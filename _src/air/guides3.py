@@ -222,6 +222,7 @@ g('collectibles', 4, ['ppx_100', 'tbl_coll'],
 
 # ---- Radio stations (KeenGamer, Nov 19 2026) ----
 import html as _h
+from urllib.parse import quote as _q
 S3.update({'kg_radio': ['KeenGamer: GTA 6 all radio stations and full soundtrack list (Nov 19, 2026)', 'https://www.keengamer.com/articles/guides/gta-6-all-radio-stations-and-full-soundtrack-list/']})
 _ST = [
  ('Flash FM', ('Pop and dance', 'Pop y dance', 'Pop e dance'), 'Robyn, Alex Consani', ["Charli xcx – Good Ones","MGMT – Electric Feel","Zara Larsson & PinkPantheress – Midnight Sun (Girls Trip)","Ciara feat. Justin Timberlake – Love Sex Magic","Kylie Minogue – Spinning Around","Drake feat. Majid Jordan – Hold On, We're Going Home","X-Press 2 feat. David Byrne – Lazy","Addison Rae – Fame Is a Gun","KATSEYE – Gabriela","Ariana Grande feat. Zedd – Break Free","PinkPantheress – Illegal","Chappell Roan – Hot to Go!","JISOO – Earthquake","Dua Lipa – Houdini","Billie Eilish – Lunch","The Weeknd – Wanderlust","Justin Bieber – Sweet Spot","Gorillaz – Dare","Jennifer Paige – Crush","Daft Punk – Around the World","Moloko – Forever More","JENNIE – Mantra","LISA – Sawadika","Calvin Harris feat. Pharrell Williams, Katy Perry & Big Sean – Feels","Madonna feat. Nicki Minaj & M.I.A. – Give Me All Your Luvin'","Kodak Black – Skrilla","Frank Ocean – Lost","Tate McRae – Sports Car","Kelly Rowland feat. Lil Wayne – Motivation","Mariah Carey – Someday","Kenya Grace – Mr. Cool","Doechii & SZA – Persuasive"]),
@@ -253,12 +254,12 @@ def _radio(lg):
         out += '<details><summary><strong>%s</strong> · %s · %d %s</summary>%s<ol>%s</ol></details>' % (
             _h.escape(n), _h.escape(gn[i]), len(tr), w,
             ('<p>%s: %s</p>' % (hl, _h.escape(hosts))) if hosts else '',
-            ''.join('<li>%s</li>' % _h.escape(t) for t in tr))
+            ''.join('<li>%s <a class="lis" href="https://www.youtube.com/results?search_query=%s" target="_blank" rel="noopener" aria-label="YouTube">&#9654; YouTube</a></li>' % (_h.escape(t), _q(t)) for t in tr))
     return out
 _RI = {
- 'en': '<p><strong>Quick answer:</strong> GTA 6 has 22 radio stations: 20 with music and 2 talk stations. KeenGamer\'s list from November 19, 2026 counts 249 songs across the 20 music stations. Tap a station to open its songs.</p>',
- 'es': '<p><strong>Respuesta rápida:</strong> GTA 6 tiene 22 emisoras: 20 con música y 2 de charla. La lista de KeenGamer del 19 de noviembre de 2026 cuenta 249 canciones en las 20 emisoras musicales. Toca una emisora para ver sus canciones.</p>',
- 'pt': '<p><strong>Resposta rápida:</strong> GTA 6 tem 22 rádios: 20 com música e 2 de conversa. A lista da KeenGamer de 19 de novembro de 2026 conta 249 músicas nas 20 rádios musicais. Toque numa rádio para abrir as músicas.</p>',
+ 'en': '<p><strong>Quick answer:</strong> GTA 6 has 22 radio stations: 20 with music and 2 talk stations. KeenGamer\'s list from November 19, 2026 counts 249 songs across the 20 music stations. Tap a station to open its songs. The YouTube links open a search for that song. They are not official uploads, and Rockstar has not published official playlists for the stations that we could find.</p>',
+ 'es': '<p><strong>Respuesta rápida:</strong> GTA 6 tiene 22 emisoras: 20 con música y 2 de charla. La lista de KeenGamer del 19 de noviembre de 2026 cuenta 249 canciones en las 20 emisoras musicales. Toca una emisora para ver sus canciones. Los enlaces de YouTube abren una búsqueda de esa canción. No son subidas oficiales, y no encontramos listas oficiales de Rockstar para las emisoras.</p>',
+ 'pt': '<p><strong>Resposta rápida:</strong> GTA 6 tem 22 rádios: 20 com música e 2 de conversa. A lista da KeenGamer de 19 de novembro de 2026 conta 249 músicas nas 20 rádios musicais. Toque numa rádio para abrir as músicas. Os links do YouTube abrem uma busca daquela música. Não são uploads oficiais, e não encontramos playlists oficiais da Rockstar para as rádios.</p>',
 }
 _RO = {
  'en': '<h2>Talk stations</h2><ul><li><strong>WKTT</strong>: conservative talk radio.</li><li><strong>The Wipe</strong>: absurdist talk and podcast-style radio.</li></ul><h2>About this list</h2><p>Rockstar has not published an official track list. This one comes from a single outlet, so counts may differ from other sites and can change as players keep checking. Other sites already show shorter or different lists. We will correct it as more is confirmed.</p><p>Want to hear the official soundtrack? Use the Soundtrack button on this site, or read our <a href="#g-soundtrack">soundtrack guide</a>.</p>',
