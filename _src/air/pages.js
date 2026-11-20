@@ -171,7 +171,7 @@ function mapInit(){var w=$('[data-mapwrap]'),g=$('[data-mapg]'),svg=$('svg.map',
 
 page.addEventListener('click',function(e){
   var b=e.target.closest('[data-f] button');
-  if(b){var cur=page.getAttribute('data-cur'),key=b.parentNode.dataset.f;state[cur]=state[cur]||({live:{pl:'all',lg:'any'},videos:{c:'all',lg:'any',s:'new'},news:{c:'all'}})[cur];state[cur][key]=b.dataset.v;render();return;}
+  if(b){var cur=page.getAttribute('data-cur'),key=b.parentNode.dataset.f;state[cur]=state[cur]||({live:{pl:'all',lg:'any'},videos:{c:'all',lg:'any',s:'new'},news:{c:'all'},guides:{t:'all'}})[cur];state[cur][key]=b.dataset.v;render();return;}
   if(e.target.closest('[data-noop]')){e.preventDefault();toast.textContent=T[lang].soon;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},2200);return;}
   var tw=e.target.closest('[data-twitch]');
   if(tw){var ch=tw.dataset.twitch,host=location.hostname||'fivestardaily.com';$('.screen',modal).style.background='#000';$('.screen',modal).innerHTML='<iframe src="https://player.twitch.tv/?channel='+encodeURIComponent(ch)+'&parent='+host+'&autoplay=true" title="Twitch" allow="autoplay; fullscreen" allowfullscreen></iframe>';$('[data-mopen]',modal).href='https://www.twitch.tv/'+encodeURIComponent(ch);$('h3',modal).textContent=$('h3',tw).textContent;$('[data-mopen]',modal).textContent=P[lang].open_tw;$('[data-mclose]',modal).textContent=P[lang].close;modal.classList.add('open');$('[data-mclose]',modal).focus();return;}
