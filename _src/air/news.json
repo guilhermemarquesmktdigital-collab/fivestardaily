@@ -31,6 +31,26 @@
   "ps_psn": [
    "Push Square: PSN down sporadically for some as GTA 6 launches around the world",
    "https://www.pushsquare.com/news/2026/11/psn-down-sporadically-for-some-as-gta-6-launches-around-the-world"
+  ],
+  "f5_sales": [
+   "FOX 5 DC: GTA VI pulls in estimated $1.84 billion by release day, more than double GTA V's launch record",
+   "https://www.fox5dc.com/news/gta-vi-pulls-estimated-1-84-billion-release-day-more-than-double-gta-vs-launch-record"
+  ],
+  "tw_sales": [
+   "THE WEEK: GTA 6 becomes the biggest entertainment launch, crossing $2 billion in sales",
+   "https://www.theweek.in/news/biz-tech/2026/11/20/gta-6-sales-records-take-two-interactive-earnings.html"
+  ],
+  "bw_available": [
+   "Business Wire: Rockstar Games Announces Grand Theft Auto VI Now Available",
+   "https://www.financialcontent.com/article/bizwire-2026-11-19-rockstar-games-announces-grand-theft-auto-vi-now-available"
+  ],
+  "rs_available": [
+   "Rockstar Newswire: Grand Theft Auto VI Now Available",
+   "https://www.rockstargames.com/newswire/article/39akk424a9oo53/grand-theft-auto-vi-now-available"
+  ],
+  "gr_houser": [
+   "GamesRadar+: As GTA 6 finally releases, Rockstar boss Sam Houser issues rare statement",
+   "https://www.gamesradar.com/games/grand-theft-auto/as-gta-6-finally-releases-rockstar-boss-sam-houser-issues-rare-statement-we-are-incredibly-grateful-and-look-forward-to-many-more-years-of-sharing-these-experiences-with-you/"
   ]
  },
  "NEWS": [
@@ -223,6 +243,47 @@
     "en": "<p>GTA 6 has started unlocking region by region, beginning with New Zealand, Australia and parts of Asia. Push Square reports scattered complaints of PlayStation Network outages over the first hours of the rollout, even though Sony's official service status page showed every service running normally at the time.</p><p>The game's story mode is single-player, but the network still matters on day one: each player has to verify their digital license once the game goes live in their region, and the PS5 must be on system software version 14.23.00. If you are in Europe or the Americas, sign in to PSN and install the update before your local midnight to avoid getting stuck.</p>",
     "es": "<p>GTA 6 ya se está desbloqueando por regiones, empezando por Nueva Zelanda, Australia y parte de Asia. Push Square informa de quejas aisladas por caídas de PlayStation Network en las primeras horas, aunque la página oficial de estado de servicios de Sony mostraba todo funcionando con normalidad.</p><p>El modo historia es para un jugador, pero la red sigue siendo clave el primer día: cada jugador debe verificar su licencia digital cuando el juego se active en su región, y la PS5 necesita la versión 14.23.00 del software del sistema. Si estás en Europa o América, inicia sesión en PSN e instala la actualización antes de tu medianoche local.</p>",
     "pt": "<p>GTA 6 começou a ser liberado região por região, a partir da Nova Zelândia, da Austrália e de partes da Ásia. O Push Square relata queixas pontuais de quedas da PlayStation Network nas primeiras horas, embora a página oficial de status da Sony mostrasse todos os serviços funcionando normalmente.</p><p>O modo história é para um jogador, mas a rede ainda importa no primeiro dia: cada pessoa precisa verificar a licença digital quando o jogo liberar na sua região, e o PS5 precisa estar na versão 14.23.00 do sistema. Se você está na Europa ou nas Américas, entre na PSN e instale a atualização antes da meia-noite local.</p>"
+   }
+  },
+  {
+   "slug": "gta-6-launch-sales-estimate-sensor-tower",
+   "date": "2026-11-20T07:30:00Z",
+   "cat": "industry",
+   "src": [
+    "tw_sales",
+    "f5_sales"
+   ],
+   "guide": "editions",
+   "title": {
+    "en": "GTA 6 passes $2 billion in estimated launch sales, per Sensor Tower",
+    "es": "GTA 6 supera los 2.000 millones en ventas estimadas de lanzamiento, según Sensor Tower",
+    "pt": "GTA 6 passa de US$ 2 bilhões em vendas estimadas no lançamento, segundo a Sensor Tower"
+   },
+   "body": {
+    "en": "<p>Market research firm Sensor Tower estimates that GTA 6 had moved more than 24.5 million copies, worth about $2.36 billion, once pre-orders and launch-day purchases are counted together, according to The Week. A day earlier, FOX 5 reported a launch-morning reading of around 19 million units and $1.84 billion, with roughly three in four sales on PlayStation.</p><p>These are third-party estimates, not official data: Take-Two and Rockstar have not published any sales totals yet. For comparison, GTA V's first 24 hours in 2013 brought in $815.7 million from 11.21 million units, the record listed by Guinness World Records. Because the new figures include months of pre-orders, they are not a like-for-like day-one count.</p>",
+    "es": "<p>La consultora Sensor Tower calcula que GTA 6 ya habría superado los 24,5 millones de copias, por unos 2.360 millones de dólares, sumando reservas y compras del día de lanzamiento, según The Week. Un día antes, FOX 5 recogía una medición de la mañana del estreno de unos 19 millones de unidades y 1.840 millones de dólares, con cerca de tres de cada cuatro ventas en PlayStation.</p><p>Son estimaciones externas, no datos oficiales: Take-Two y Rockstar todavía no han publicado cifras de ventas. Como referencia, GTA V ingresó 815,7 millones de dólares con 11,21 millones de unidades en sus primeras 24 horas en 2013, el récord que reconoce Guinness. Como las nuevas cifras incluyen meses de reservas, no son una comparación directa del primer día.</p>",
+    "pt": "<p>A consultoria Sensor Tower estima que GTA 6 já teria passado de 24,5 milhões de cópias, cerca de US$ 2,36 bilhões, somando pré-vendas e compras do dia de lançamento, segundo a The Week. Um dia antes, a FOX 5 citou uma leitura da manhã de estreia de cerca de 19 milhões de unidades e US$ 1,84 bilhão, com aproximadamente três em cada quatro vendas no PlayStation.</p><p>São estimativas de terceiros, não dados oficiais: Take-Two e Rockstar ainda não divulgaram números de vendas. Para comparar, GTA V faturou US$ 815,7 milhões com 11,21 milhões de unidades nas primeiras 24 horas em 2013, recorde reconhecido pelo Guinness. Como os novos números incluem meses de pré-venda, não são uma comparação direta do primeiro dia.</p>"
+   }
+  },
+  {
+   "slug": "rockstar-gta-6-now-available-houser-statement",
+   "date": "2026-11-19T12:00:00Z",
+   "cat": "official",
+   "src": [
+    "rs_available",
+    "bw_available",
+    "gr_houser"
+   ],
+   "guide": "release-date",
+   "title": {
+    "en": "Rockstar makes it official: GTA 6 is out, with a rare word from Sam Houser",
+    "es": "Rockstar lo hace oficial: GTA 6 ya está a la venta, con un raro mensaje de Sam Houser",
+    "pt": "Rockstar oficializa: GTA 6 chegou, com um raro recado de Sam Houser"
+   },
+   "body": {
+    "en": "<p>Rockstar Games has formally announced that Grand Theft Auto VI is available worldwide on PlayStation 5 and Xbox Series X|S. The press release lists the PlayStation Store, Microsoft Store, Rockstar Games Store and retail as places to buy it, confirms an ESRB rating of M (Mature), and notes that the 34-track GTA VI: The Album is out alongside the game.</p><p>Studio president and founder Sam Houser, who rarely speaks publicly, said the team set out to exceed expectations and looks forward to \"many more years\" of sharing the game with players. As GamesRadar+ points out, the launch covers the single-player story only, and Rockstar has not said anything yet about an online mode.</p>",
+    "es": "<p>Rockstar Games ha anunciado oficialmente que Grand Theft Auto VI ya está disponible en todo el mundo para PlayStation 5 y Xbox Series X|S. El comunicado señala que se puede comprar en PlayStation Store, Microsoft Store, la Rockstar Games Store y tiendas físicas, confirma la clasificación M (Maduro) de la ESRB y recuerda que GTA VI: The Album, con 34 temas, sale junto al juego.</p><p>Sam Houser, presidente y fundador del estudio, que rara vez habla en público, dijo que el equipo quiso superar las expectativas y que espera compartir el juego con los jugadores durante muchos años más. Como destaca GamesRadar+, el lanzamiento incluye solo la historia para un jugador y Rockstar aún no ha dicho nada sobre un modo en línea.</p>",
+    "pt": "<p>A Rockstar Games anunciou oficialmente que Grand Theft Auto VI está disponível no mundo todo para PlayStation 5 e Xbox Series X|S. O comunicado cita PlayStation Store, Microsoft Store, Rockstar Games Store e lojas físicas como pontos de venda, confirma a classificação M (Mature) da ESRB e lembra que GTA VI: The Album, com 34 faixas, sai junto com o jogo.</p><p>Sam Houser, presidente e fundador do estúdio, que raramente fala em público, disse que a equipe quis superar as expectativas e que espera dividir o jogo com os fãs por muitos anos ainda. Como observa o GamesRadar+, o lançamento traz apenas a história para um jogador, e a Rockstar ainda não comentou nada sobre um modo online.</p>"
    }
   }
  ]
