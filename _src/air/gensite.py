@@ -10,7 +10,8 @@ C = json.load(open(SC + '/air/content.json'))
 src = open(SC + '/fsd/index.html').read()
 # The 100% checklist tile is replaced by the Cheats tile until the checklist has real content (see NEWS-HOWTO).
 CHEAT_TILE = '<a class="tile t-cheats" href="#g-cheats"><div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><h2 data-i18n="cheats">Cheats</h2></div><p data-i18n="cheats_d">What early reports say about GTA 6 cheats. Not official.</p><div class="body cheatbody"><span>Phone</span><span>Money</span><span>Cars</span><span>Ammo</span></div></a>'
-# checklist is live now: the real tile stays; cheats is reachable from Guides
+# The launch tile is gone: the Cheats tile takes its slot, the real checklist tile stays.
+src = re.sub(r'<a class="tile t-launch".*?</a>', CHEAT_TILE, src, count=1, flags=re.S)
 
 # images and icons load from the site root, so nested pages find them
 for n in ['island', 'water', 'rocks']:
