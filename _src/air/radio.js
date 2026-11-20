@@ -15,7 +15,7 @@
  '.rad-ct{display:flex;align-items:center;gap:4px;padding:8px 10px}.rad-ct .now{flex:1;min-width:0;font-size:13px;line-height:1.25}.rad-ct .now b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rad-ct .now span{display:block;opacity:.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'+
  '.rad-ls{overflow:auto;border-top:1px solid rgba(255,255,255,.14);min-height:0}.rad-ls button{display:block;width:100%;text-align:left;border:0;background:transparent;color:#fff;cursor:pointer;padding:7px 12px;font-size:13px;line-height:1.25}.rad-ls button span{opacity:.65}.rad-ls button:hover,.rad-ls button:focus-visible{background:rgba(255,255,255,.1);outline:none}.rad-ls button.on{background:rgba(255,61,139,.22)}'+
  '.rad-nt{padding:8px 12px 10px;font-size:11.5px;line-height:1.35;opacity:.65;border-top:1px solid rgba(255,255,255,.14)}@media (max-width:600px){.rad-b span.lb{display:none}.rad-b{padding:11px}}@media (prefers-reduced-motion:reduce){.rad-on .eq{display:flex}.rad-on .eq i{animation:none;height:10px}}';
- document.head.appendChild(css);
+ css.textContent+='.rad-tb{display:flex;gap:6px;padding:0 12px 8px}.rad-tb button{flex:1;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:999px;padding:6px 8px;font:700 12.5px/1 inherit;cursor:pointer}.rad-tb button.on{background:#fff;color:#14102E;border-color:#fff}.rad-sp{display:none}.rad-p.sp .rad-sp{display:block}.rad-p.sp .rad-sc,.rad-p.sp .rad-ct,.rad-p.sp .rad-ls{display:none}.rad-sp iframe{width:100%;height:352px;border:0;display:block;border-radius:0}';document.head.appendChild(css);
  var b=document.createElement('button');b.className='rad-b';b.type='button';b.innerHTML='<svg class="nt" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 18.5a3 3 0 1 1-2-2.83V5.2l12-2.4v12.7a3 3 0 1 1-2-2.83V7.04L9 8.64z"/></svg><span class="eq"><i></i><i></i><i></i></span><span class="lb"></span>';
  var p=document.createElement('div');p.className='rad-p';p.setAttribute('role','region');
  document.body.appendChild(b);document.body.appendChild(p);
@@ -28,12 +28,14 @@
   p.querySelector('[data-pp]').textContent=playing?'❚❚':'▶';b.classList.toggle('rad-on',playing);txt();}
  function go(i,play){cur=(i+T.length)%T.length;if(ready){play?player.loadVideoById(T[cur][0]):player.cueVideoById(T[cur][0]);}mark();}
  function build(){built=true;
-  p.innerHTML='<div class="rad-hd"><span data-h></span><button type="button" data-x>×</button></div><div class="rad-sc"><div id="rad-yt"></div></div>'+
+  p.innerHTML='<div class="rad-hd"><span data-h></span><button type="button" data-x>×</button></div><div class="rad-tb"><button type="button" data-tab="yt" class="on">YouTube</button><button type="button" data-tab="sp">Spotify</button></div><div class="rad-sp"></div><div class="rad-sc"><div id="rad-yt"></div></div>'+
    '<div class="rad-ct"><button type="button" data-pv>⏮</button><button type="button" data-pp>▶</button><button type="button" data-nx>⏭</button><div class="now"></div></div>'+
    '<div class="rad-ls">'+T.map(function(t,i){return '<button type="button" data-i="'+i+'"></button>'}).join('')+'</div><div class="rad-nt"></div>';
   var q=p.querySelectorAll('.rad-ls button');for(var i=0;i<q.length;i++){q[i].innerHTML='<b></b> <span></span>';q[i].querySelector('b').textContent=T[i][1];q[i].querySelector('span').textContent='· '+T[i][2];}
   p.addEventListener('click',function(e){var t=e.target.closest('button');if(!t)return;
    if(t.hasAttribute('data-x'))p.classList.remove('open');
+   else if(t.hasAttribute('data-tab')){var sp=t.getAttribute('data-tab')==='sp';p.classList.toggle('sp',sp);var tb=p.querySelectorAll('.rad-tb button');tb[0].classList.toggle('on',!sp);tb[1].classList.toggle('on',sp);
+    if(sp){if(ready&&playing)player.pauseVideo();var h=p.querySelector('.rad-sp');if(!h.firstChild)h.innerHTML='<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX6RSJAsEDz7H?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify"></iframe>';}}
    else if(t.hasAttribute('data-pv'))go(cur-1,true);else if(t.hasAttribute('data-nx'))go(cur+1,true);
    else if(t.hasAttribute('data-pp')){if(ready){playing?player.pauseVideo():player.playVideo();}}
    else if(t.hasAttribute('data-i'))go(+t.getAttribute('data-i'),true);});
