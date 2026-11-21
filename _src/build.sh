@@ -15,5 +15,5 @@ assert '/*__REALJS__*/' in s
 s=s.replace('/*__REALJS__*/',r); open('fsd/index.html','w').write(s)
 PY2
 python3 air/gensite.py .. / https://fivestardaily.com
-mkdir -p ../chat && cp chat/index.html ../chat/index.html
+python3 chat/build_chat.py ..
 rm -f fsd/index.html air/content.json
