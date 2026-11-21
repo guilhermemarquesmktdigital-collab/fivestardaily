@@ -51,6 +51,18 @@
   "gr_houser": [
    "GamesRadar+: As GTA 6 finally releases, Rockstar boss Sam Houser issues rare statement",
    "https://www.gamesradar.com/games/grand-theft-auto/as-gta-6-finally-releases-rockstar-boss-sam-houser-issues-rare-statement-we-are-incredibly-grateful-and-look-forward-to-many-more-years-of-sharing-these-experiences-with-you/"
+  ],
+  "t2_record": [
+   "Take-Two: Grand Theft Auto VI Shatters Entertainment Box Office Records with $3.79 Billion in Day One Retail Sales",
+   "https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records"
+  ],
+  "dt_record": [
+   "Digital Trends: GTA VI just outsold every movie, album, and game launch ever",
+   "https://www.digitaltrends.com/gaming/gta-vi-just-outsold-every-movie-album-and-game-launch-ever/"
+  ],
+  "dx_gta7": [
+   "Dexerto: Take-Two CEO is shutting down questions about GTA 7 just days after GTA 6's launch",
+   "https://www.dexerto.com/gta/take-two-ceo-is-shutting-down-questions-about-gta-7-just-days-after-gta-6s-launch-3430074/"
   ]
  },
  "NEWS": [
@@ -284,6 +296,45 @@
     "en": "<p>Rockstar Games has formally announced that Grand Theft Auto VI is available worldwide on PlayStation 5 and Xbox Series X|S. The press release lists the PlayStation Store, Microsoft Store, Rockstar Games Store and retail as places to buy it, confirms an ESRB rating of M (Mature), and notes that the 34-track GTA VI: The Album is out alongside the game.</p><p>Studio president and founder Sam Houser, who rarely speaks publicly, said the team set out to exceed expectations and looks forward to \"many more years\" of sharing the game with players. As GamesRadar+ points out, the launch covers the single-player story only, and Rockstar has not said anything yet about an online mode.</p>",
     "es": "<p>Rockstar Games ha anunciado oficialmente que Grand Theft Auto VI ya está disponible en todo el mundo para PlayStation 5 y Xbox Series X|S. El comunicado señala que se puede comprar en PlayStation Store, Microsoft Store, la Rockstar Games Store y tiendas físicas, confirma la clasificación M (Maduro) de la ESRB y recuerda que GTA VI: The Album, con 34 temas, sale junto al juego.</p><p>Sam Houser, presidente y fundador del estudio, que rara vez habla en público, dijo que el equipo quiso superar las expectativas y que espera compartir el juego con los jugadores durante muchos años más. Como destaca GamesRadar+, el lanzamiento incluye solo la historia para un jugador y Rockstar aún no ha dicho nada sobre un modo en línea.</p>",
     "pt": "<p>A Rockstar Games anunciou oficialmente que Grand Theft Auto VI está disponível no mundo todo para PlayStation 5 e Xbox Series X|S. O comunicado cita PlayStation Store, Microsoft Store, Rockstar Games Store e lojas físicas como pontos de venda, confirma a classificação M (Mature) da ESRB e lembra que GTA VI: The Album, com 34 faixas, sai junto com o jogo.</p><p>Sam Houser, presidente e fundador do estúdio, que raramente fala em público, disse que a equipe quis superar as expectativas e que espera dividir o jogo com os fãs por muitos anos ainda. Como observa o GamesRadar+, o lançamento traz apenas a história para um jogador, e a Rockstar ainda não comentou nada sobre um modo online.</p>"
+   }
+  },
+  {
+   "slug": "take-two-gta-6-day-one-3-79-billion-record",
+   "date": "2026-11-20T14:00:00Z",
+   "cat": "official",
+   "src": [
+    "t2_record",
+    "dt_record"
+   ],
+   "guide": "editions",
+   "title": {
+    "en": "Official: GTA 6 made $3.79 billion on day one, says Take-Two",
+    "es": "Oficial: GTA 6 generó 3.790 millones de dólares en su primer día, según Take-Two",
+    "pt": "Oficial: GTA 6 faturou US$ 3,79 bilhões no primeiro dia, diz a Take-Two"
+   },
+   "body": {
+    "en": "<p>Take-Two and Rockstar have shared the first official sales figures for GTA 6. In a release dated November 20, the publisher said day-one retail sales reached $3.79 billion worldwide, based on company estimates through the end of November 19. It calls this the biggest entertainment launch in history, across any medium. The game also sold 32.5 million units before release, which Take-Two describes as a record on every platform.</p><p>The announcement repeats the game's Metacritic score of 99 and includes a short thank-you from Rockstar founder Sam Houser, who said the team is \"incredibly humbled\" by the response. No separate post-launch unit total was given. These official numbers replace the third-party estimates reported earlier, such as Sensor Tower's, and GTA 6 is still available only on PS5 and Xbox Series X|S.</p>",
+    "es": "<p>Take-Two y Rockstar han publicado las primeras cifras oficiales de ventas de GTA 6. En un comunicado del 20 de noviembre, la editora afirma que las ventas minoristas del primer día alcanzaron 3.790 millones de dólares en todo el mundo, según estimaciones propias hasta el cierre del 19 de noviembre. Lo presenta como el mayor lanzamiento de entretenimiento de la historia en cualquier formato. Además, el juego vendió 32,5 millones de unidades antes de salir, un récord en todas las plataformas según Take-Two.</p><p>El anuncio recuerda la nota de 99 en Metacritic e incluye un breve agradecimiento de Sam Houser, fundador de Rockstar, que se dice muy agradecido por la respuesta de los jugadores. No se ha dado un total de unidades posterior al lanzamiento. Estas cifras oficiales sustituyen a las estimaciones externas publicadas antes, como la de Sensor Tower. GTA 6 sigue disponible solo en PS5 y Xbox Series X|S.</p>",
+    "pt": "<p>Take-Two e Rockstar divulgaram os primeiros números oficiais de vendas de GTA 6. Em comunicado de 20 de novembro, a publicadora disse que as vendas no varejo do primeiro dia chegaram a US$ 3,79 bilhões no mundo, com base em estimativas próprias até o fim do dia 19 de novembro. A empresa chama isso de maior lançamento de entretenimento da história, em qualquer mídia. O jogo também vendeu 32,5 milhões de unidades antes do lançamento, recorde em todas as plataformas, segundo a Take-Two.</p><p>O anúncio reforça a nota 99 no Metacritic e traz um breve agradecimento de Sam Houser, fundador da Rockstar, que se disse muito grato pela resposta dos jogadores. Não foi informado um total de unidades depois do lançamento. Esses números oficiais substituem as estimativas de terceiros divulgadas antes, como a da Sensor Tower. GTA 6 continua disponível apenas para PS5 e Xbox Series X|S.</p>"
+   }
+  },
+  {
+   "slug": "zelnick-deflects-gta-7-question-launch-day",
+   "date": "2026-11-20T13:30:00Z",
+   "cat": "industry",
+   "src": [
+    "dx_gta7"
+   ],
+   "guide": "timeline",
+   "title": {
+    "en": "Take-Two's CEO laughs off GTA 7 questions on GTA 6 launch day",
+    "es": "El CEO de Take-Two esquiva las preguntas sobre GTA 7 el día del estreno de GTA 6",
+    "pt": "CEO da Take-Two desconversa sobre GTA 7 no dia de estreia de GTA 6"
+   },
+   "body": {
+    "en": "<p>Asked about Grand Theft Auto 7 only hours after GTA 6 went on sale, Take-Two chief executive Strauss Zelnick politely declined to engage. Speaking on the TBPN podcast on November 19, he was asked whether a future GTA could become a live version of the whole world. His answer, as reported by Dexerto, was to remind the hosts that the company had only just launched GTA 6 that same day.</p><p>Zelnick joked that players have several hundred hours of fun ahead of them before anyone should be thinking about a sequel. He gave no timing, platforms or details for a next game, and nothing official exists about GTA 7. For now, Rockstar's focus remains on GTA 6 itself, with the online side of the game still to be detailed.</p>",
+    "es": "<p>Preguntado por Grand Theft Auto 7 apenas unas horas después de que GTA 6 saliera a la venta, el consejero delegado de Take-Two, Strauss Zelnick, prefirió no entrar en el tema. En el pódcast TBPN, el 19 de noviembre, le plantearon si un futuro GTA podría ser una versión en vivo del mundo entero. Según Dexerto, respondió recordando que la compañía acababa de lanzar GTA 6 ese mismo día.</p><p>Zelnick bromeó con que a los jugadores les esperan varios cientos de horas de diversión antes de pensar en una secuela. No dio fechas, plataformas ni detalles de un próximo juego, y no hay nada oficial sobre GTA 7. Por ahora, Rockstar sigue centrada en GTA 6, con la parte online todavía pendiente de detallar.</p>",
+    "pt": "<p>Questionado sobre Grand Theft Auto 7 poucas horas depois de GTA 6 chegar às lojas, o CEO da Take-Two, Strauss Zelnick, preferiu não entrar no assunto. No podcast TBPN, em 19 de novembro, perguntaram se um futuro GTA poderia virar uma versão ao vivo do mundo inteiro. Segundo o Dexerto, ele respondeu lembrando que a empresa tinha acabado de lançar GTA 6 naquele mesmo dia.</p><p>Zelnick brincou que os jogadores ainda têm várias centenas de horas de diversão pela frente antes de pensar numa sequência. Ele não deu prazos, plataformas nem detalhes de um próximo jogo, e não existe nada oficial sobre GTA 7. Por enquanto, o foco da Rockstar continua em GTA 6, com a parte online ainda a ser detalhada.</p>"
    }
   }
  ]
