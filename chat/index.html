@@ -73,10 +73,11 @@ a{color:var(--gold)}
 .hbar{background:rgba(0,0,0,.75)}
 .note{color:var(--mute)}
 .lg button{border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:8px;padding:5px 9px;font:700 12px/1 inherit;cursor:pointer;margin-left:4px}.lg button.on{background:#fff;color:#14102E}
+.bd{font-style:normal;flex:none;min-width:20px;height:20px;border-radius:10px;background:#ff3b30;color:#fff;font:700 12px/20px inherit;text-align:center;padding:0 6px}.ct .pv{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px}.ct.un b,.ct.un .pv{color:#000;font-weight:700}.ct .tx{flex:1;min-width:0}.sn{border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:8px;padding:4px 8px;font-size:14px;cursor:pointer;margin-left:4px}
 </style>
 </head>
 <body>
-<div class="top"><a href="/" id="tb">&larr; Five Star Daily</a><span class="lg" id="lg"><button data-l="en">EN</button><button data-l="es">ES</button><button data-l="pt">PT</button></span></div>
+<div class="top"><a href="/" id="tb">&larr; Five Star Daily</a><span class="lg" id="lg"><button data-l="en">EN</button><button data-l="es">ES</button><button data-l="pt">PT</button><button class="sn" id="sn" aria-label="Sound">🔔</button></span></div>
 <div class="phone" aria-label="Phone"><div class="sb"><span id="clk">9:41</span><span class="r"><span>5G</span><i class="bt"></i></span></div><main id="ph" style="flex:1;min-height:0;display:flex;flex-direction:column"></main><i class="hbar"></i></div>
 <p class="note" id="nt"></p>
 <script>
@@ -173,12 +174,17 @@ var C={
 };
 var L=(function(){var l='en';try{l=localStorage.getItem('fsd.lang')||(navigator.language||'en').slice(0,2)}catch(e){}return U[l]?l:'en'})();
 function tk(){var d=new Date(),h=d.getHours(),m=('0'+d.getMinutes()).slice(-2);document.getElementById('clk').textContent=(h%12||12)+':'+m;}tk();setInterval(tk,20000);
+var SEEN=[];try{SEEN=JSON.parse(localStorage.getItem('fsd.cs')||'[]')}catch(e){}
+var SND=true;try{SND=localStorage.getItem('fsd.snd')!=='0'}catch(e){}
+var AC=null;
+function ping(){if(!SND)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();var t=AC.currentTime;[[880,0],[1318,.11]].forEach(function(n){var o=AC.createOscillator(),g=AC.createGain();o.type='sine';o.frequency.value=n[0];g.gain.setValueAtTime(0.0001,t+n[1]);g.gain.exponentialRampToValueAtTime(.12,t+n[1]+.015);g.gain.exponentialRampToValueAtTime(.0001,t+n[1]+.32);o.connect(g);g.connect(AC.destination);o.start(t+n[1]);o.stop(t+n[1]+.34);});}catch(e){}}
+function mark(k){if(SEEN.indexOf(k)<0){SEEN.push(k);try{localStorage.setItem('fsd.cs',JSON.stringify(SEEN))}catch(e){}}}
 var ph=document.getElementById('ph'),cur=null,busy=false;
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function clk(){var d=new Date(),m=('0'+d.getMinutes()).slice(-2),h=d.getHours();if(L==='en'){return (h%12||12)+':'+m+(h<12?' AM':' PM')}return h+':'+m;}
 function home(){cur=null;
- ph.innerHTML='<div class="hd"><h1>'+U[L].msgs+'<small>'+U[L].tap+'</small></h1></div><div class="list">'+Object.keys(C).map(function(k){var c=C[k];return '<button class="ct" data-k="'+k+'"><div class="av '+c.cls+'" aria-hidden="true">'+c.i+'</div><div><b>'+c.n+'</b><span>'+esc(c.sub[L])+'</span></div></button>'}).join('')+'<div class="soon">'+U[L].soon+'</div></div>';}
-function open(k){cur=k;var c=C[k];
+ ph.innerHTML='<div class="hd"><h1>'+U[L].msgs+'<small>'+U[L].tap+'</small></h1></div><div class="list">'+Object.keys(C).map(function(k){var c=C[k];var un=SEEN.indexOf(k)<0;return '<button class="ct'+(un?' un':'')+'" data-k="'+k+'"><div class="av '+c.cls+'" aria-hidden="true">'+c.i+'</div><div class="tx"><b>'+c.n+'</b><span class="pv">'+esc(un?c.s.start[L].say[0]:c.sub[L])+'</span></div>'+(un?'<i class="bd" aria-label="1">1</i>':'')+'</button>'}).join('')+'<div class="soon">'+U[L].soon+'</div></div>';}
+function open(k){cur=k;var c=C[k];mark(k);
  ph.innerHTML='<div class="hd chatpg"><button class="back" data-back aria-label="Back">&lsaquo;</button><div class="av '+c.cls+'" aria-hidden="true">'+c.i+'</div><div class="nm">'+c.n+' <i>&rsaquo;</i></div></div><div class="msgs" id="ms" aria-live="polite"><div class="stamp">'+U[L].today+' '+clk()+'</div></div><div class="ch"><div class="opts" id="ch"></div><div class="inp" aria-hidden="true"><i>+</i><span>'+U[L].msg+'</span></div></div>';
  node('start');}
 function add(t,cls,html){var m=document.getElementById('ms'),d=document.createElement('div');d.className='b '+cls;if(html)d.innerHTML=html;else d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight;return d;}
@@ -186,7 +192,7 @@ function node(id){var c=C[cur],n=c.s[id][L],ch=document.getElementById('ch'),ms=
  (function next(){if(i>=n.say.length){fin();return;}
   var ty=document.createElement('div');ty.className='typing';ty.innerHTML='<i></i><i></i><i></i>';ms.appendChild(ty);ms.scrollTop=ms.scrollHeight;
   var d=Math.min(1400,500+n.say[i].length*22);
-  setTimeout(function(){ty.remove();add(n.say[i],'t');i++;next();},d);})();
+  setTimeout(function(){ty.remove();add(n.say[i],'t');ping();i++;next();},d);})();
  function fin(){busy=false;
   if(n.link){add('','t','<a href="/map/">'+esc(U[L].map)+' &rarr;</a>');}
   if(n.end){ch.innerHTML='<span class="end">'+U[L].end+'</span><button data-again>'+U[L].again+'</button><button data-back>'+U[L].all+'</button>';}
@@ -197,7 +203,9 @@ document.querySelector('.phone').addEventListener('click',function(e){var b=e.ta
  if(b.hasAttribute('data-again')){open(cur);return;}
  if(b.dataset.n&&!busy){add(b.textContent,'m');node(b.dataset.n);}});
 function setL(l){L=l;try{localStorage.setItem('fsd.lang',l)}catch(e){}document.documentElement.lang=l;document.title=U[l].title+' | Five Star Daily';document.getElementById('tb').innerHTML=U[l].back.replace('\u2190','&larr;');document.getElementById('nt').textContent=U[l].note;[].forEach.call(document.querySelectorAll('#lg button'),function(b){b.classList.toggle('on',b.dataset.l===l)});if(cur){var k=cur;open(k)}else home();}
-document.getElementById('lg').addEventListener('click',function(e){var b=e.target.closest('button');if(b)setL(b.dataset.l)});
+document.getElementById('lg').addEventListener('click',function(e){var b=e.target.closest('button[data-l]');if(b)setL(b.dataset.l)});
+var sn=document.getElementById('sn');function sbtn(){sn.textContent=SND?'🔔':'🔕';sn.setAttribute('aria-pressed',SND)}
+sn.addEventListener('click',function(){SND=!SND;try{localStorage.setItem('fsd.snd',SND?'1':'0')}catch(e){}sbtn();if(SND)ping();});sbtn();
 setL(L);
 </script>
 </body>
