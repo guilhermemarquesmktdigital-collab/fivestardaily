@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Text the Crew: GTA 6 character chat | Five Star Daily</title>
+<meta name="description" content="A fan-made parody: text Lucia and Jason and see how they would answer. Unofficial, not written by Rockstar Games.">
+<link rel="canonical" href="https://fivestardaily.com/chat/">
+<meta name="theme-color" content="#14102E">
+<style>
+:root{--bg:#14102E;--card:#1E1840;--ink:#fff;--mute:#B9B2D8;--pink:#FF3D8B;--orange:#FF8A3D;--gold:#FFE08A}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:radial-gradient(1200px 700px at 50% -10%,#3a1d6b 0,var(--bg) 60%);color:var(--ink);font:16px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;display:flex;flex-direction:column;align-items:center;min-height:100%;padding:12px 12px calc(12px + env(safe-area-inset-bottom))}
+a{color:var(--gold)}
+.top{width:100%;max-width:430px;display:flex;justify-content:space-between;align-items:center;margin:2px 0 10px;font-size:14px}
+.top a{text-decoration:none;font-weight:700}
+.phone{width:100%;max-width:430px;flex:1;min-height:0;max-height:760px;display:flex;flex-direction:column;background:var(--card);border:1px solid rgba(255,255,255,.18);border-radius:26px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.8)}
+.hd{display:flex;align-items:center;gap:10px;padding:14px 14px 12px;border-bottom:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03)}
+.hd h1{font-size:17px;margin:0;flex:1}
+.hd .back{border:0;background:transparent;color:#fff;font-size:22px;cursor:pointer;padding:2px 8px 2px 0}
+.hd small{display:block;color:var(--mute);font-weight:400;font-size:12px}
+.av{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:17px;color:#fff;letter-spacing:.5px}
+.av.l{background:linear-gradient(135deg,var(--pink),var(--orange))}.av.j{background:linear-gradient(135deg,#1fb7a6,#3b6fe0)}
+.hd .av{width:38px;height:38px;font-size:15px}
+.list{flex:1;overflow:auto}
+.ct{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:0;background:transparent;color:#fff;padding:14px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.08)}
+.ct:hover,.ct:focus-visible{background:rgba(255,255,255,.07);outline:none}
+.ct b{display:block;font-size:16px}.ct span{color:var(--mute);font-size:13.5px}
+.soon{padding:16px 14px;color:var(--mute);font-size:13.5px}
+.msgs{flex:1;overflow:auto;padding:14px 12px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth}
+.b{max-width:80%;padding:9px 13px;border-radius:18px;font-size:15.5px;word-wrap:break-word;animation:pop .18s ease-out}
+.b.t{align-self:flex-start;background:#2d2656;border-bottom-left-radius:5px}
+.b.m{align-self:flex-end;background:linear-gradient(135deg,var(--pink),#d62f7a);border-bottom-right-radius:5px}
+.b a{font-weight:700}
+.typing{align-self:flex-start;background:#2d2656;border-radius:18px;border-bottom-left-radius:5px;padding:12px 14px;display:flex;gap:4px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--mute);animation:bl 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes bl{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ch{padding:10px 12px 14px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:8px;background:rgba(255,255,255,.03);min-height:64px;align-items:center}
+.ch button{border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:999px;padding:9px 14px;font:600 14.5px/1.2 inherit;cursor:pointer}
+.ch button:hover,.ch button:focus-visible{background:#fff;color:#14102E;outline:none}
+.ch .end{color:var(--mute);font-size:13.5px;margin-right:4px}
+.note{width:100%;max-width:430px;text-align:center;color:var(--mute);font-size:12px;margin:10px 0 0}
+@media (prefers-reduced-motion:reduce){.b,.typing i{animation:none}.msgs{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="top"><a href="/">&larr; Five Star Daily</a><span>Text the Crew</span></div>
+<main class="phone" id="ph" aria-label="Phone"></main>
+<p class="note">Fan-made parody for fun. Not official, not affiliated with Rockstar Games, and not their real messages. Characters belong to Rockstar Games.</p>
+<script>
+/* Scripted chats: tap a reply, the character answers. Nothing here is sent anywhere. */
+var C={
+ lucia:{n:'Lucia',i:'L',cls:'l',sub:'Tough, sharp, doesn’t waste words',
+  s:{
+  start:{say:['Hey. You better not be texting me about nothing.'],ch:[['I need a plan for today','plan'],['Who’s the best at what we do?','best'],['Just checking in','check']]},
+  plan:{say:['A plan. Okay.','Rule one: know your exit before you walk in.'],ch:[['Rule two?','r2'],['And if it goes wrong?','wrong']]},
+  r2:{say:['Never trust a plan that needs everyone to behave.'],ch:[['Fair. Where do I start?','where'],['Rule three?','r3']]},
+  r3:{say:['Eat first. Nobody makes good decisions on an empty stomach.'],ch:[['Fair. Where do I start?','where']]},
+  wrong:{say:['Then it was a bad plan. Or a good story.','Depends who walks out.'],ch:[['Fair. Where do I start?','where']]},
+  where:{say:['Scout it. Count the cameras, the doors, the people.','Then count again.'],ch:[['Then what?','then'],['And money?','money']]},
+  then:{say:['Then you go quiet and you go fast.','Louder is not smarter.'],end:1},
+  money:{say:['Cash is easy to find and hard to keep.','Check the map on this site before you ask me.'],link:['Open the map','/map/'],end:1},
+  best:{say:['Me.','Obviously.'],ch:[['And Jason?','jason'],['Fair.','fair']]},
+  jason:{say:['He’s fine. Better when he’s listening.'],end:1},
+  fair:{say:['I know.'],end:1},
+  check:{say:['Don’t do that. Check in when there’s a reason.'],ch:[['Reason: I’m bored','bored'],['Sorry','sorry']]},
+  bored:{say:['Then go do something with your day.','Come back with a story.'],end:1},
+  sorry:{say:['Don’t be. Just don’t waste my battery.'],end:1}}},
+ jason:{n:'Jason',i:'J',cls:'j',sub:'Easygoing, dry humor, always has a plan B',
+  s:{
+  start:{say:['Hey, you. Everything okay, or is this a “bring a truck” kind of text?'],ch:[['Bring a truck','truck'],['Just saying hi','hi'],['I need advice','adv']]},
+  truck:{say:['Ha. Okay.','What are we moving, and does anyone need to not know about it?'],ch:[['Nothing illegal','nil'],['Maybe a little','little']]},
+  nil:{say:['Sure. That’s exactly what I’d say too.','Meet you there. Gas is on you.'],end:1},
+  little:{say:['My favorite amount.','Wear shoes you can run in.'],end:1},
+  hi:{say:['Hey. Good timing.','I’ve been staring at a boat engine for an hour.'],ch:[['Why a boat engine?','boat'],['Sounds relaxing','relax']]},
+  boat:{say:['Long story. Short version: never buy a boat from a guy who says “trust me.”'],end:1},
+  relax:{say:['It is. Until it isn’t.','Then it’s a swim.'],end:1},
+  adv:{say:['Free advice, worth every penny. Go.'],ch:[['How do I not get caught?','caught'],['How do I make money?','money']]},
+  caught:{say:['Don’t be where the trouble is.','Or be there and look bored. Works more than you’d think.'],end:1},
+  money:{say:['Do the boring jobs well. Boring pays.','Also, I hear there’s a list of money spots on a certain fan site.'],link:['Open the map','/map/'],end:1}}}
+};
+var ph=document.getElementById('ph'),cur=null,busy=false;
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function home(){cur=null;
+ ph.innerHTML='<div class="hd"><h1>Messages<small>Tap a contact</small></h1></div><div class="list">'+Object.keys(C).map(function(k){var c=C[k];return '<button class="ct" data-k="'+k+'"><div class="av '+c.cls+'" aria-hidden="true">'+c.i+'</div><div><b>'+c.n+'</b><span>'+esc(c.sub)+'</span></div></button>'}).join('')+'<div class="soon">More contacts coming soon.</div></div>';}
+function open(k){cur=k;var c=C[k];
+ ph.innerHTML='<div class="hd"><button class="back" data-back aria-label="Back">&lsaquo;</button><div class="av '+c.cls+'" aria-hidden="true">'+c.i+'</div><h1>'+c.n+'<small>'+esc(c.sub)+'</small></h1></div><div class="msgs" id="ms" aria-live="polite"></div><div class="ch" id="ch"></div>';
+ node('start');}
+function add(t,cls,html){var m=document.getElementById('ms'),d=document.createElement('div');d.className='b '+cls;if(html)d.innerHTML=html;else d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight;return d;}
+function node(id){var c=C[cur],n=c.s[id],ch=document.getElementById('ch'),ms=document.getElementById('ms');busy=true;ch.innerHTML='';var i=0;
+ (function next(){if(i>=n.say.length){fin();return;}
+  var ty=document.createElement('div');ty.className='typing';ty.innerHTML='<i></i><i></i><i></i>';ms.appendChild(ty);ms.scrollTop=ms.scrollHeight;
+  var d=Math.min(1400,500+n.say[i].length*22);
+  setTimeout(function(){ty.remove();add(n.say[i],'t');i++;next();},d);})();
+ function fin(){busy=false;
+  if(n.link){add('','t','<a href="'+n.link[1]+'">'+esc(n.link[0])+' &rarr;</a>');}
+  if(n.end){ch.innerHTML='<span class="end">End of chat.</span><button data-again>Start over</button><button data-back>All chats</button>';}
+  else{ch.innerHTML=n.ch.map(function(x){return '<button data-n="'+x[1]+'">'+esc(x[0])+'</button>'}).join('');}}}
+ph.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+ if(b.dataset.k){open(b.dataset.k);return;}
+ if(b.hasAttribute('data-back')){home();return;}
+ if(b.hasAttribute('data-again')){open(cur);return;}
+ if(b.dataset.n&&!busy){add(b.textContent,'m');node(b.dataset.n);}});
+home();
+</script>
+</body>
+</html>
