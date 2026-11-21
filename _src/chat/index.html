@@ -20,7 +20,7 @@ a{color:var(--gold)}
 .hd .back{border:0;background:transparent;color:#fff;font-size:22px;cursor:pointer;padding:2px 8px 2px 0}
 .hd small{display:block;color:var(--mute);font-weight:400;font-size:12px}
 .av{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:17px;color:#fff;letter-spacing:.5px}
-.av.l{background:linear-gradient(135deg,var(--pink),var(--orange))}.av.j{background:linear-gradient(135deg,#1fb7a6,#3b6fe0)}
+.av.l{background:linear-gradient(135deg,var(--pink),var(--orange))}.av.m{background:linear-gradient(135deg,#ff5fa8,#8a4dff)}.av.j{background:linear-gradient(135deg,#1fb7a6,#3b6fe0)}
 .hd .av{width:38px;height:38px;font-size:15px}
 .list{flex:1;overflow:auto}
 .ct{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:0;background:rgba(10,6,24,.4);color:#fff;padding:14px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -108,7 +108,21 @@ var C={
   relax:{say:['It is. Until it isn’t.','Then it’s a swim.'],end:1},
   adv:{say:['Free advice, worth every penny. Go.'],ch:[['How do I not get caught?','caught'],['How do I make money?','money']]},
   caught:{say:['Don’t be where the trouble is.','Or be there and look bored. Works more than you’d think.'],end:1},
-  money:{say:['Do the boring jobs well. Boring pays.','Also, I hear there’s a list of money spots on a certain fan site.'],link:['Open the map','/map/'],end:1}}}
+  money:{say:['Do the boring jobs well. Boring pays.','Also, I hear there’s a list of money spots on a certain fan site.'],link:['Open the map','/map/'],end:1}}},
+ mandy:{n:'Mandy',i:'M',cls:'m',sub:'Flirty, teasing, always up to something',
+  s:{
+  start:{say:['Well, well. Look who texted first.'],ch:[['About that rent\u2026','rent'],['Just checking in','chk'],['What are you up to?','doing']]},
+  rent:{say:['Rent? Ugh. Such a boring word.','Fix my sink first. Then we\u2019ll talk numbers.'],ch:[['Fine. What\u2019s wrong with it?','sink'],['Rent is rent','rr']]},
+  sink:{say:['It drips. It gurgles. It makes sounds I won\u2019t repeat.','Come see for yourself.'],ch:[['Should I bring a wrench?','wr'],['I\u2019ll send a plumber','pl']]},
+  wr:{say:['Bring whatever you want. Just don\u2019t be late.'],end:1},
+  pl:{say:['A plumber? You\u2019re no fun.'],end:1},
+  rr:{say:['Always so serious. It\u2019s kind of cute, honestly.'],end:1},
+  chk:{say:['Checking in. How sweet.','I\u2019m lounging in the sun, working on my tan.'],ch:[['Where?','wh'],['Sounds nice','nice']]},
+  wh:{say:['Somewhere with a view and zero responsibilities.','You should try it.'],end:1},
+  nice:{say:['It is. You should join me sometime.'],end:1},
+  doing:{say:['Oh, you know. Sun, snacks, and being unforgettable.'],ch:[['Unforgettable how?','unf'],['Be careful out there','care']]},
+  unf:{say:['Ask around the neighborhood. Everybody has a story.'],end:1},
+  care:{say:['Careful is my middle name.','Okay, it isn\u2019t. But nice try.'],end:1}}}
 };
 function tk(){var d=new Date(),h=d.getHours()%12||12,m=('0'+d.getMinutes()).slice(-2);document.getElementById('clk').textContent=h+':'+m;}tk();setInterval(tk,20000);
 var ph=document.getElementById('ph'),cur=null,busy=false;
