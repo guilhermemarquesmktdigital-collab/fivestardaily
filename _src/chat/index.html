@@ -42,6 +42,36 @@ a{color:var(--gold)}
 .ch .end{color:var(--mute);font-size:13.5px;margin-right:4px}
 .note{width:100%;max-width:430px;text-align:center;color:var(--mute);font-size:12px;margin:10px 0 0}
 @media (prefers-reduced-motion:reduce){.b,.typing i{animation:none}.msgs{scroll-behavior:auto}}
+
+/* Messages-app look: light screen, blue sent bubbles, gray received */
+.phone{background:#fff;border-color:#0b0b10}
+.sb{background:#fff;color:#000}.sb .bt{border-color:#000}.sb .bt:after{background:#000}
+.hd{background:#fff;border-bottom:1px solid #e5e5ea;color:#000;backdrop-filter:none}
+.hd h1{color:#000}.hd small{color:#8a8a8e}
+.hd.chatpg{position:relative;flex-direction:column;gap:2px;padding:6px 14px 8px;text-align:center}
+.hd.chatpg .back{position:absolute;left:10px;top:18px;color:#0a84ff;font-size:30px;line-height:1;padding:0}
+.hd.chatpg .av{width:48px;height:48px;font-size:19px}
+.hd.chatpg .nm{font-size:12.5px;font-weight:600;color:#000}
+.hd.chatpg .nm i{font-style:normal;color:#8a8a8e;font-weight:400}
+.list{background:#fff}.ct{background:#fff;color:#000;border-bottom:1px solid #e5e5ea}
+.ct:hover,.ct:focus-visible{background:#f2f2f7}.ct span{color:#8a8a8e}
+.soon{color:#8a8a8e;opacity:1}
+.msgs{background:#fff}
+.stamp{align-self:center;font-size:11.5px;color:#8a8a8e;margin:2px 0 6px}
+.b.t{background:#e9e9eb;color:#000}
+.b.m{background:#0a84ff;color:#fff}
+.b a{color:#0a63c9}
+.typing{background:#e9e9eb}.typing i{background:#8a8a8e}
+.ch{background:#fff;border-top:1px solid #e5e5ea;padding:8px 12px 10px;flex-direction:column;align-items:stretch;gap:8px}
+.ch .opts{display:flex;flex-wrap:wrap;gap:8px}
+.ch button{border:1px solid #0a84ff;color:#0a84ff;background:#fff}
+.ch button:hover,.ch button:focus-visible{background:#0a84ff;color:#fff}
+.ch .end{color:#8a8a8e}
+.inp{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.inp i{flex:none;width:30px;height:30px;border-radius:50%;background:#e9e9eb;color:#555;display:grid;place-items:center;font-style:normal;font-size:20px}
+.inp span{flex:1;border:1px solid #d1d1d6;border-radius:18px;padding:7px 12px;color:#a0a0a5;font-size:15px}
+.hbar{background:rgba(0,0,0,.75)}
+.note{color:var(--mute)}
 </style>
 </head>
 <body>
@@ -83,10 +113,11 @@ var C={
 function tk(){var d=new Date(),h=d.getHours()%12||12,m=('0'+d.getMinutes()).slice(-2);document.getElementById('clk').textContent=h+':'+m;}tk();setInterval(tk,20000);
 var ph=document.getElementById('ph'),cur=null,busy=false;
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function clk(){var d=new Date(),h=d.getHours()%12||12,m=('0'+d.getMinutes()).slice(-2);return h+':'+m+(d.getHours()<12?' AM':' PM');}
 function home(){cur=null;
  ph.innerHTML='<div class="hd"><h1>Messages<small>Tap a contact</small></h1></div><div class="list">'+Object.keys(C).map(function(k){var c=C[k];return '<button class="ct" data-k="'+k+'"><div class="av '+c.cls+'" aria-hidden="true">'+c.i+'</div><div><b>'+c.n+'</b><span>'+esc(c.sub)+'</span></div></button>'}).join('')+'<div class="soon">More contacts coming soon.</div></div>';}
 function open(k){cur=k;var c=C[k];
- ph.innerHTML='<div class="hd"><button class="back" data-back aria-label="Back">&lsaquo;</button><div class="av '+c.cls+'" aria-hidden="true">'+c.i+'</div><h1>'+c.n+'<small>'+esc(c.sub)+'</small></h1></div><div class="msgs" id="ms" aria-live="polite"></div><div class="ch" id="ch"></div>';
+ ph.innerHTML='<div class="hd chatpg"><button class="back" data-back aria-label="Back">&lsaquo;</button><div class="av '+c.cls+'" aria-hidden="true">'+c.i+'</div><div class="nm">'+c.n+' <i>&rsaquo;</i></div></div><div class="msgs" id="ms" aria-live="polite"><div class="stamp">Today '+clk()+'</div></div><div class="ch"><div class="opts" id="ch"></div><div class="inp" aria-hidden="true"><i>+</i><span>Message</span></div></div>';
  node('start');}
 function add(t,cls,html){var m=document.getElementById('ms'),d=document.createElement('div');d.className='b '+cls;if(html)d.innerHTML=html;else d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight;return d;}
 function node(id){var c=C[cur],n=c.s[id],ch=document.getElementById('ch'),ms=document.getElementById('ms');busy=true;ch.innerHTML='';var i=0;
