@@ -63,6 +63,22 @@
   "dx_gta7": [
    "Dexerto: Take-Two CEO is shutting down questions about GTA 7 just days after GTA 6's launch",
    "https://www.dexerto.com/gta/take-two-ceo-is-shutting-down-questions-about-gta-7-just-days-after-gta-6s-launch-3430074/"
+  ],
+  "l10_fest": [
+   "Local 10: Miami turns up for GTA 6 soundtrack party",
+   "https://www.local10.com/news/local/2026/11/21/miami-turns-up-for-gta-6-soundtrack-party/"
+  ],
+  "rs_fest": [
+   "Rockstar Games: Grand Theft Auto VI: The Festival",
+   "https://www.rockstargames.com/VI/gtavi-thefestival"
+  ],
+  "vgc_fest": [
+   "VGC: Rockstar announces Grand Theft Auto 6 music festival taking place in Miami",
+   "https://www.videogameschronicle.com/news/rockstar-announces-grand-theft-auto-6-music-festival-taking-place-in-miami/"
+  ],
+  "kt_rdr": [
+   "Kotaku: GTA 6 Includes Compelling Evidence That It's Set In The Same Universe As Red Dead Redemption",
+   "https://kotaku.com/gta-6-includes-compelling-evidence-that-its-set-in-the-same-universe-as-red-dead-redemption-2000758912"
   ]
  },
  "NEWS": [
@@ -335,6 +351,46 @@
     "en": "<p>Asked about Grand Theft Auto 7 only hours after GTA 6 went on sale, Take-Two chief executive Strauss Zelnick politely declined to engage. Speaking on the TBPN podcast on November 19, he was asked whether a future GTA could become a live version of the whole world. His answer, as reported by Dexerto, was to remind the hosts that the company had only just launched GTA 6 that same day.</p><p>Zelnick joked that players have several hundred hours of fun ahead of them before anyone should be thinking about a sequel. He gave no timing, platforms or details for a next game, and nothing official exists about GTA 7. For now, Rockstar's focus remains on GTA 6 itself, with the online side of the game still to be detailed.</p>",
     "es": "<p>Preguntado por Grand Theft Auto 7 apenas unas horas después de que GTA 6 saliera a la venta, el consejero delegado de Take-Two, Strauss Zelnick, prefirió no entrar en el tema. En el pódcast TBPN, el 19 de noviembre, le plantearon si un futuro GTA podría ser una versión en vivo del mundo entero. Según Dexerto, respondió recordando que la compañía acababa de lanzar GTA 6 ese mismo día.</p><p>Zelnick bromeó con que a los jugadores les esperan varios cientos de horas de diversión antes de pensar en una secuela. No dio fechas, plataformas ni detalles de un próximo juego, y no hay nada oficial sobre GTA 7. Por ahora, Rockstar sigue centrada en GTA 6, con la parte online todavía pendiente de detallar.</p>",
     "pt": "<p>Questionado sobre Grand Theft Auto 7 poucas horas depois de GTA 6 chegar às lojas, o CEO da Take-Two, Strauss Zelnick, preferiu não entrar no assunto. No podcast TBPN, em 19 de novembro, perguntaram se um futuro GTA poderia virar uma versão ao vivo do mundo inteiro. Segundo o Dexerto, ele respondeu lembrando que a empresa tinha acabado de lançar GTA 6 naquele mesmo dia.</p><p>Zelnick brincou que os jogadores ainda têm várias centenas de horas de diversão pela frente antes de pensar numa sequência. Ele não deu prazos, plataformas nem detalhes de um próximo jogo, e não existe nada oficial sobre GTA 7. Por enquanto, o foco da Rockstar continua em GTA 6, com a parte online ainda a ser detalhada.</p>"
+   }
+  },
+  {
+   "slug": "gta-vi-the-festival-miami-launch-concert",
+   "date": "2026-11-22T04:00:00Z",
+   "cat": "official",
+   "src": [
+    "l10_fest",
+    "rs_fest",
+    "vgc_fest"
+   ],
+   "guide": "soundtrack",
+   "title": {
+    "en": "Rockstar celebrates GTA 6 with a one-night festival in Miami",
+    "es": "Rockstar celebra GTA 6 con un festival de una noche en Miami",
+    "pt": "Rockstar comemora GTA 6 com um festival de uma noite em Miami"
+   },
+   "body": {
+    "en": "<p>Two days after launch, Rockstar Games and PlayStation took GTA 6 off the screen and into the real Miami. Grand Theft Auto VI: The Festival ran on Saturday, November 21, at Mana Wynwood, with two stages and a 17+ crowd. Local 10 News reported that the city came out for a night of music and Miami pride built around the game's soundtrack.</p><p>The announced lineup was drawn from the game and its official album, with Cardi B, Justice, Metro Boomin and a Cactus Jack closing set led by Travis Scott with Don Toliver, Kodak Black and SoFaygo, among others. Tickets were sold through a lottery that closed on November 10, and Rockstar said all ticket proceeds go to local Miami charities. The event was produced with the team behind the III Points festival.</p>",
+    "es": "<p>Dos días después del lanzamiento, Rockstar Games y PlayStation sacaron GTA 6 de la pantalla y lo llevaron al Miami real. Grand Theft Auto VI: The Festival se celebró el sábado 21 de noviembre en Mana Wynwood, con dos escenarios y entrada para mayores de 17 años. Local 10 News informó de que la ciudad salió a disfrutar de una noche de música y orgullo miamense en torno a la banda sonora del juego.</p><p>El cartel anunciado salió del juego y de su álbum oficial, con Cardi B, Justice, Metro Boomin y un cierre de Cactus Jack encabezado por Travis Scott junto a Don Toliver, Kodak Black y SoFaygo, entre otros. Las entradas se vendieron por sorteo, cerrado el 10 de noviembre, y Rockstar afirmó que toda la recaudación irá a organizaciones benéficas de Miami. El evento contó con los productores del festival III Points.</p>",
+    "pt": "<p>Dois dias depois do lançamento, a Rockstar Games e a PlayStation tiraram GTA 6 da tela e levaram o jogo para a Miami de verdade. O Grand Theft Auto VI: The Festival aconteceu no sábado, 21 de novembro, no Mana Wynwood, com dois palcos e público a partir de 17 anos. A Local 10 News relatou que a cidade compareceu para uma noite de música e orgulho de Miami em torno da trilha sonora do jogo.</p><p>A programação anunciada veio do jogo e do álbum oficial, com Cardi B, Justice, Metro Boomin e um encerramento da Cactus Jack liderado por Travis Scott ao lado de Don Toliver, Kodak Black e SoFaygo, entre outros. Os ingressos foram vendidos por sorteio, encerrado em 10 de novembro, e a Rockstar disse que toda a renda vai para instituições de caridade de Miami. O evento foi produzido com a equipe do festival III Points.</p>"
+   }
+  },
+  {
+   "slug": "gta-6-red-dead-redemption-shared-universe-clues",
+   "date": "2026-11-20T20:30:00Z",
+   "cat": "gameplay",
+   "src": [
+    "kt_rdr"
+   ],
+   "guide": "references-and-callbacks",
+   "title": {
+    "en": "GTA 6 hides strong hints that it shares a universe with Red Dead Redemption",
+    "es": "GTA 6 esconde pistas claras de que comparte universo con Red Dead Redemption",
+    "pt": "GTA 6 esconde pistas fortes de que divide o universo com Red Dead Redemption"
+   },
+   "body": {
+    "en": "<p>Players digging through Leonida have found several nods to Red Dead Redemption, and Kotaku argues they add up to real evidence of a shared universe. The clearest is a book found in Brian's marina that recounts events from Red Dead Redemption and its prequel, including the death of the outlaw Flaco Hernandez. The YouTube channel GameRoll was among the first to spot it.</p><p>Other details point the same way: some cars carry New Austin license plates, a dog on a mini-golf course has an Arthur Morgan doll on its back, and a hat resembling Arthur's turns up in the game. Kotaku notes the lore does not line up perfectly, and Rockstar has not commented. Still, the references suggest the studio is at least playing with the idea of linking its two biggest series.</p>",
+    "es": "<p>Los jugadores que exploran Leonida han encontrado varios guiños a Red Dead Redemption, y Kotaku sostiene que juntos son una prueba seria de un universo compartido. El más claro es un libro en el puerto deportivo de Brian que relata hechos de Red Dead Redemption y su precuela, incluida la muerte del forajido Flaco Hernández. El canal de YouTube GameRoll fue de los primeros en descubrirlo.</p><p>Otros detalles apuntan en la misma dirección: algunos coches llevan matrículas de New Austin, un perro en un minigolf carga un muñeco de Arthur Morgan y aparece un sombrero parecido al de Arthur. Kotaku señala que la historia no encaja del todo y Rockstar no ha hecho comentarios. Aun así, las referencias sugieren que el estudio juega con la idea de unir sus dos grandes sagas.</p>",
+    "pt": "<p>Os jogadores que exploram Leonida encontraram várias referências a Red Dead Redemption, e o Kotaku defende que, juntas, elas são uma evidência séria de um universo compartilhado. A mais clara é um livro na marina de Brian que narra acontecimentos de Red Dead Redemption e do seu prequel, incluindo a morte do fora da lei Flaco Hernández. O canal do YouTube GameRoll foi um dos primeiros a encontrá-lo.</p><p>Outros detalhes apontam na mesma direção: alguns carros usam placas de New Austin, um cachorro em um minigolfe carrega um boneco de Arthur Morgan e um chapéu parecido com o de Arthur aparece no jogo. O Kotaku lembra que a cronologia não fecha perfeitamente, e a Rockstar não comentou. Mesmo assim, as referências sugerem que o estúdio brinca com a ideia de ligar suas duas maiores séries.</p>"
    }
   }
  ]
