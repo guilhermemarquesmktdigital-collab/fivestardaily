@@ -79,6 +79,22 @@
   "kt_rdr": [
    "Kotaku: GTA 6 Includes Compelling Evidence That It's Set In The Same Universe As Red Dead Redemption",
    "https://kotaku.com/gta-6-includes-compelling-evidence-that-its-set-in-the-same-universe-as-red-dead-redemption-2000758912"
+  ],
+  "vice_patch": [
+   "VICE: GTA 6 Patch Update 01.002.002 Is Live on PS5 and Xbox Series X – Patch Notes",
+   "https://www.vice.com/en/article/gta-6-update-01-002-002-patch-notes/"
+  ],
+  "lc_patch": [
+   "LibertyCity: Rockstar Releases First Post-Launch GTA 6 Patch, Rolling Out in Waves on PS5",
+   "https://libertycity.net/news/gta-6/10649-rockstar-releases-first-post-launch-gta.html"
+  ],
+  "nbc_circana": [
+   "Notebookcheck: GTA 6 drew a mammoth 61% of active U.S. PS5 players on launch day",
+   "https://www.notebookcheck.net/GTA-6-drew-a-mammoth-61-of-active-U-S-PS5-players-on-launch-day-averaging-more-than-eight-hours-per-player.1456846.0.html"
+  ],
+  "hg_circana": [
+   "HappyGamer: Circana: 61% of Active US PS5 Players Played GTA 6 on Launch Day",
+   "https://happygamer.com/gta-6-launch-day-engagement-61-percent-ps5-players-179878/"
   ]
  },
  "NEWS": [
@@ -391,6 +407,44 @@
     "en": "<p>Players digging through Leonida have found several nods to Red Dead Redemption, and Kotaku argues they add up to real evidence of a shared universe. The clearest is a book found in Brian's marina that recounts events from Red Dead Redemption and its prequel, including the death of the outlaw Flaco Hernandez. The YouTube channel GameRoll was among the first to spot it.</p><p>Other details point the same way: some cars carry New Austin license plates, a dog on a mini-golf course has an Arthur Morgan doll on its back, and a hat resembling Arthur's turns up in the game. Kotaku notes the lore does not line up perfectly, and Rockstar has not commented. Still, the references suggest the studio is at least playing with the idea of linking its two biggest series.</p>",
     "es": "<p>Los jugadores que exploran Leonida han encontrado varios guiños a Red Dead Redemption, y Kotaku sostiene que juntos son una prueba seria de un universo compartido. El más claro es un libro en el puerto deportivo de Brian que relata hechos de Red Dead Redemption y su precuela, incluida la muerte del forajido Flaco Hernández. El canal de YouTube GameRoll fue de los primeros en descubrirlo.</p><p>Otros detalles apuntan en la misma dirección: algunos coches llevan matrículas de New Austin, un perro en un minigolf carga un muñeco de Arthur Morgan y aparece un sombrero parecido al de Arthur. Kotaku señala que la historia no encaja del todo y Rockstar no ha hecho comentarios. Aun así, las referencias sugieren que el estudio juega con la idea de unir sus dos grandes sagas.</p>",
     "pt": "<p>Os jogadores que exploram Leonida encontraram várias referências a Red Dead Redemption, e o Kotaku defende que, juntas, elas são uma evidência séria de um universo compartilhado. A mais clara é um livro na marina de Brian que narra acontecimentos de Red Dead Redemption e do seu prequel, incluindo a morte do fora da lei Flaco Hernández. O canal do YouTube GameRoll foi um dos primeiros a encontrá-lo.</p><p>Outros detalhes apontam na mesma direção: alguns carros usam placas de New Austin, um cachorro em um minigolfe carrega um boneco de Arthur Morgan e um chapéu parecido com o de Arthur aparece no jogo. O Kotaku lembra que a cronologia não fecha perfeitamente, e a Rockstar não comentou. Mesmo assim, as referências sugerem que o estúdio brinca com a ideia de ligar suas duas maiores séries.</p>"
+   }
+  },
+  {
+   "slug": "gta-6-first-post-launch-patch-01-002-002",
+   "date": "2026-11-23T11:00:00Z",
+   "cat": "official",
+   "src": [
+    "vice_patch",
+    "lc_patch"
+   ],
+   "title": {
+    "en": "GTA 6 gets its first post-launch patch, rolling out in waves on PS5",
+    "es": "GTA 6 recibe su primer parche tras el lanzamiento, que llega por fases en PS5",
+    "pt": "GTA 6 recebe o primeiro patch pós-lançamento, liberado em etapas no PS5"
+   },
+   "body": {
+    "en": "<p>Four days after launch, GTA 6 has received its first update since November 19. It is version 01.002.002 on PS5 and 1.0.2.2 on Xbox Series X|S, a download of about 603.8 MB on PlayStation and 1.6 GB on Xbox. The version and sizes were first spotted by the dataminer Tex2 and reported by VICE.</p><p>On PS5 the patch is going out in stages: roughly a third of players first, about two thirds some three hours later, and everyone around six hours after the start. If you don't see it yet, highlight the game, press Options and choose Check for Update. Rockstar has not published patch notes, so what the update changes is still unconfirmed.</p>",
+    "es": "<p>Cuatro días después del lanzamiento, GTA 6 ha recibido su primera actualización desde el 19 de noviembre. Es la versión 01.002.002 en PS5 y 1.0.2.2 en Xbox Series X|S, con una descarga de unos 603,8 MB en PlayStation y 1,6 GB en Xbox. El dataminer Tex2 fue el primero en detectar la versión y los tamaños, y VICE lo publicó.</p><p>En PS5 el parche se distribuye por fases: primero cerca de un tercio de los jugadores, unos dos tercios unas tres horas después y todos alrededor de seis horas tras el inicio. Si aún no te aparece, selecciona el juego, pulsa Options y elige Buscar actualización. Rockstar no ha publicado notas del parche, así que sus cambios siguen sin confirmarse.</p>",
+    "pt": "<p>Quatro dias após o lançamento, GTA 6 recebeu sua primeira atualização desde 19 de novembro. É a versão 01.002.002 no PS5 e 1.0.2.2 no Xbox Series X|S, com download de cerca de 603,8 MB no PlayStation e 1,6 GB no Xbox. O dataminer Tex2 foi quem identificou a versão e os tamanhos, e a VICE noticiou.</p><p>No PS5, o patch está sendo liberado em etapas: primeiro para cerca de um terço dos jogadores, uns dois terços umas três horas depois e todos por volta de seis horas após o início. Se ainda não apareceu para você, selecione o jogo, aperte Options e escolha Verificar atualização. A Rockstar não publicou notas do patch, então o que mudou ainda não está confirmado.</p>"
+   }
+  },
+  {
+   "slug": "circana-gta-6-launch-day-engagement-61-percent-ps5",
+   "date": "2026-11-22T12:00:00Z",
+   "cat": "industry",
+   "src": [
+    "nbc_circana",
+    "hg_circana"
+   ],
+   "title": {
+    "en": "Circana: 61% of active US PS5 players played GTA 6 on launch day",
+    "es": "Circana: el 61% de los jugadores activos de PS5 en EE. UU. jugó GTA 6 el día del lanzamiento",
+    "pt": "Circana: 61% dos jogadores ativos de PS5 nos EUA jogaram GTA 6 no dia do lançamento"
+   },
+   "body": {
+    "en": "<p>New engagement data shows how completely GTA 6 took over consoles on November 19. According to Circana's Player Engagement Tracker, shared on Bluesky by analyst Mat Piscatella, 61% of US PS5 players who were active that day played the game, as did 56% of active Xbox players worldwide. Piscatella notes the two figures are not directly comparable, since one covers the US and the other is global.</p><p>Players also stayed for a long time: on average they spent 513 minutes in the game on PS5, about eight and a half hours, and 494 minutes on Xbox. Piscatella called the engagement rates \"absolutely bonkers.\" For comparison, Fortnite came second on launch day, played by 10% of active users across both platforms.</p>",
+    "es": "<p>Nuevos datos de participación muestran hasta qué punto GTA 6 se adueñó de las consolas el 19 de noviembre. Según el Player Engagement Tracker de Circana, compartido en Bluesky por el analista Mat Piscatella, el 61% de los jugadores de PS5 en EE. UU. activos ese día jugó al título, igual que el 56% de los jugadores activos de Xbox en todo el mundo. Piscatella aclara que las cifras no son comparables directamente: una es de EE. UU. y la otra global.</p><p>Además, la gente jugó mucho tiempo: el promedio fue de 513 minutos en PS5, unas ocho horas y media, y de 494 minutos en Xbox. Piscatella describió las tasas de participación como \"absolutely bonkers\" (una auténtica locura). Como referencia, Fortnite quedó segundo ese día, con el 10% de los usuarios activos en ambas plataformas.</p>",
+    "pt": "<p>Novos dados de engajamento mostram como GTA 6 dominou os consoles em 19 de novembro. Segundo o Player Engagement Tracker da Circana, divulgado no Bluesky pelo analista Mat Piscatella, 61% dos jogadores de PS5 nos EUA que estavam ativos naquele dia jogaram o game, assim como 56% dos jogadores ativos de Xbox no mundo todo. Piscatella ressalta que os números não são diretamente comparáveis, já que um é dos EUA e o outro é global.</p><p>Os jogadores também ficaram muito tempo: a média foi de 513 minutos no PS5, cerca de oito horas e meia, e de 494 minutos no Xbox. Piscatella chamou as taxas de engajamento de \"absolutely bonkers\" (simplesmente insanas). Para comparar, Fortnite ficou em segundo no dia do lançamento, jogado por 10% dos usuários ativos nas duas plataformas.</p>"
    }
   }
  ]
