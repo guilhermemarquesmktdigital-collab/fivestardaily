@@ -23,7 +23,7 @@ _SONGS = [('That’s It', 'Yung Lean feat. Future & Metro Boomin'), ('RHYNO', 'T
 _UL = '<ul>' + ''.join('<li><strong>%s</strong> · %s</li>' % s for s in _SONGS) + '</ul>'
 
 g('soundtrack', 4, ['nw_album', 'gem_album', 'pcg_songs', 'rs_music'],
- {'en': 'GTA 6 songs: full soundtrack and radio stations list (play them here)',
+ {'en': 'All GTA 6 songs: full soundtrack list and radio stations (play them here)',
   'es': 'Canciones de GTA 6: lista completa de la banda sonora y emisoras (escúchalas aquí)',
   'pt': 'Músicas de GTA 6: lista completa da trilha sonora e rádios (ouça aqui)'},
  {'en': 'Every GTA 6 song on the official album, plus the radio stations. Play the full playlist on Spotify right here, no login needed for previews.',

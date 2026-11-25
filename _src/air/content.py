@@ -188,5 +188,7 @@ from guides2 import S2, G2
 S.update(S2); GUIDES = GUIDES + G2
 from guides3 import S3, G3
 S.update(S3); GUIDES = GUIDES + G3
+from guides4 import S4, G4
+S.update(S4); GUIDES = GUIDES + G4
 json.dump({'S': S, 'GUIDES': GUIDES, 'NEWS': NEWS, 'PAGES': PAGESX, 'EMAIL': EMAIL}, open(os.path.join(HERE, 'content.json'), 'w'), ensure_ascii=False)
 print('ok')
