@@ -95,6 +95,14 @@
   "hg_circana": [
    "HappyGamer: Circana: 61% of Active US PS5 Players Played GTA 6 on Launch Day",
    "https://happygamer.com/gta-6-launch-day-engagement-61-percent-ps5-players-179878/"
+  ],
+  "nlife-uk-chart-gta6": [
+   "Nintendo Life: UK Charts: No Disc, No Problem - GTA 6 Shoves Zelda Further Down The Ranking",
+   "https://www.nintendolife.com/news/2026/11/uk-charts-no-disc-no-problem-gta-6-shoves-zelda-further-down-the-ranking"
+  ],
+  "gamesasylum-uk-chart-gta6": [
+   "Games Asylum: GTA VI tops the UK retail chart, while Black Friday deals push first-party PS5 releases",
+   "https://www.gamesasylum.com/2026/11/24/gta-vi-tops-the-uk-retail-chart-while-black-friday-deals-push-first-party-ps5-releases/"
   ]
  },
  "NEWS": [
@@ -445,6 +453,26 @@
     "en": "<p>New engagement data shows how completely GTA 6 took over consoles on November 19. According to Circana's Player Engagement Tracker, shared on Bluesky by analyst Mat Piscatella, 61% of US PS5 players who were active that day played the game, as did 56% of active Xbox players worldwide. Piscatella notes the two figures are not directly comparable, since one covers the US and the other is global.</p><p>Players also stayed for a long time: on average they spent 513 minutes in the game on PS5, about eight and a half hours, and 494 minutes on Xbox. Piscatella called the engagement rates \"absolutely bonkers.\" For comparison, Fortnite came second on launch day, played by 10% of active users across both platforms.</p>",
     "es": "<p>Nuevos datos de participación muestran hasta qué punto GTA 6 se adueñó de las consolas el 19 de noviembre. Según el Player Engagement Tracker de Circana, compartido en Bluesky por el analista Mat Piscatella, el 61% de los jugadores de PS5 en EE. UU. activos ese día jugó al título, igual que el 56% de los jugadores activos de Xbox en todo el mundo. Piscatella aclara que las cifras no son comparables directamente: una es de EE. UU. y la otra global.</p><p>Además, la gente jugó mucho tiempo: el promedio fue de 513 minutos en PS5, unas ocho horas y media, y de 494 minutos en Xbox. Piscatella describió las tasas de participación como \"absolutely bonkers\" (una auténtica locura). Como referencia, Fortnite quedó segundo ese día, con el 10% de los usuarios activos en ambas plataformas.</p>",
     "pt": "<p>Novos dados de engajamento mostram como GTA 6 dominou os consoles em 19 de novembro. Segundo o Player Engagement Tracker da Circana, divulgado no Bluesky pelo analista Mat Piscatella, 61% dos jogadores de PS5 nos EUA que estavam ativos naquele dia jogaram o game, assim como 56% dos jogadores ativos de Xbox no mundo todo. Piscatella ressalta que os números não são diretamente comparáveis, já que um é dos EUA e o outro é global.</p><p>Os jogadores também ficaram muito tempo: a média foi de 513 minutos no PS5, cerca de oito horas e meia, e de 494 minutos no Xbox. Piscatella chamou as taxas de engajamento de \"absolutely bonkers\" (simplesmente insanas). Para comparar, Fortnite ficou em segundo no dia do lançamento, jogado por 10% dos usuários ativos nas duas plataformas.</p>"
+   }
+  },
+  {
+   "slug": "gta-6-tops-uk-retail-chart-launch-week",
+   "date": "2026-11-24T10:15:00Z",
+   "cat": "industry",
+   "src": [
+    "nlife-uk-chart-gta6",
+    "gamesasylum-uk-chart-gta6"
+   ],
+   "guide": "editions",
+   "title": {
+    "en": "GTA 6 debuts at No. 1 on the UK retail chart, even without a disc",
+    "es": "GTA 6 debuta en el n.º 1 de las listas de ventas físicas de Reino Unido, incluso sin disco",
+    "pt": "GTA 6 estreia em 1º lugar nas vendas físicas do Reino Unido, mesmo sem disco"
+   },
+   "body": {
+    "en": "<p>Grand Theft Auto VI has entered the UK boxed sales chart at No. 1 in its first full week, according to the GfK-compiled ranking reported by Nintendo Life and Games Asylum. The boxed version in shops is a code in a box rather than a disc, but that did not stop it from pushing EA Sports FC 27 down to second place, with The Legend of Zelda: Ocarina of Time slipping to third and Call of Duty: Modern Warfare 4 to fourth.</p><p>The rest of the chart was shaped by Black Friday discounts. Several PlayStation titles climbed back in, including Marvel's Wolverine (up from 18th to 6th), Gran Turismo 7, Marvel's Spider-Man 2, Astro Bot and Ghost of Yotei, while Elden Ring returned at No. 10. GTA V also stayed in the top 20, at 18th. No unit totals were published for GTA 6.</p>",
+    "es": "<p>Grand Theft Auto VI ha entrado en el n.º 1 de la lista de ventas en caja de Reino Unido en su primera semana completa, según la clasificación elaborada por GfK que recogen Nintendo Life y Games Asylum. La versión física de las tiendas es un código dentro de una caja y no un disco, pero eso no le impidió desplazar a EA Sports FC 27 al segundo puesto, mientras The Legend of Zelda: Ocarina of Time baja al tercero y Call of Duty: Modern Warfare 4 al cuarto.</p><p>El resto de la lista estuvo marcado por los descuentos del Black Friday. Varios juegos de PlayStation volvieron a aparecer, como Marvel's Wolverine (del puesto 18 al 6), Gran Turismo 7, Marvel's Spider-Man 2, Astro Bot y Ghost of Yotei, y Elden Ring regresó en el n.º 10. GTA V se mantuvo en el top 20, en el puesto 18. No se publicaron cifras de unidades de GTA 6.</p>",
+    "pt": "<p>Grand Theft Auto VI entrou em 1º lugar na parada de vendas em caixa do Reino Unido na sua primeira semana completa, segundo o ranking compilado pela GfK e divulgado pelo Nintendo Life e pelo Games Asylum. A versão física vendida nas lojas é um código dentro de uma caixa, e não um disco, mas isso não impediu o jogo de empurrar EA Sports FC 27 para o segundo lugar, com The Legend of Zelda: Ocarina of Time caindo para terceiro e Call of Duty: Modern Warfare 4 para quarto.</p><p>O restante da parada foi movido pelos descontos de Black Friday. Vários títulos de PlayStation voltaram à lista, como Marvel's Wolverine (do 18º para o 6º), Gran Turismo 7, Marvel's Spider-Man 2, Astro Bot e Ghost of Yotei, e Elden Ring retornou em 10º. GTA V também segue no top 20, em 18º. Não foram divulgados números de unidades de GTA 6.</p>"
    }
   }
  ]
