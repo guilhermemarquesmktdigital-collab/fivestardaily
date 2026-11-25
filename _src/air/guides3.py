@@ -23,12 +23,12 @@ _SONGS = [('That’s It', 'Yung Lean feat. Future & Metro Boomin'), ('RHYNO', 'T
 _UL = '<ul>' + ''.join('<li><strong>%s</strong> · %s</li>' % s for s in _SONGS) + '</ul>'
 
 g('soundtrack', 4, ['nw_album', 'gem_album', 'pcg_songs', 'rs_music'],
- {'en': 'GTA 6 soundtrack: every official song released so far',
-  'es': 'Banda sonora de GTA 6: todas las canciones oficiales publicadas hasta ahora',
-  'pt': 'Trilha sonora de GTA 6: todas as músicas oficiais lançadas até agora'},
- {'en': 'GTA VI: The Album drops with the game. Here are the songs you can already hear, where they come from, and how to play them on this site.',
-  'es': 'GTA VI: The Album sale junto con el juego. Estas son las canciones que ya puedes escuchar, de dónde vienen y cómo oírlas en este sitio.',
-  'pt': 'GTA VI: The Album sai junto com o jogo. Veja as músicas que já dá para ouvir, de onde elas vêm e como tocá-las aqui no site.'},
+ {'en': 'GTA 6 songs: full soundtrack and radio stations list (play them here)',
+  'es': 'Canciones de GTA 6: lista completa de la banda sonora y emisoras (escúchalas aquí)',
+  'pt': 'Músicas de GTA 6: lista completa da trilha sonora e rádios (ouça aqui)'},
+ {'en': 'Every GTA 6 song on the official album, plus the radio stations. Play the full playlist on Spotify right here, no login needed for previews.',
+  'es': 'Todas las canciones de GTA 6 del álbum oficial y las emisoras de radio. Escucha la playlist en Spotify aquí mismo, sin login para los avances.',
+  'pt': 'Todas as músicas de GTA 6 do álbum oficial e as rádios do jogo. Ouça a playlist no Spotify aqui mesmo, sem login nos trechos.'},
  {'en': """<h2>The album</h2><p><strong>Grand Theft Auto VI: The Album</strong> is Rockstar's companion record for the game, made with Atlantic Records. It releases on <strong>November 19</strong>, the same day as the game, with <strong>34 tracks</strong>, and it was announced in September with physical CD and vinyl versions available to pre-order.</p>
 <h2>Songs already out</h2><p>These tracks were released early as official uploads, labelled as coming from the album or from the game:</p>""" + _UL + """
 <p>The last two are from Justice, who are tagged on the uploads as part of the GTA VI music. The rest come from the album itself.</p>

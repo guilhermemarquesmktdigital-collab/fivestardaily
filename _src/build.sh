@@ -16,4 +16,5 @@ s=s.replace('/*__REALJS__*/',r); open('fsd/index.html','w').write(s)
 PY2
 python3 air/gensite.py .. / https://fivestardaily.com
 python3 chat/build_chat.py ..
+python3 air/externalize.py ..
 rm -f fsd/index.html air/content.json

@@ -63,7 +63,7 @@ def page_html(path, title, desc, robots_noindex=False):
             f'<link rel="canonical" href="{url}">\n'
             f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="Five Star Daily">\n'
             f'<meta property="og:title" content="{html.escape(title)}">\n<meta property="og:description" content="{html.escape(desc)}">\n'
-            f'<meta property="og:url" content="{url}">\n' + ogimg(path, title) + FAV + '\n' + jsonld(path, url, title, desc)
+            f'<meta property="og:url" content="{url}">\n<link rel="alternate" type="application/rss+xml" title="Five Star Daily" href="/rss.xml">\n' + ogimg(path, title) + FAV + '\n' + jsonld(path, url, title, desc)
             + ('<meta name="robots" content="noindex, nofollow">\n' if (noindex or robots_noindex) else ''))
     s = re.sub(r'<title>.*?</title>', '<title>' + html.escape(title) + '</title>', src, count=1, flags=re.S)
     s = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="' + html.escape(desc) + '">', s, count=1)
@@ -102,4 +102,15 @@ if not noindex:
     llms += ['', '## Sections', f'- [Live streams]({origin}{base}live/)', f'- [Videos and official trailers]({origin}{base}videos/)', f'- [News]({origin}{base}news/)', f'- [Fan-made map of Leonida]({origin}{base}map/)', f'- [Chat with GTA 6 characters (fan parody): Lucia, Jason and Mandy]({origin}{base}chat/)', f'- [Fale com os personagens de GTA 6]({origin}{base}chat/pt/)', f'- [Habla con los personajes de GTA 6]({origin}{base}chat/es/)', '', '## About', f'- [About]({origin}{base}about/)', f'- [Contact]({origin}{base}contact/)', f'- [Privacy]({origin}{base}privacy/)']
     open(out + '/llms.txt', 'w').write('\n'.join(llms) + '\n')
     open(out + '/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {origin}{base}sitemap.xml\n')
+    import email.utils, datetime
+    def _rss():
+        items=[]
+        for n in sorted(C['NEWS'], key=lambda x: x['date'], reverse=True)[:30]:
+            d = re.sub('<[^>]+>', '', n['body']['en']).strip()
+            d = d[:300].rsplit(' ', 1)[0] + '...' if len(d) > 300 else d
+            pd = email.utils.format_datetime(datetime.datetime.fromisoformat(n['date'][:10]).replace(hour=12, tzinfo=datetime.timezone.utc))
+            u = f"{origin}{base}news/{n['slug']}/"
+            items.append(f"<item><title>{html.escape(n['title']['en'])}</title><link>{u}</link><guid>{u}</guid><pubDate>{pd}</pubDate><description>{html.escape(d)}</description></item>")
+        return '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Five Star Daily</title><link>' + origin + base + '</link><description>GTA 6 news, guides and tools. Unofficial fan site.</description><language>en</language>' + ''.join(items) + '</channel></rss>\n'
+    open(out + '/rss.xml', 'w').write(_rss())
 print(len(pages), 'pages ->', out)

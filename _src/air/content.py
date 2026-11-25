@@ -14,12 +14,12 @@ S = {
 
 GUIDES = [
  {'slug': 'release-date', 'cat': 'start', 'mins': 3, 'src': ['ps_preload', 'wc_cloud', 'rs_preload'],
-  'title': {'en': 'GTA 6 release date, launch time and platforms', 'es': 'GTA 6: fecha de lanzamiento, hora y plataformas', 'pt': 'GTA 6: data de lançamento, horário e plataformas'},
-  'lede': {'en': 'Everything Rockstar and the console makers have confirmed about when and where you can play.',
-           'es': 'Todo lo que Rockstar y los fabricantes de consolas confirmaron sobre cuándo y dónde jugar.',
-           'pt': 'Tudo o que a Rockstar e as fabricantes de console confirmaram sobre quando e onde jogar.'},
+  'title': {'en': 'GTA 6 is out: release date, editions and platforms', 'es': 'GTA 6 ya salió: fecha, ediciones y plataformas', 'pt': 'GTA 6 já saiu: data, edições e plataformas'},
+  'lede': {'en': 'GTA 6 launched November 19, 2026 on PS5 and Xbox Series X|S. Release date, platforms, file size and what is confirmed.',
+           'es': 'GTA 6 salió el 19 de noviembre de 2026 en PS5 y Xbox Series X|S. Fecha, plataformas, tamaño y lo confirmado.',
+           'pt': 'GTA 6 saiu em 19 de novembro de 2026 no PS5 e Xbox Series X|S. Data, plataformas, tamanho e o que é confirmado.'},
   'body': {
-   'en': """<p><strong>Quick answer:</strong> GTA 6 launches November 19, 2026. On PS5 it unlocks at midnight in your own time zone, so for most people that is the night of November 18 going into the 19th. Free space needed: about 212 GB on PS5 and 234 GB on Xbox Series X|S.</p>
+   'en': """<p><strong>Quick answer:</strong> GTA 6 launched on November 19, 2026. On PS5 it unlocked at midnight in your own time zone, so for most people that is the night of November 18 going into the 19th. Free space needed: about 212 GB on PS5 and 234 GB on Xbox Series X|S.</p>
 <h2>The date</h2><p>Grand Theft Auto VI launches on <strong>Thursday, November 19, 2026</strong>.</p>
 <h2>Platforms</h2><ul><li><strong>PlayStation 5</strong> and <strong>PS5 Pro</strong></li><li><strong>Xbox Series X|S</strong></li><li><strong>Xbox One and Xbox Series X|S through Xbox Cloud Gaming</strong>, from launch day</li></ul>
 <p>Cloud play on Xbox does not include PC, mobile or TV devices, and it runs at Xbox Series S settings. Rockstar has not announced a PC version.</p>
