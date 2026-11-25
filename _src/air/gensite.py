@@ -69,6 +69,8 @@ def page_html(path, title, desc, robots_noindex=False):
     s = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="' + html.escape(desc) + '">', s, count=1)
     if '<meta name="description"' not in s:
         s = s.replace('</title>', '</title>\n<meta name="description" content="' + html.escape(desc) + '">', 1)
+    if path == '':
+        s = s.replace('<span class="logo">Five Star Daily</span>', '<h1 class="logo" style="margin:0 0 -.16em">Five Star Daily<span style="position:absolute;left:-9999px">: GTA 6 news, videos, live streams and guides</span></h1>', 1)
     return s.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + head, 1)
 
 if os.path.exists(out):
@@ -94,12 +96,12 @@ K = open(SC + '/air/indexnow.key').read().strip()
 open(f'{out}/{K}.txt', 'w').write(K)
 # indexnow
 if not noindex:
-    urls = ''.join(f'<url><loc>{origin}{base}{p + "/" if p else ""}</loc><lastmod>{TODAY}</lastmod></url>' for p, _, _ in pages) + ''.join(f'<url><loc>{origin}{base}{c}</loc><lastmod>{TODAY}</lastmod></url>' for c in ('chat/', 'chat/es/', 'chat/pt/'))
+    urls = ''.join(f'<url><loc>{origin}{base}{p + "/" if p else ""}</loc><lastmod>{TODAY}</lastmod></url>' for p, _, _ in pages) + ''.join(f'<url><loc>{origin}{base}{c}</loc><lastmod>{TODAY}</lastmod></url>' for c in ('chat/', 'chat/es/', 'chat/pt/', 'today/'))
     open(out + '/sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + urls + '</urlset>\n')
     llms = ['# Five Star Daily', '', '> Unofficial fan site about Grand Theft Auto VI (GTA 6). Live streams, new videos, daily news with our own summaries, guides in English, Spanish and Portuguese. Not affiliated with Rockstar Games or Take-Two Interactive.', '', '## Guides']
     llms += [f'- [{g["title"]["en"]}]({origin}{base}guides/{g["slug"]}/): {g["lede"]["en"]}' for g in C['GUIDES']]
     llms += ['', '## News (our summaries)'] + [f'- [{n["title"]["en"]}]({origin}{base}news/{n["slug"]}/)' for n in C['NEWS']]
-    llms += ['', '## Sections', f'- [Live streams]({origin}{base}live/)', f'- [Videos and official trailers]({origin}{base}videos/)', f'- [News]({origin}{base}news/)', f'- [Fan-made map of Leonida]({origin}{base}map/)', f'- [Chat with GTA 6 characters (fan parody): Lucia, Jason and Mandy]({origin}{base}chat/)', f'- [Fale com os personagens de GTA 6]({origin}{base}chat/pt/)', f'- [Habla con los personajes de GTA 6]({origin}{base}chat/es/)', '', '## About', f'- [About]({origin}{base}about/)', f'- [Contact]({origin}{base}contact/)', f'- [Privacy]({origin}{base}privacy/)']
+    llms += ['', '## Sections', f'- [Live streams]({origin}{base}live/)', f'- [Videos and official trailers]({origin}{base}videos/)', f'- [News]({origin}{base}news/)', f'- [Fan-made map of Leonida]({origin}{base}map/)', f'- [Chat with GTA 6 characters (fan parody): Lucia, Jason and Mandy]({origin}{base}chat/)', f'- [GTA 6 today: daily headlines, guide and easter egg]({origin}{base}today/)', f'- [Fale com os personagens de GTA 6]({origin}{base}chat/pt/)', f'- [Habla con los personajes de GTA 6]({origin}{base}chat/es/)', '', '## About', f'- [About]({origin}{base}about/)', f'- [Contact]({origin}{base}contact/)', f'- [Privacy]({origin}{base}privacy/)']
     open(out + '/llms.txt', 'w').write('\n'.join(llms) + '\n')
     open(out + '/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {origin}{base}sitemap.xml\n')
     import email.utils, datetime
