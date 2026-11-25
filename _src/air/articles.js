@@ -12,13 +12,20 @@ function fmtDate(d){try{return new Date(d).toLocaleDateString(lang==='pt'?'pt-BR
 function srcList(keys){return '<aside class="srcs"><h3>'+UI[lang].sources+'</h3><ul>'+keys.map(function(k){var s=C.S[k];return '<li><a href="'+s[1]+'" target="_blank" rel="noopener">'+esc(s[0])+' &#8599;</a></li>'}).join('')+'</ul></aside>';}
 function artShell(back,backLabel,kicker,title,lede,meta,body){
   return '<div class="pg-head"><a class="back" href="#'+back+'">&larr; '+esc(backLabel)+'</a></div><article class="panel art"><p class="kick">'+esc(kicker)+'</p><h1>'+esc(title)+'</h1>'+(lede?'<p class="lede">'+esc(lede)+'</p>':'')+'<p class="meta">'+meta+'</p><div class="prose">'+body+'</div></article>';}
+
+var KR={en:{h:'Keep reading',x:'More to explore',m:'Interactive map',c:'Chat with characters',t:'GTA 6 today'},es:{h:'Sigue leyendo',x:'Más para explorar',m:'Mapa interactivo',c:'Chatea con personajes',t:'GTA 6 hoy'},pt:{h:'Continue lendo',x:'Mais para explorar',m:'Mapa interativo',c:'Converse com personagens',t:'GTA 6 hoje'}};
+function keepReading(slug){var k=KR[lang],grp=null;Object.keys(GTOP).forEach(function(g){if(GTOP[g].indexOf(slug)>=0)grp=GTOP[g]});grp=grp||GTOP.world;
+  var i=grp.indexOf(slug),pick=[];for(var j=1;j<=grp.length&&pick.length<3;j++){var s=grp[(i+j+grp.length)%grp.length];if(s!==slug&&pick.indexOf(s)<0)pick.push(s);}
+  var rows=pick.map(function(s){var g=gBy(s);return g?'<div class="pinrow"><i style="background:#FFC93C"></i><div><b>'+esc(g.title[lang])+'</b><p>'+esc(g.lede[lang])+'</p></div><a class="btn ghost" href="#g-'+s+'">'+esc(P[lang].gd_t&&k.h==='Keep reading'?'Read':'›')+'</a></div>':''}).join('');
+  var lp=lang==='pt'?'/chat/pt/':lang==='es'?'/chat/es/':'/chat/',tp=lang==='pt'?'/today/pt/':lang==='es'?'/today/es/':'/today/';
+  return '<h2 class="sub2">'+k.h+'</h2><div class="pinlist">'+rows+'</div><h2 class="sub2">'+k.x+'</h2><p><a class="btn" href="/map/">'+k.m+'</a> <a class="btn ghost" href="'+lp+'">'+k.c+'</a> <a class="btn ghost" href="'+tp+'">'+k.t+'</a></p>';}
 function guidePage(g){var u=UI[lang],p=P[lang];
   var vids=(g.videos||[]).map(function(id){return VIDS.filter(function(v){return v[0]===id})[0]}).filter(Boolean);
   var vg=vids.length?'<h2 class="sub2">'+u.watchall+'</h2><div class="grid g3">'+vids.map(function(v,i){return '<button class="card" data-watch="'+v[0]+'">'+thumbFor(v,i)+play+(v[5]?'<span class="dur">'+v[5]+'</span>':'')+'</div><div class="meta"><h3>'+esc(v[1])+'</h3></div></button>'}).join('')+'</div>':'';
-  return artShell('guides',p.gd_t,u.byus,g.title[lang],g.lede[lang],u.updated+' '+fmtDate((g.upd||'2026-11-13')+'T12:00:00')+' &middot; '+g.mins+' '+u.read,g.body[lang]+vg+srcList(g.src));}
+  return artShell('guides',p.gd_t,u.byus,g.title[lang],g.lede[lang],u.updated+' '+fmtDate((g.upd||'2026-11-13')+'T12:00:00')+' &middot; '+g.mins+' '+u.read,g.body[lang]+vg+srcList(g.src)+keepReading(g.slug));}
 function newsPage(n){var u=UI[lang],p=P[lang],first=C.S[n.src[0]];
   var rel=n.guide?'<p class="relg">'+u.related+': <a href="#g-'+n.guide+'">'+esc(gBy(n.guide).title[lang])+' &rarr;</a></p>':'';
-  return artShell('news',p.news_t,u.oursum+' · '+p.nc[n.cat],n.title[lang],'',fmtDate(n.date),n.body[lang]+'<p><a class="btn" href="'+first[1]+'" target="_blank" rel="noopener">'+u.readfull+' '+esc(first[0].split(':')[0])+' &#8599;</a></p>'+rel+srcList(n.src));}
+  return artShell('news',p.news_t,u.oursum+' · '+p.nc[n.cat],n.title[lang],'',fmtDate(n.date),n.body[lang]+'<p><a class="btn" href="'+first[1]+'" target="_blank" rel="noopener">'+u.readfull+' '+esc(first[0].split(':')[0])+' &#8599;</a></p>'+rel+srcList(n.src)+keepReading(n.guide||'references-and-callbacks'));}
 function sitePage(k){var x=C.PAGES[k];return artShell('',P[lang].menu,'Five Star Daily',x.title[lang],'','',x.body[lang]);}
 var GTOP={start:['release-date','pre-load','editions','trailers'],play:['missions','collectibles','cheats','things-to-do','wanted-system','combat-and-cars','cars-weapons-shops','gameplay-extended-look'],world:['characters','jason-and-lucia','leonida-regions','references-and-callbacks','timeline','soundtrack','radio-stations']};
 var GUI={en:{all:'All',start:'Start here',play:'Gameplay',world:'World & story',q:'Search guides',none:'No guide matches. Try another word.',top:'Most searched',f:{cheats:['Cheats','Codes and what is unconfirmed','#g-cheats'],missions:['Missions','All 91 story missions, spoiler-safe','#g-missions'],collectibles:['Collectibles','What exists and where','#g-collectibles'],checklist:['100% checklist','Track every requirement','#checklist']}},

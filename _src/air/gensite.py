@@ -70,6 +70,11 @@ def page_html(path, title, desc, robots_noindex=False):
     if '<meta name="description"' not in s:
         s = s.replace('</title>', '</title>\n<meta name="description" content="' + html.escape(desc) + '">', 1)
     if path == '':
+        _news = sorted(C['NEWS'], key=lambda n: n['date'], reverse=True)[:3]
+        _lat = '<ul class="qn" aria-label="Latest news">' + ''.join(f'<li><small>{n["date"][5:10]}</small><a href="{base}news/{n["slug"]}/">{html.escape(n["title"]["en"])}</a></li>' for n in _news) + '</ul>'
+        s = s.replace('__LATEST__', _lat)
+    else:
+        s = s.replace('__LATEST__', '')
         s = s.replace('<span class="logo">Five Star Daily</span>', '<h1 class="logo" style="margin:0 0 -.16em">Five Star Daily<span style="position:absolute;left:-9999px">: GTA 6 news, videos, live streams and guides</span></h1>', 1)
     return s.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + head, 1)
 

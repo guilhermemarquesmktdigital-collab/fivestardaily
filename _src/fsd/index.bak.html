@@ -139,8 +139,8 @@ body.ph-day .seafill{background:#0E3E5C}
 .clock{font:700 20px/1 "Big Shoulders Display",sans-serif;letter-spacing:.04em;color:#fff;padding:0 4px 0 8px}
 .pro{border:1px solid rgba(255,201,74,.7);background:linear-gradient(135deg,rgba(255,201,74,.25),rgba(255,61,139,.2));border-radius:6px;padding:8px 14px;font-weight:700;color:#FFE7A3;backdrop-filter:blur(10px)}
 
-.mid{display:flex;align-items:flex-end;padding-bottom:14px}
-.tagline{font:700 clamp(15px,1.35vw,19px)/1.3 "Chakra Petch",sans-serif;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6);margin:0;max-width:40ch}
+.mid{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:14px}
+.tagline{text-align:center;font:700 clamp(15px,1.35vw,19px)/1.3 "Chakra Petch",sans-serif;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.6);margin:0;max-width:40ch}
 
 /* menu grid */
 .menu{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:12px;height:min(40svh,420px);min-height:320px}
@@ -195,7 +195,7 @@ body.ph-day .seafill{background:#0E3E5C}
 /* small / short screens: allow scrolling */
 @media (max-width:900px),(max-height:640px){
   body{overflow:auto}
-  .hud{height:auto;min-height:100svh;grid-template-rows:auto 30svh auto auto}
+  .hud{height:auto;min-height:100svh;grid-template-rows:auto minmax(30svh,auto) auto auto}
   .menu{grid-template-columns:repeat(2,1fr);grid-template-rows:none;height:auto}
   .t-live{grid-column:span 2} .tile{min-height:170px}
   .ctrl{width:100%}
@@ -225,6 +225,7 @@ body.ph-night .gator .eye{fill:#FFE36B;filter:drop-shadow(0 0 3px #FFE36B)}
 @keyframes flap{to{transform:scaleY(-.7)}}
 @keyframes fbob{50%{transform:translateY(4px)}}
 body.ph-sunset .flock svg{filter:brightness(.8)}
+.qa{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px auto 0;max-width:620px;padding:0 12px}.qa a{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700;font-size:13.5px;text-decoration:none;color:#fff;backdrop-filter:blur(10px)}.qa a:hover{background:#fff;color:#14102E}.qn{list-style:none;margin:12px auto 0;max-width:620px;padding:0 12px;font-size:13.5px}.qn li{padding:5px 0;border-top:1px solid var(--line)}.qn a{color:#fff;text-decoration:none;font-weight:600}.qn a:hover{text-decoration:underline}.qn small{color:#b9b3d6;margin-right:6px}
 </style>
 </head>
 <body class="ph-sunset">
@@ -291,7 +292,7 @@ setTimeout(function(){_a.classList.remove("wob");void _a.offsetWidth;_a.classLis
     </div>
   </header>
 
-  <div class="mid"><p class="tagline" data-i18n="tagline">Everything GTA VI, every day.</p></div>
+  <div class="mid"><p class="tagline" data-i18n="tagline">Everything GTA VI, every day.</p><nav class="qa" aria-label="Quick links"><a href="/today/" data-qa="t" data-i18n="qa_today">Today</a><a href="/map/" data-i18n="qa_map">Map</a><a href="/chat/" data-qa="c" data-i18n="qa_chat">Chat with characters</a><a href="/map/" data-i18n="qa_eggs">Easter eggs</a><a href="/guides/soundtrack/" data-i18n="qa_music">Soundtrack</a></nav>__LATEST__<script>try{var _q=localStorage.getItem("fsd.lang")||(navigator.language||"en").slice(0,2);document.querySelectorAll("[data-qa]").forEach(function(a){var t=a.dataset.qa==="t";a.href=(t?"/today/":"/chat/")+(_q==="pt"?"pt/":_q==="es"?"es/":"")})}catch(e){}</script></div>
 
   <nav class="menu" data-menu aria-label="Sections">
     <button class="tile t-live" data-soon>
@@ -367,7 +368,7 @@ var T={
   launch:"Out now",launch_d:"GTA VI is live on PS5 and Xbox Series X|S.",since:"days since launch",days:"days",hours:"hours",mins:"min",out:"Out now",
   news:"Today’s news",news_d:"Headlines from across the web, linked to the source.",
   guides:"Guides",guides_d:"Step-by-step help for the things everyone searches for.",g1:"Money",g2:"Cars",g3:"Missions",g4:"Beginners",
-  chat_chip:"Chat with GTA 6 characters",today_chip:"GTA 6 today",check:"100% checklist",check_d:"Tick off every collectible. Your progress is saved on this device.",cheats:"Cheats",cheats_d:"What early reports say about GTA 6 cheats. Not official.",
+  chat_chip:"Chat with GTA 6 characters",qa_today:"Today",qa_map:"Map",qa_chat:"Chat with characters",qa_eggs:"Easter eggs",qa_music:"Soundtrack",today_chip:"GTA 6 today",check:"100% checklist",check_d:"Tick off every collectible. Your progress is saved on this device.",cheats:"Cheats",cheats_d:"What early reports say about GTA 6 cheats. Not official.",
   map:"Interactive map",map_d:"Secrets and points of interest across Leonida.",
   disclaimer:"Unofficial fan site. Not affiliated with Rockstar Games or Take-Two Interactive.",
   keys:"Use the arrow keys to move through the menu, Enter to open.",soon:"This section opens in version 1.",timeOfDay:"Time of day"},
@@ -377,7 +378,7 @@ var T={
   launch:"Ya disponible",launch_d:"GTA VI ya está en PS5 y Xbox Series X|S.",since:"días desde el lanzamiento",days:"días",hours:"horas",mins:"min",out:"Ya disponible",
   news:"Noticias de hoy",news_d:"Titulares de toda la web, con enlace a la fuente.",
   guides:"Guías",guides_d:"Ayuda paso a paso para lo que todos buscan.",g1:"Dinero",g2:"Autos",g3:"Misiones",g4:"Principiantes",
-  chat_chip:"Chatea con personajes de GTA 6",today_chip:"GTA 6 hoy",check:"Checklist 100%",check_d:"Marca cada coleccionable. Tu progreso se guarda en este dispositivo.",cheats:"Trucos",cheats_d:"Lo que dicen los primeros reportes sobre trucos de GTA 6. No oficial.",
+  chat_chip:"Chatea con personajes de GTA 6",qa_today:"Hoy",qa_map:"Mapa",qa_chat:"Chatea con personajes",qa_eggs:"Easter eggs",qa_music:"Banda sonora",today_chip:"GTA 6 hoy",check:"Checklist 100%",check_d:"Marca cada coleccionable. Tu progreso se guarda en este dispositivo.",cheats:"Trucos",cheats_d:"Lo que dicen los primeros reportes sobre trucos de GTA 6. No oficial.",
   map:"Mapa interactivo",map_d:"Secretos y puntos de interés en todo Leonida.",
   disclaimer:"Sitio de fans no oficial. Sin relación con Rockstar Games ni Take-Two Interactive.",
   keys:"Usa las flechas para moverte por el menú y Enter para abrir.",soon:"Esta sección abre en la versión 1.",timeOfDay:"Hora del día"},
@@ -387,7 +388,7 @@ var T={
   launch:"Já disponível",launch_d:"GTA VI já está no PS5 e Xbox Series X|S.",since:"dias desde o lançamento",days:"dias",hours:"horas",mins:"min",out:"Já disponível",
   news:"Notícias de hoje",news_d:"Manchetes da web inteira, com link para a fonte.",
   guides:"Guias",guides_d:"Passo a passo para o que todo mundo procura.",g1:"Dinheiro",g2:"Carros",g3:"Missões",g4:"Iniciantes",
-  chat_chip:"Converse com personagens de GTA 6",today_chip:"GTA 6 hoje",check:"Checklist 100%",check_d:"Marque cada colecionável. Seu progresso fica salvo neste aparelho.",cheats:"Cheats",cheats_d:"O que os primeiros relatos dizem sobre cheats de GTA 6. Não oficial.",
+  chat_chip:"Converse com personagens de GTA 6",qa_today:"Hoje",qa_map:"Mapa",qa_chat:"Converse com personagens",qa_eggs:"Easter eggs",qa_music:"Trilha sonora",today_chip:"GTA 6 hoje",check:"Checklist 100%",check_d:"Marque cada colecionável. Seu progresso fica salvo neste aparelho.",cheats:"Cheats",cheats_d:"O que os primeiros relatos dizem sobre cheats de GTA 6. Não oficial.",
   map:"Mapa interativo",map_d:"Segredos e pontos de interesse por toda Leonida.",
   disclaimer:"Site de fã não oficial. Sem ligação com a Rockstar Games ou a Take-Two Interactive.",
   keys:"Use as setas para navegar no menu e Enter para abrir.",soon:"Esta seção abre na versão 1.",timeOfDay:"Hora do dia"}
