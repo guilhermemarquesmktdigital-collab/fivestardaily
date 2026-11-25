@@ -206,7 +206,7 @@ body.ph-day .seafill{background:#0E3E5C}
 .news li::before{content:"";width:6px;height:6px;background:var(--teal);border-radius:1px;flex:none;margin-top:6px}
 .news .sk{flex:1}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips span{font-size:12.5px;font-weight:600;padding:4px 9px;border-radius:999px;border:1px solid rgba(181,140,255,.5);color:#E3D6FF}
+.chips span[data-go]{cursor:pointer}.chips span{font-size:12.5px;font-weight:600;padding:4px 9px;border-radius:999px;border:1px solid rgba(181,140,255,.5);color:#E3D6FF}
 .ring{display:flex;align-items:center;gap:12px}
 .ring svg{width:58px;height:58px}
 .ring b{font:900 30px/1 "Big Shoulders Display",sans-serif}
@@ -538,7 +538,7 @@ setTimeout(function(){_a.classList.remove("wob");void _a.offsetWidth;_a.classLis
     <a class="tile t-guides" href="#guides">
       <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></svg><h2 data-i18n="guides">Guides</h2></div>
       <p data-i18n="guides_d">Step-by-step help for the things everyone searches for.</p>
-      <div class="body chips"><span data-i18n="g1">Money</span><span data-i18n="g2">Cars</span><span data-i18n="g3">Missions</span><span data-i18n="g4">Beginners</span></div>
+      <div class="body chips"><span role="link" tabindex="0" data-go="/guides/gta-6-patch-notes/" data-i18n="g1">Patch notes</span><span role="link" tabindex="0" data-go="/guides/cars-weapons-shops/" data-i18n="g2">Cars</span><span role="link" tabindex="0" data-go="/guides/missions/" data-i18n="g3">Missions</span><span role="link" tabindex="0" data-go="/guides/gta-6-pc-release-date/" data-i18n="g4">PC date</span></div>
     </a>
 
     <a class="tile t-check" href="#checklist">
@@ -565,6 +565,7 @@ setTimeout(function(){_a.classList.remove("wob");void _a.offsetWidth;_a.classLis
 <div class="toast" role="status" data-toast></div>
 <div class="modal" data-modal role="dialog" aria-modal="true"><div class="box"><div class="screen"></div><div class="row"><h3></h3><div style="display:flex;gap:8px"><a class="btn" href="#" data-mopen hidden style="display:none">Open</a><button class="btn ghost" data-mclose>Close</button></div></div></div></div>
 
-<script src="/assets/app.ef7953ca23.js"></script>
+<script src="/assets/app.6b0cdbe489.js"></script>
+<script>document.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('[data-go]');if(c){e.preventDefault();e.stopPropagation();location.href=c.getAttribute('data-go')}},true);document.addEventListener('keydown',function(e){if(e.key==='Enter'){var c=e.target.closest&&e.target.closest('[data-go]');if(c){e.preventDefault();location.href=c.getAttribute('data-go')}}},true);</script>
 </body>
 </html>

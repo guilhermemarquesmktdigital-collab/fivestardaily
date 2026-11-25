@@ -207,7 +207,7 @@ body.ph-day .seafill{background:#0E3E5C}
 .news li::before{content:"";width:6px;height:6px;background:var(--teal);border-radius:1px;flex:none;margin-top:6px}
 .news .sk{flex:1}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips span{font-size:12.5px;font-weight:600;padding:4px 9px;border-radius:999px;border:1px solid rgba(181,140,255,.5);color:#E3D6FF}
+.chips span[data-go]{cursor:pointer}.chips span{font-size:12.5px;font-weight:600;padding:4px 9px;border-radius:999px;border:1px solid rgba(181,140,255,.5);color:#E3D6FF}
 .ring{display:flex;align-items:center;gap:12px}
 .ring svg{width:58px;height:58px}
 .ring b{font:900 30px/1 "Big Shoulders Display",sans-serif}
@@ -539,7 +539,7 @@ setTimeout(function(){_a.classList.remove("wob");void _a.offsetWidth;_a.classLis
     <a class="tile t-guides" href="#guides">
       <div class="hd"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></svg><h2 data-i18n="guides">Guides</h2></div>
       <p data-i18n="guides_d">Step-by-step help for the things everyone searches for.</p>
-      <div class="body chips"><span data-i18n="g1">Money</span><span data-i18n="g2">Cars</span><span data-i18n="g3">Missions</span><span data-i18n="g4">Beginners</span></div>
+      <div class="body chips"><span role="link" tabindex="0" data-go="/guides/gta-6-patch-notes/" data-i18n="g1">Patch notes</span><span role="link" tabindex="0" data-go="/guides/cars-weapons-shops/" data-i18n="g2">Cars</span><span role="link" tabindex="0" data-go="/guides/missions/" data-i18n="g3">Missions</span><span role="link" tabindex="0" data-go="/guides/gta-6-pc-release-date/" data-i18n="g4">PC date</span></div>
     </a>
 
     <a class="tile t-check" href="#checklist">
@@ -580,7 +580,7 @@ var T={
   videos:"New videos",videos_d:"Gameplay, tips and trailers from creators, updated every hour.",
   launch:"Out now",launch_d:"GTA VI is live on PS5 and Xbox Series X|S.",since:"days since launch",days:"days",hours:"hours",mins:"min",out:"Out now",
   news:"Today’s news",news_d:"Headlines from across the web, linked to the source.",
-  guides:"Guides",guides_d:"Step-by-step help for the things everyone searches for.",g1:"Money",g2:"Cars",g3:"Missions",g4:"Beginners",
+  guides:"Guides",guides_d:"Step-by-step help for the things everyone searches for.",g1:"Patch notes",g2:"Cars",g3:"Missions",g4:"PC date",
   chat_chip:"Chat with GTA 6 characters",qa_today:"Today",qa_map:"Map",qa_chat:"Chat",qa_eggs:"Easter eggs",qa_music:"Soundtrack",today_chip:"GTA 6 today",check:"100% checklist",check_d:"Tick off every collectible. Your progress is saved on this device.",cheats:"Cheats",cheats_d:"What early reports say about GTA 6 cheats. Not official.",
   map:"Interactive map",map_d:"Secrets and points of interest across Leonida.",
   disclaimer:"Unofficial fan site. Not affiliated with Rockstar Games or Take-Two Interactive.",
@@ -590,7 +590,7 @@ var T={
   videos:"Videos nuevos",videos_d:"Gameplay, trucos y tráilers de creadores, actualizados cada hora.",
   launch:"Ya disponible",launch_d:"GTA VI ya está en PS5 y Xbox Series X|S.",since:"días desde el lanzamiento",days:"días",hours:"horas",mins:"min",out:"Ya disponible",
   news:"Noticias de hoy",news_d:"Titulares de toda la web, con enlace a la fuente.",
-  guides:"Guías",guides_d:"Ayuda paso a paso para lo que todos buscan.",g1:"Dinero",g2:"Autos",g3:"Misiones",g4:"Principiantes",
+  guides:"Guías",guides_d:"Ayuda paso a paso para lo que todos buscan.",g1:"Parches",g2:"Autos",g3:"Misiones",g4:"Fecha en PC",
   chat_chip:"Chatea con personajes de GTA 6",qa_today:"Hoy",qa_map:"Mapa",qa_chat:"Chat",qa_eggs:"Easter eggs",qa_music:"Banda sonora",today_chip:"GTA 6 hoy",check:"Checklist 100%",check_d:"Marca cada coleccionable. Tu progreso se guarda en este dispositivo.",cheats:"Trucos",cheats_d:"Lo que dicen los primeros reportes sobre trucos de GTA 6. No oficial.",
   map:"Mapa interactivo",map_d:"Secretos y puntos de interés en todo Leonida.",
   disclaimer:"Sitio de fans no oficial. Sin relación con Rockstar Games ni Take-Two Interactive.",
@@ -600,7 +600,7 @@ var T={
   videos:"Vídeos novos",videos_d:"Gameplay, dicas e trailers de criadores, atualizados de hora em hora.",
   launch:"Já disponível",launch_d:"GTA VI já está no PS5 e Xbox Series X|S.",since:"dias desde o lançamento",days:"dias",hours:"horas",mins:"min",out:"Já disponível",
   news:"Notícias de hoje",news_d:"Manchetes da web inteira, com link para a fonte.",
-  guides:"Guias",guides_d:"Passo a passo para o que todo mundo procura.",g1:"Dinheiro",g2:"Carros",g3:"Missões",g4:"Iniciantes",
+  guides:"Guias",guides_d:"Passo a passo para o que todo mundo procura.",g1:"Patches",g2:"Carros",g3:"Missões",g4:"Data no PC",
   chat_chip:"Converse com personagens de GTA 6",qa_today:"Hoje",qa_map:"Mapa",qa_chat:"Chat",qa_eggs:"Easter eggs",qa_music:"Trilha sonora",today_chip:"GTA 6 hoje",check:"Checklist 100%",check_d:"Marque cada colecionável. Seu progresso fica salvo neste aparelho.",cheats:"Cheats",cheats_d:"O que os primeiros relatos dizem sobre cheats de GTA 6. Não oficial.",
   map:"Mapa interativo",map_d:"Segredos e pontos de interesse por toda Leonida.",
   disclaimer:"Site de fã não oficial. Sem ligação com a Rockstar Games ou a Take-Two Interactive.",
@@ -1158,5 +1158,6 @@ var BAKED={};VIDS.concat(LIVES,PASTS).forEach(function(v){BAKED[v[0]]=1});
 applyPhase(); applyCursor(store.get('cursor')||'aim'); applyLang(lang);
 })();
 </script>
+<script>document.addEventListener('click',function(e){var c=e.target.closest&&e.target.closest('[data-go]');if(c){e.preventDefault();e.stopPropagation();location.href=c.getAttribute('data-go')}},true);document.addEventListener('keydown',function(e){if(e.key==='Enter'){var c=e.target.closest&&e.target.closest('[data-go]');if(c){e.preventDefault();location.href=c.getAttribute('data-go')}}},true);</script>
 </body>
 </html>
