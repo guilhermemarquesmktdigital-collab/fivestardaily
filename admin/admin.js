@@ -65,7 +65,7 @@ function weak(p) {
 /* ---------- boot ---------- */
 async function boot() {
   const r = await pub('/admin/vault.json');
-  if (!r) return viewSetup();
+  if (!r) { if (new URLSearchParams(location.search).has('setup')) return viewSetup(); return root('<div class="lock card"><div class="logo">Five Star Daily</div><p class="mu">Painel indisponível.</p></div>'); }
   S.vault = await r.json();
   viewUnlock();
 }
