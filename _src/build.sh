@@ -18,4 +18,10 @@ python3 air/gensite.py .. / https://fivestardaily.com
 python3 chat/build_chat.py ..
 python3 today/build_today.py ..
 python3 air/externalize.py ..
+python3 - <<'PY3'
+import json
+c=json.load(open('air/content.json'))
+out=[{"slug":g["slug"],"title":g["title"]["en"],"upd":g.get("upd") or g.get("updated") or ""} for g in c["GUIDES"]]
+json.dump(out,open('../admin/guides.json','w'),ensure_ascii=False,indent=1)
+PY3
 rm -f fsd/index.html air/content.json
