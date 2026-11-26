@@ -103,6 +103,18 @@
   "gamesasylum-uk-chart-gta6": [
    "Games Asylum: GTA VI tops the UK retail chart, while Black Friday deals push first-party PS5 releases",
    "https://www.gamesasylum.com/2026/11/24/gta-vi-tops-the-uk-retail-chart-while-black-friday-deals-push-first-party-ps5-releases/"
+  ],
+  "vgc_pcports": [
+   "VGC: Unofficial GTA 6 PC ports are already getting shut down",
+   "https://www.videogameschronicle.com/news/unofficial-gta-6-pc-ports-are-already-getting-shut-down/"
+  ],
+  "pcgh_nov25": [
+   "PC Games Hardware: GTA 6: Where the rumor of a November 25 update comes from",
+   "https://www.pcgameshardware.de/GTA-6-Spiel-55239/News/GTA-6-Is-a-new-update-to-fix-stuttering-coming-today-1561060/"
+  ],
+  "cx_patch": [
+   "Complex: Rockstar Games Announces 'Grand Theft Auto VI' Updates, Including a Fix for Weather Issue",
+   "https://www.complex.com/pop-culture/a/tracewilliamcowen/gta-vi-updates-announced"
   ]
  },
  "NEWS": [
@@ -473,6 +485,45 @@
     "en": "<p>Grand Theft Auto VI has entered the UK boxed sales chart at No. 1 in its debut week, according to the GfK-compiled ranking reported by Nintendo Life and Games Asylum. The boxed version in shops is a code in a box rather than a disc, but that did not stop it from pushing EA Sports FC 27 down to second place, with The Legend of Zelda: Ocarina of Time slipping to third and Call of Duty: Modern Warfare 4 to fourth.</p><p>The rest of the chart was shaped by Black Friday discounts. Several PlayStation titles climbed back in, including Marvel's Wolverine (up from 18th to 6th), Gran Turismo 7, Marvel's Spider-Man 2, Astro Bot and Ghost of Yotei, while Elden Ring returned at No. 10. GTA V also stayed in the top 20, at 18th. No unit totals were published for GTA 6.</p>",
     "es": "<p>Grand Theft Auto VI ha entrado en el n.º 1 de la lista de ventas en caja de Reino Unido en su semana de debut, según la clasificación elaborada por GfK que recogen Nintendo Life y Games Asylum. La versión física de las tiendas es un código dentro de una caja y no un disco, pero eso no le impidió desplazar a EA Sports FC 27 al segundo puesto, mientras The Legend of Zelda: Ocarina of Time baja al tercero y Call of Duty: Modern Warfare 4 al cuarto.</p><p>El resto de la lista estuvo marcado por los descuentos del Black Friday. Varios juegos de PlayStation volvieron a aparecer, como Marvel's Wolverine (del puesto 18 al 6), Gran Turismo 7, Marvel's Spider-Man 2, Astro Bot y Ghost of Yotei, y Elden Ring regresó en el n.º 10. GTA V se mantuvo en el top 20, en el puesto 18. No se publicaron cifras de unidades de GTA 6.</p>",
     "pt": "<p>Grand Theft Auto VI entrou em 1º lugar na parada de vendas em caixa do Reino Unido na sua semana de estreia, segundo o ranking compilado pela GfK e divulgado pelo Nintendo Life e pelo Games Asylum. A versão física vendida nas lojas é um código dentro de uma caixa, e não um disco, mas isso não impediu o jogo de empurrar EA Sports FC 27 para o segundo lugar, com The Legend of Zelda: Ocarina of Time caindo para terceiro e Call of Duty: Modern Warfare 4 para quarto.</p><p>O restante da parada foi movido pelos descontos de Black Friday. Vários títulos de PlayStation voltaram à lista, como Marvel's Wolverine (do 18º para o 6º), Gran Turismo 7, Marvel's Spider-Man 2, Astro Bot e Ghost of Yotei, e Elden Ring retornou em 10º. GTA V também segue no top 20, em 18º. Não foram divulgados números de unidades de GTA 6.</p>"
+   }
+  },
+  {
+   "slug": "unofficial-gta-6-pc-port-leonida-taken-down",
+   "date": "2026-11-24T15:00:00Z",
+   "cat": "industry",
+   "src": [
+    "vgc_pcports"
+   ],
+   "guide": "gta-6-pc-release-date",
+   "title": {
+    "en": "Fan-made GTA 6 PC port 'Leonida' is taken offline",
+    "es": "Retiran 'Leonida', un port no oficial de GTA 6 para PC",
+    "pt": "'Leonida', port não oficial de GTA 6 para PC, sai do ar"
+   },
+   "body": {
+    "en": "<p>GTA 6 is only on PS5 and Xbox Series X|S, but some fans are trying to force it onto PC anyway. One of those efforts, a project called Leonida that aimed to make the Xbox Series X version run on a computer, has had its GitHub page removed, VGC reports. It is also claimed that the project's Discord server was closed after a request from Rockstar and Take-Two, though that part has not been confirmed. The creator says they are stepping away to focus on school.</p><p>According to VGC, other groups are still working on similar builds, many leaning on AI chatbots to write code, and some clips reportedly show the intro loading with heavy graphical problems. None of this is an official version. Rockstar has not announced a PC release date, so any download that promises GTA 6 on PC is unofficial at best and a security risk at worst.</p>",
+    "es": "<p>GTA 6 solo está en PS5 y Xbox Series X|S, pero algunos fans intentan llevarlo a PC por su cuenta. Uno de esos intentos, un proyecto llamado Leonida que buscaba hacer funcionar la versión de Xbox Series X en un ordenador, ha perdido su página de GitHub, según VGC. También se afirma que su servidor de Discord se cerró tras una petición de Rockstar y Take-Two, aunque eso no está confirmado. Su creador dice que lo deja para centrarse en los estudios.</p><p>Según VGC, otros grupos siguen trabajando en versiones parecidas, muchos con ayuda de chatbots de IA para programar, y algunos vídeos mostrarían la intro cargando con graves fallos gráficos. Nada de esto es oficial. Rockstar no ha anunciado fecha para PC, así que cualquier descarga que prometa GTA 6 en PC es, como poco, no oficial y, en el peor caso, un riesgo de seguridad.</p>",
+    "pt": "<p>GTA 6 só existe no PS5 e no Xbox Series X|S, mas alguns fãs estão tentando levá-lo ao PC por conta própria. Uma dessas tentativas, um projeto chamado Leonida que queria rodar a versão de Xbox Series X no computador, teve a página no GitHub removida, segundo a VGC. Também se diz que o servidor do Discord do projeto foi fechado a pedido da Rockstar e da Take-Two, mas isso não foi confirmado. O criador diz que vai se afastar para focar nos estudos.</p><p>De acordo com a VGC, outros grupos continuam trabalhando em versões parecidas, muitos usando chatbots de IA para programar, e alguns vídeos mostrariam a abertura carregando com muitos problemas gráficos. Nada disso é oficial. A Rockstar não anunciou data para PC, então qualquer download que prometa GTA 6 no PC é, no mínimo, não oficial e, no pior caso, um risco de segurança.</p>"
+   }
+  },
+  {
+   "slug": "gta-6-no-november-25-patch-stutter-rumor",
+   "date": "2026-11-25T14:00:00Z",
+   "cat": "official",
+   "src": [
+    "pcgh_nov25",
+    "cx_patch"
+   ],
+   "guide": "gta-6-patch-notes",
+   "title": {
+    "en": "No, GTA 6 did not get a stutter-fix patch on November 25",
+    "es": "No, GTA 6 no recibió un parche contra los tirones el 25 de noviembre",
+    "pt": "Não, GTA 6 não ganhou patch contra engasgos em 25 de novembro"
+   },
+   "body": {
+    "en": "<p>A post shared widely on X since November 20 claimed Rockstar would release a GTA 6 update on November 25 to fix stuttering. PC Games Hardware checked and found no such announcement: there was no patch on that date, and Rockstar has not said when the next one is coming. The rumor had no official link behind it.</p><p>The latest version is still the November 23 update, 01.002.002 on PS5 and 1.0.2.2 on Xbox Series X|S. Its notes on Rockstar Support list seven fixes, including crashes, weather that stayed the same for long stretches, autosave failures and phone calls that did not trigger. Stuttering and rendering are not mentioned. If a new version arrives with official notes, we will cover it.</p>",
+    "es": "<p>Un mensaje muy compartido en X desde el 20 de noviembre aseguraba que Rockstar lanzaría una actualización de GTA 6 el 25 de noviembre para corregir los tirones. PC Games Hardware lo comprobó y no encontró ningún anuncio: no hubo parche ese día y Rockstar no ha dicho cuándo llegará el siguiente. El rumor no tenía ninguna fuente oficial.</p><p>La versión más reciente sigue siendo la del 23 de noviembre, 01.002.002 en PS5 y 1.0.2.2 en Xbox Series X|S. Sus notas en Rockstar Support recogen siete correcciones, entre ellas cierres inesperados, un clima que no cambiaba durante mucho tiempo, fallos del autoguardado y llamadas que no se activaban. No mencionan tirones ni cambios de renderizado. Si sale una versión nueva con notas oficiales, la contaremos.</p>",
+    "pt": "<p>Um post muito compartilhado no X desde 20 de novembro dizia que a Rockstar lançaria uma atualização de GTA 6 em 25 de novembro para corrigir engasgos. A PC Games Hardware verificou e não encontrou nenhum anúncio: não houve patch nessa data, e a Rockstar não disse quando sai o próximo. O boato não tinha nenhuma fonte oficial.</p><p>A versão mais recente continua sendo a de 23 de novembro, 01.002.002 no PS5 e 1.0.2.2 no Xbox Series X|S. As notas no Rockstar Support listam sete correções, entre elas travamentos, clima que ficava igual por muito tempo, falhas no salvamento automático e ligações que não tocavam. Engasgos e mudanças de renderização não aparecem. Se sair uma versão nova com notas oficiais, a gente noticia.</p>"
    }
   }
  ]
