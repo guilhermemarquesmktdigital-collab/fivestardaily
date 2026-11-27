@@ -115,6 +115,26 @@
   "cx_patch": [
    "Complex: Rockstar Games Announces 'Grand Theft Auto VI' Updates, Including a Fix for Weather Issue",
    "https://www.complex.com/pop-culture/a/tracewilliamcowen/gta-vi-updates-announced"
+  ],
+  "gematsu_famitsu_1122": [
+   "Gematsu: Famitsu Sales: 11/16/26 – 11/22/26",
+   "https://www.gematsu.com/2026/11/famitsu-sales-11-16-26-11-22-26"
+  ],
+  "vgc_perez_decade": [
+   "VGC: Lucia actress Manni L. Perez claims she worked on GTA 6 for 'almost a decade'",
+   "https://www.videogameschronicle.com/news/lucia-actress-manni-l-perez-claims-she-worked-on-gta-6-for-almost-a-decade/"
+  ],
+  "lg_panini": [
+   "License Global: Panini Announces 'Grand Theft Auto VI' Trading Card Collection",
+   "https://www.licenseglobal.com/toys-games/panini-announces-grand-theft-auto-vi-trading-card-collection"
+  ],
+  "ri_panini": [
+   "RockstarINTEL: GTA VI Official Trading Cards Announced by Panini",
+   "https://rockstarintel.com/gta-vi-official-trading-cards-announced-by-panini/"
+  ],
+  "vgc_tga_lucia": [
+   "VGC: Lucia actor confirmed as GTA 6 sweeps The Game Awards nominations",
+   "https://www.videogameschronicle.com/news/lucia-actor-confirmed-as-gta-6-sweeps-the-game-awards-nominations/"
   ]
  },
  "NEWS": [
@@ -524,6 +544,63 @@
     "en": "<p>A post shared widely on X since November 20 claimed Rockstar would release a GTA 6 update on November 25 to fix stuttering. PC Games Hardware checked and found no such announcement: there was no patch on that date, and Rockstar has not said when the next one is coming. The rumor had no official link behind it.</p><p>The latest version is still the November 23 update, 01.002.002 on PS5 and 1.0.2.2 on Xbox Series X|S. Its notes on Rockstar Support list seven fixes, including crashes, weather that stayed the same for long stretches, autosave failures and phone calls that did not trigger. Stuttering and rendering are not mentioned. If a new version arrives with official notes, we will cover it.</p>",
     "es": "<p>Un mensaje muy compartido en X desde el 20 de noviembre aseguraba que Rockstar lanzaría una actualización de GTA 6 el 25 de noviembre para corregir los tirones. PC Games Hardware lo comprobó y no encontró ningún anuncio: no hubo parche ese día y Rockstar no ha dicho cuándo llegará el siguiente. El rumor no tenía ninguna fuente oficial.</p><p>La versión más reciente sigue siendo la del 23 de noviembre, 01.002.002 en PS5 y 1.0.2.2 en Xbox Series X|S. Sus notas en Rockstar Support recogen siete correcciones, entre ellas cierres inesperados, un clima que no cambiaba durante mucho tiempo, fallos del autoguardado y llamadas que no se activaban. No mencionan tirones ni cambios de renderizado. Si sale una versión nueva con notas oficiales, la contaremos.</p>",
     "pt": "<p>Um post muito compartilhado no X desde 20 de novembro dizia que a Rockstar lançaria uma atualização de GTA 6 em 25 de novembro para corrigir engasgos. A PC Games Hardware verificou e não encontrou nenhum anúncio: não houve patch nessa data, e a Rockstar não disse quando sai o próximo. O boato não tinha nenhuma fonte oficial.</p><p>A versão mais recente continua sendo a de 23 de novembro, 01.002.002 no PS5 e 1.0.2.2 no Xbox Series X|S. As notas no Rockstar Support listam sete correções, entre elas travamentos, clima que ficava igual por muito tempo, falhas no salvamento automático e ligações que não tocavam. Engasgos e mudanças de renderização não aparecem. Se sair uma versão nova com notas oficiais, a gente noticia.</p>"
+   }
+  },
+  {
+   "slug": "gta-6-famitsu-japan-chart-no-1-launch-week",
+   "date": "2026-11-26T13:06:00Z",
+   "cat": "industry",
+   "src": [
+    "gematsu_famitsu_1122"
+   ],
+   "title": {
+    "en": "GTA 6 opens at No. 1 in Japan with over 200,000 boxed copies",
+    "es": "GTA 6 debuta como número 1 en Japón con más de 200.000 copias en caja",
+    "pt": "GTA 6 estreia em 1º no Japão com mais de 200 mil cópias em caixa"
+   },
+   "body": {
+    "en": "<p>GTA VI topped Famitsu's Japanese retail chart for November 16–22, its launch week, with 200,759 copies sold, according to Gematsu's report of the Famitsu figures. The number covers the PS5 boxed release only, which in Japan is a box with a download code rather than a disc. Digital sales are not counted.</p><p>The gap to second place was wide: The Legend of Zelda: Ocarina of Time on Switch 2 sold 35,295 copies that week. On the hardware side, the PS5 Digital Edition was the best-selling console in Japan with 40,362 units, just ahead of Switch 2 at 36,817. The Xbox Series family sold 751 units.</p>",
+    "es": "<p>GTA VI encabezó la lista de ventas físicas de Famitsu en Japón del 16 al 22 de noviembre, su semana de lanzamiento, con 200.759 copias, según el resumen de Gematsu. La cifra solo incluye la edición en caja de PS5, que en Japón contiene un código de descarga en lugar de un disco. Las ventas digitales no se cuentan.</p><p>La distancia con el segundo puesto fue enorme: The Legend of Zelda: Ocarina of Time para Switch 2 vendió 35.295 copias esa semana. En hardware, la PS5 Digital Edition fue la consola más vendida en Japón con 40.362 unidades, por delante de Switch 2 con 36.817. La familia Xbox Series vendió 751 unidades.</p>",
+    "pt": "<p>GTA VI liderou o ranking de vendas físicas da Famitsu no Japão entre 16 e 22 de novembro, sua semana de lançamento, com 200.759 cópias, segundo o resumo da Gematsu. O número cobre só a versão em caixa do PS5, que no Japão traz um código de download em vez de disco. Vendas digitais não entram na conta.</p><p>A distância para o segundo lugar foi grande: The Legend of Zelda: Ocarina of Time no Switch 2 vendeu 35.295 cópias na semana. Em hardware, o PS5 Digital Edition foi o console mais vendido no Japão, com 40.362 unidades, à frente do Switch 2, com 36.817. A família Xbox Series vendeu 751 unidades.</p>"
+   }
+  },
+  {
+   "slug": "manni-l-perez-lucia-almost-a-decade-thank-you",
+   "date": "2026-11-26T20:52:00Z",
+   "cat": "industry",
+   "src": [
+    "vgc_perez_decade",
+    "vgc_tga_lucia"
+   ],
+   "guide": "jason-and-lucia",
+   "title": {
+    "en": "Lucia actress Manni L. Perez thanks fans after almost a decade on GTA 6",
+    "es": "Manni L. Perez, la actriz de Lucía, agradece a los fans tras casi una década en GTA 6",
+    "pt": "Manni L. Perez, atriz de Lucia, agradece aos fãs após quase uma década em GTA 6"
+   },
+   "body": {
+    "en": "<p>Manni L. Perez, who plays co-lead Lucia in GTA 6, has thanked players in an Instagram story posted after the launch, VGC reports. She described the days since release as a whirlwind and said she spent close to ten years working on the character: \"I've dedicated almost a decade bringing Lucia to life.\"</p><p>Perez added that she is grateful Lucia can now be part of players' lives. Her casting was only confirmed when The Game Awards nominations named her for Best Performance. GTA 6 came out on November 19 on PS5 and Xbox Series X|S, with Lucia and Jason as its two playable leads.</p>",
+    "es": "<p>Manni L. Perez, que interpreta a Lucía, una de las dos protagonistas de GTA 6, dio las gracias a los jugadores en una historia de Instagram publicada después del lanzamiento, según VGC. Describió los días desde el estreno como un torbellino y contó que dedicó cerca de diez años a dar vida al personaje.</p><p>Perez añadió que está agradecida de que Lucía ya forme parte de la vida de los jugadores. Su participación no se confirmó hasta que las nominaciones de The Game Awards la incluyeron en Mejor Interpretación. GTA 6 salió el 19 de noviembre en PS5 y Xbox Series X|S, con Lucía y Jason como protagonistas jugables.</p>",
+    "pt": "<p>Manni L. Perez, que interpreta Lucia, uma das duas protagonistas de GTA 6, agradeceu aos jogadores em um story no Instagram publicado depois do lançamento, segundo a VGC. Ela descreveu os dias desde a estreia como um turbilhão e contou que dedicou quase dez anos a dar vida à personagem.</p><p>Perez disse ainda que está grata por Lucia agora fazer parte da vida dos jogadores. A escalação dela só foi confirmada quando as indicações do The Game Awards a incluíram em Melhor Atuação. GTA 6 saiu em 19 de novembro no PS5 e no Xbox Series X|S, com Lucia e Jason como protagonistas jogáveis.</p>"
+   }
+  },
+  {
+   "slug": "panini-gta-vi-sports-trading-card-collection-december",
+   "date": "2026-11-24T15:00:00Z",
+   "cat": "official",
+   "src": [
+    "lg_panini",
+    "ri_panini"
+   ],
+   "title": {
+    "en": "Panini and Rockstar announce real GTA VI sports trading cards for December",
+    "es": "Panini y Rockstar anuncian cromos deportivos reales de GTA VI para diciembre",
+    "pt": "Panini e Rockstar anunciam cards esportivos reais de GTA VI para dezembro"
+   },
+   "body": {
+    "en": "<p>Panini America has announced the GTAVI: Sports Trading Card Collection, made with Rockstar Games and due in December 2026, License Global reports. The physical cards are real-world versions of the sports cards players can collect inside GTA 6, featuring the game's fictional athletes. No exact release day or price has been announced.</p><p>Each hobby box holds four packs and, on average, two Rookie cards, one Retro, one Illustrated and four Special Silvers. Rarer cards include Legend Bronze numbered to 49, Silver numbered to 25 and one-of-one Gold cards, plus silver, pink, teal and light blue parallels. RockstarINTEL says the product is listed as coming soon on Panini America's site.</p>",
+    "es": "<p>Panini America anunció la GTAVI: Sports Trading Card Collection, creada junto a Rockstar Games y prevista para diciembre de 2026, según License Global. Son cromos físicos que reproducen los cromos deportivos que se coleccionan dentro de GTA 6, con los atletas ficticios del juego. Todavía no hay fecha exacta ni precio.</p><p>Cada caja hobby trae cuatro sobres y, de media, dos cromos Rookie, uno Retro, uno Illustrated y cuatro Special Silver. Entre los más raros hay Legend Bronze numerados hasta 49, Silver numerados hasta 25 y Gold únicos, además de variantes en plata, rosa, verde azulado y azul claro. RockstarINTEL indica que el producto figura como «próximamente» en la web de Panini America.</p>",
+    "pt": "<p>A Panini America anunciou a GTAVI: Sports Trading Card Collection, feita com a Rockstar Games e prevista para dezembro de 2026, segundo a License Global. São cards físicos que reproduzem os cards esportivos colecionáveis dentro de GTA 6, com os atletas fictícios do jogo. Ainda não há dia exato nem preço.</p><p>Cada caixa hobby traz quatro pacotes e, em média, dois cards Rookie, um Retro, um Illustrated e quatro Special Silver. Entre os mais raros estão Legend Bronze numerados até 49, Silver numerados até 25 e Gold únicos, além de variantes prata, rosa, verde-azulado e azul-claro. O RockstarINTEL diz que o produto aparece como \"em breve\" no site da Panini America.</p>"
    }
   }
  ]
