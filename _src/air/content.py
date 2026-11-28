@@ -14,8 +14,8 @@ S = {
 
 GUIDES = [
  {'slug': 'release-date', 'cat': 'start', 'mins': 3, 'src': ['ps_preload', 'wc_cloud', 'rs_preload'],
-  'title': {'en': 'GTA 6 is out: release date, editions and platforms', 'es': 'GTA 6 ya salió: fecha, ediciones y plataformas', 'pt': 'GTA 6 já saiu: data, edições e plataformas'},
-  'lede': {'en': 'GTA 6 launched November 19, 2026 on PS5 and Xbox Series X|S. Release date, platforms, file size and what is confirmed.',
+  'title': {'en': 'GTA 6 release date: out now (Nov 19, 2026), editions and platforms', 'es': 'Fecha de GTA 6: ya salió (19 nov 2026), ediciones y plataformas', 'pt': 'Data de GTA 6: já saiu (19 nov 2026), edições e plataformas'},
+  'lede': {'en': 'GTA 6 released November 19, 2026 on PS5 and Xbox Series X|S. Unlock time, editions, file size (about 212 GB on PS5, 234 GB on Xbox) and what is confirmed.',
            'es': 'GTA 6 salió el 19 de noviembre de 2026 en PS5 y Xbox Series X|S. Fecha, plataformas, tamaño y lo confirmado.',
            'pt': 'GTA 6 saiu em 19 de novembro de 2026 no PS5 e Xbox Series X|S. Data, plataformas, tamanho e o que é confirmado.'},
   'body': {

@@ -23,10 +23,10 @@ _SONGS = [('That’s It', 'Yung Lean feat. Future & Metro Boomin'), ('RHYNO', 'T
 _UL = '<ul>' + ''.join('<li><strong>%s</strong> · %s</li>' % s for s in _SONGS) + '</ul>'
 
 g('soundtrack', 4, ['nw_album', 'gem_album', 'pcg_songs', 'rs_music'],
- {'en': 'All GTA 6 songs: full soundtrack list and radio stations (play them here)',
-  'es': 'Canciones de GTA 6: lista completa de la banda sonora y emisoras (escúchalas aquí)',
-  'pt': 'Músicas de GTA 6: lista completa da trilha sonora e rádios (ouça aqui)'},
- {'en': 'Every GTA 6 song on the official album, plus the radio stations. Play the full playlist on Spotify right here, no login needed for previews.',
+ {'en': 'GTA 6 songs: full soundtrack and radio stations list',
+  'es': 'Canciones de GTA 6: banda sonora completa y emisoras',
+  'pt': 'Músicas de GTA 6: trilha sonora completa e rádios'},
+ {'en': 'Every GTA 6 song announced so far from the official 34-track album, plus the radio stations. Play the Spotify playlist right here.',
   'es': 'Todas las canciones de GTA 6 del álbum oficial y las emisoras de radio. Escucha la playlist en Spotify aquí mismo, sin login para los avances.',
   'pt': 'Todas as músicas de GTA 6 do álbum oficial e as rádios do jogo. Ouça a playlist no Spotify aqui mesmo, sem login nos trechos.'},
  {'en': """<h2>The album</h2><p><strong>Grand Theft Auto VI: The Album</strong> is Rockstar's companion record for the game, made with Atlantic Records. It releases on <strong>November 19</strong>, the same day as the game, with <strong>34 tracks</strong>, and it was announced in September with physical CD and vinyl versions available to pre-order.</p>
@@ -94,10 +94,10 @@ _GUNS_N = [('Moreland 850', 'Pump shotgun', 'Pickup prompt in the Extended Look'
 _GUNS_S = 'submachine gun and grenade launcher (Trailer 2), carbines and a scoped sniper rifle (screenshots and video), double-barrel shotgun, and melee items: baseball bat, hammer, pool cue and a mini golf club'
 
 g('cars-weapons-shops', 5, ['gti_cars', 'pcg_cars', 'gti_weapons', 'gf_look'],
- {'en': 'GTA 6 confirmed cars, weapons, clothes and shops (official only)',
-  'es': 'GTA 6: autos, armas, ropa y tiendas confirmados (solo oficial)',
-  'pt': 'GTA 6: carros, armas, roupas e lojas confirmados (só oficial)'},
- {'en': 'Every car, gun and place Rockstar has actually named or shown, separated from the guesses. Leaks are left out.',
+ {'en': 'GTA 6 cars, weapons, clothes and shops list (official, no leaks)',
+  'es': 'GTA 6: lista de autos, armas, ropa y tiendas (oficial, sin filtraciones)',
+  'pt': 'GTA 6: lista de carros, armas, roupas e lojas (oficial, sem vazamentos)'},
+ {'en': 'Every GTA 6 car, gun, clothing item and shop Rockstar has officially named or shown, kept apart from rumors. Leaks are left out.',
   'es': 'Cada auto, arma y lugar que Rockstar nombró o mostró de verdad, separado de las suposiciones. Las filtraciones quedan fuera.',
   'pt': 'Cada carro, arma e lugar que a Rockstar realmente nomeou ou mostrou, separado dos palpites. Vazamentos ficam de fora.'},
  {'en': """<p>Two levels of "confirmed" are mixed up online. Here we split them: <strong>named by Rockstar</strong> (in its own text, edition pages, or a name visible in the game) and <strong>seen in official footage</strong> (identified by fans from the trailers, screenshots and the Extended Look, so the exact in-game name can still change).</p>
