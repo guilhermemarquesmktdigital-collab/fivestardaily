@@ -135,6 +135,14 @@
   "vgc_tga_lucia": [
    "VGC: Lucia actor confirmed as GTA 6 sweeps The Game Awards nominations",
    "https://www.videogameschronicle.com/news/lucia-actor-confirmed-as-gta-6-sweeps-the-game-awards-nominations/"
+  ],
+  "sc_week1": [
+   "Streams Charts: GTA 6's first week on livestreaming: 420 million Hours Watched",
+   "https://streamscharts.com/news/gta6-livestreaming-week-after-launch"
+  ],
+  "gb_week1": [
+   "GamingBolt: GTA 6 had higher week one livestream viewership than Elden Ring, Valorant, Diablo 4 combined",
+   "https://gamingbolt.com/gta-6-had-higher-week-one-livestream-viewership-than-elden-ring-valorant-diablo-4-combined-rumor"
   ]
  },
  "NEWS": [
@@ -601,6 +609,25 @@
     "en": "<p>Panini America has announced the GTAVI: Sports Trading Card Collection, made with Rockstar Games and due in December 2026, License Global reports. The physical cards are real-world versions of the sports cards players can collect inside GTA 6, featuring the game's fictional athletes. No exact release day or price has been announced.</p><p>Each hobby box holds four packs and, on average, two Rookie cards, one Retro, one Illustrated and four Special Silvers. Rarer cards include Legend Bronze numbered to 49, Silver numbered to 25 and one-of-one Gold cards, plus silver, pink, teal and light blue parallels. RockstarINTEL says the product is listed as coming soon on Panini America's site.</p>",
     "es": "<p>Panini America anunció la GTAVI: Sports Trading Card Collection, creada junto a Rockstar Games y prevista para diciembre de 2026, según License Global. Son cromos físicos que reproducen los cromos deportivos que se coleccionan dentro de GTA 6, con los atletas ficticios del juego. Todavía no hay fecha exacta ni precio.</p><p>Cada caja hobby trae cuatro sobres y, de media, dos cromos Rookie, uno Retro, uno Illustrated y cuatro Special Silver. Entre los más raros hay Legend Bronze numerados hasta 49, Silver numerados hasta 25 y Gold únicos, además de variantes en plata, rosa, verde azulado y azul claro. RockstarINTEL indica que el producto figura como «próximamente» en la web de Panini America.</p>",
     "pt": "<p>A Panini America anunciou a GTAVI: Sports Trading Card Collection, feita com a Rockstar Games e prevista para dezembro de 2026, segundo a License Global. São cards físicos que reproduzem os cards esportivos colecionáveis dentro de GTA 6, com os atletas fictícios do jogo. Ainda não há dia exato nem preço.</p><p>Cada caixa hobby traz quatro pacotes e, em média, dois cards Rookie, um Retro, um Illustrated e quatro Special Silver. Entre os mais raros estão Legend Bronze numerados até 49, Silver numerados até 25 e Gold únicos, além de variantes prata, rosa, verde-azulado e azul-claro. O RockstarINTEL diz que o produto aparece como \"em breve\" no site da Panini America.</p>"
+   }
+  },
+  {
+   "slug": "gta-6-first-week-420-million-hours-watched-streams-charts",
+   "date": "2026-11-25T12:00:00Z",
+   "cat": "industry",
+   "src": [
+    "sc_week1",
+    "gb_week1"
+   ],
+   "title": {
+    "en": "GTA 6 racks up 420 million hours watched on streams in its first week",
+    "es": "GTA 6 suma 420 millones de horas vistas en streams en su primera semana",
+    "pt": "GTA 6 soma 420 milhões de horas assistidas em lives na primeira semana"
+   },
+   "body": {
+    "en": "<p>Analytics firm Streams Charts has tallied GTA 6's first seven days on Twitch, YouTube and Kick, and the result is a new record: about 420 million hours watched. That is close to three times the previous best for a game's first week, set by Valorant's closed beta in April 2020, and more than the first weeks of Valorant, Elden Ring, Diablo IV and Lost Ark added together.</p><p>The launch also peaked at 7.91 million concurrent viewers, which Streams Charts lists as an all-time record. YouTube drew the biggest average audience in the first six hours before Twitch took over, and 1,056 channels hit new all-time viewer peaks during the week. TheBurntPeanut was the most-watched streamer, with 11.43 million hours. Rockstar has not commented on the figures.</p>",
+    "es": "<p>La firma de análisis Streams Charts ha medido los primeros siete días de GTA 6 en Twitch, YouTube y Kick, y el resultado es un nuevo récord: unos 420 millones de horas vistas. Es casi el triple del anterior máximo para la primera semana de un juego, que tenía la beta cerrada de Valorant en abril de 2020, y supera la suma de las primeras semanas de Valorant, Elden Ring, Diablo IV y Lost Ark.</p><p>El lanzamiento llegó además a un pico de 7,91 millones de espectadores simultáneos, que Streams Charts señala como récord histórico. YouTube tuvo la mayor audiencia media en las primeras seis horas y luego Twitch tomó el relevo, y 1.056 canales marcaron nuevos máximos de espectadores esa semana. TheBurntPeanut fue el streamer más visto, con 11,43 millones de horas. Rockstar no ha comentado las cifras.</p>",
+    "pt": "<p>A empresa de análise Streams Charts mediu os primeiros sete dias de GTA 6 na Twitch, no YouTube e no Kick, e o resultado é um novo recorde: cerca de 420 milhões de horas assistidas. É quase o triplo da marca anterior para a primeira semana de um jogo, do beta fechado de Valorant em abril de 2020, e supera a soma das primeiras semanas de Valorant, Elden Ring, Diablo IV e Lost Ark.</p><p>O lançamento também chegou a um pico de 7,91 milhões de espectadores simultâneos, que a Streams Charts aponta como recorde histórico. O YouTube teve a maior audiência média nas primeiras seis horas, depois a Twitch assumiu a liderança, e 1.056 canais bateram seus próprios recordes de público na semana. TheBurntPeanut foi o streamer mais assistido, com 11,43 milhões de horas. A Rockstar não comentou os números.</p>"
    }
   }
  ]
