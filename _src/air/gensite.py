@@ -49,6 +49,16 @@ def jsonld(path, url, title, desc):
         d = [{'@context': 'https://schema.org', '@type': 'NewsArticle' if path.startswith('news/') else 'Article', 'headline': h, 'description': ab, 'datePublished': date, 'dateModified': '2026-11-13', 'url': url, 'mainEntityOfPage': url, 'inLanguage': 'en', 'author': org, 'publisher': org, 'about': {'@type': 'VideoGame', 'name': 'Grand Theft Auto VI'}}]
     else:
         d = [{'@context': 'https://schema.org', '@type': 'WebPage', 'name': title, 'description': desc, 'url': url, 'isPartOf': {'@type': 'WebSite', 'name': 'Five Star Daily', 'url': origin + base}}]
+    if path:
+        _parts = path.split('/')
+        _names = {'guides': 'Guides', 'news': 'News'}
+        _items = [{'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': origin + base}]
+        _acc = ''
+        for _i, _p in enumerate(_parts):
+            _acc += _p + '/'
+            _nm = _names.get(_p) if _i < len(_parts) - 1 else (title.split(' | ')[0])
+            _items.append({'@type': 'ListItem', 'position': _i + 2, 'name': _nm or _p.replace('-', ' ').title(), 'item': origin + base + _acc})
+        d.append({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': _items})
     return ''.join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + '</script>\n' for x in d)
 
 def ogimg(path, title):
@@ -75,7 +85,7 @@ def page_html(path, title, desc, robots_noindex=False):
         s = s.replace('__LATEST__', _lat)
     else:
         s = s.replace('__LATEST__', '')
-        s = s.replace('<span class="logo">Five Star Daily</span>', '<h1 class="logo" style="margin:0 0 -.16em">Five Star Daily<span style="position:absolute;left:-9999px">: GTA 6 news, videos, live streams and guides</span></h1>', 1)
+    s = s.replace('<span class="logo">Five Star Daily</span>', '<h1 class="logo" style="margin:0 0 -.16em">Five Star Daily<span style="position:absolute;left:-9999px">: GTA 6 news, videos, live streams and guides</span></h1>', 1)
     return s.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + head, 1)
 
 if os.path.exists(out):
